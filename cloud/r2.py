@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import hmac
 import os
+import time
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 from typing import Iterable
@@ -56,6 +57,8 @@ class R2Client:
         *,
         region: str | None = None,
         session: requests.Session | None = None,
+        max_attempts: int = 3,
+        retry_backoff_seconds: float = 1.0,
     ) -> None:
         self.endpoint = (endpoint or _required_env("R2_ENDPOINT")).rstrip("/")
         parsed = urlsplit(self.endpoint)
@@ -68,6 +71,8 @@ class R2Client:
         self.secret_access_key = secret_access_key or _required_env("R2_SECRET_ACCESS_KEY")
         self.region = region or os.getenv("R2_REGION", "auto")
         self.session = session or requests.Session()
+        self.max_attempts = max(1, int(max_attempts))
+        self.retry_backoff_seconds = max(0.0, float(retry_backoff_seconds))
 
     @classmethod
     def from_env(cls) -> "R2Client":
@@ -128,16 +133,27 @@ class R2Client:
         headers: dict[str, str] | None = None,
         expected: Iterable[int] = (200,),
     ) -> requests.Response:
-        request_headers = self._authorization_headers(method, key, payload, query)
-        request_headers.update(headers or {})
-        try:
-            response = self.session.request(
-                # R2 uploads can take longer than a short probe timeout on a
-                # hosted runner.  Keep source probing separate from storage IO.
-                method, self._url(key, query), data=payload, headers=request_headers, timeout=120,
-            )
-        except requests.RequestException as exc:
-            raise R2Error(f"R2 request failed: {type(exc).__name__}") from exc
+        response: requests.Response | None = None
+        for attempt in range(1, self.max_attempts + 1):
+            # Generate a fresh SigV4 timestamp for every attempt. A delayed retry
+            # must not reuse an authorization header from the previous request.
+            request_headers = self._authorization_headers(method, key, payload, query)
+            request_headers.update(headers or {})
+            try:
+                response = self.session.request(
+                    # R2 uploads can take longer than a short probe timeout on a
+                    # hosted runner. Keep source probing separate from storage IO.
+                    method, self._url(key, query), data=payload, headers=request_headers, timeout=120,
+                )
+                break
+            except requests.RequestException as exc:
+                if attempt >= self.max_attempts:
+                    raise R2Error(
+                        f"R2 request failed after {self.max_attempts} attempts: {type(exc).__name__}"
+                    ) from exc
+                time.sleep(self.retry_backoff_seconds * (2 ** (attempt - 1)))
+        if response is None:  # Defensive guard; the loop either returns a response or raises.
+            raise R2Error("R2 request failed")
         if response.status_code not in set(expected):
             error_code = ""
             try:

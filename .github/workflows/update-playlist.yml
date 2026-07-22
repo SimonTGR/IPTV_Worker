@@ -49,7 +49,9 @@ jobs:
         run: pipenv run python -m cloud.workflow run
 
       - name: Publish public playlists
-        if: success()
+        # The verified files are built before R2 upload. Publish them even when
+        # a later, independent R2 request has a transient failure.
+        if: ${{ always() && hashFiles('public_output/live.m3u') != '' && hashFiles('public_output/full.m3u') != '' }}
         shell: bash
         run: |
           install -d -m 700 ~/.ssh
