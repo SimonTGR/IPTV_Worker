@@ -137,8 +137,16 @@ class R2Client:
         except requests.RequestException as exc:
             raise R2Error(f"R2 request failed: {type(exc).__name__}") from exc
         if response.status_code not in set(expected):
+            error_code = ""
+            try:
+                root = ElementTree.fromstring(response.content)
+                candidate = (root.findtext(".//{*}Code") or "").strip()
+                if candidate.isascii() and candidate.replace("_", "").isalnum() and len(candidate) <= 64:
+                    error_code = f" ({candidate})"
+            except ElementTree.ParseError:
+                pass
             response.close()
-            raise R2Error(f"R2 returned HTTP {response.status_code}")
+            raise R2Error(f"R2 returned HTTP {response.status_code}{error_code}")
         return response
 
     def get_bytes(self, key: str) -> bytes | None:
