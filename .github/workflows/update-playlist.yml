@@ -23,6 +23,7 @@ jobs:
       R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
       R2_REGION: auto
+      PLAYLIST_DEPLOY_KEY: ${{ secrets.PLAYLIST_DEPLOY_KEY }}
     steps:
       - name: Check out code
         uses: actions/checkout@v4
@@ -46,6 +47,36 @@ jobs:
 
       - name: Download inputs, update playlist, and publish verified output
         run: pipenv run python -m cloud.workflow run
+
+      - name: Publish public playlists
+        if: success()
+        shell: bash
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$PLAYLIST_DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git clone --depth 1 git@github.com:SimonTGR/IPTV_Playlist.git public-repository
+          cp public_output/live.m3u public-repository/live.m3u
+          cp public_output/full.m3u public-repository/full.m3u
+          cp public_output/status.json public-repository/status.json
+          if [ -f public_output/epg.xml.gz ]; then
+            cp public_output/epg.xml.gz public-repository/epg.xml.gz
+          fi
+          cd public-repository
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add live.m3u full.m3u status.json
+          if [ -f epg.xml.gz ]; then
+            git add epg.xml.gz
+          fi
+          if git diff --cached --quiet; then
+            echo "public_playlist_changed=false"
+          else
+            git commit -m "Update IPTV playlists"
+            git push origin HEAD:main
+            echo "public_playlist_changed=true"
+          fi
 
       - name: Keep sanitized execution report
         if: always()
