@@ -1,0 +1,68 @@
+name: Safely sync upstream Workers
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Worker to synchronize
+        required: true
+        default: check
+        type: choice
+        options:
+          - check
+          - guangdong
+          - chaozhou
+          - all
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: iptv-worker-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      UPSTREAM_GITHUB_TOKEN: ${{ secrets.UPSTREAM_GITHUB_TOKEN }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pipenv
+
+      - name: Install runtime dependencies
+        run: |
+          python -m pip install --upgrade pip pipenv
+          pipenv sync --dev
+
+      - name: Run Worker synchronization
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          case "${{ inputs.target }}" in
+            check) pipenv run python -m workers.sync --check ;;
+            guangdong) pipenv run python -m workers.sync --deploy guangdong --mode manual ;;
+            chaozhou) pipenv run python -m workers.sync --deploy chaozhou --mode manual ;;
+            all) pipenv run python -m workers.sync --deploy-all --mode manual ;;
+            *) echo "Unsupported target" >&2; exit 2 ;;
+          esac
+
+      - name: Keep sanitized synchronization report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: worker-sync-report
+          if-no-files-found: ignore
+          retention-days: 7
+          path: |
+            output/worker_sync_report.json

@@ -1,0 +1,11 @@
+name = "iptv-list"
+main = "workers/iptv_list.js"
+compatibility_date = "2025-12-01"
+
+[[r2_buckets]]
+binding = "IPTV_BUCKET"
+bucket_name = "iptv-simon"
+
+# Configure PLAYLIST_TOKEN with:
+#   npx wrangler secret put PLAYLIST_TOKEN
+# Do not place the token, account ID, or R2 access keys in this file.

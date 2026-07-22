@@ -1,0 +1,60 @@
+name: Update IPTV playlist
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC 03:17; avoid the top-of-hour congestion common to scheduled workflows.
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iptv-playlist-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_REGION: auto
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pipenv
+
+      - name: Install runtime dependencies
+        run: |
+          python -m pip install --upgrade pip pipenv
+          pipenv sync --dev
+
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install --yes ffmpeg
+
+      - name: Run local preflight tests
+        run: pipenv run python -m pytest -q
+
+      - name: Download inputs, update playlist, and publish verified output
+        run: pipenv run python -m cloud.workflow run
+
+      - name: Keep sanitized execution report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iptv-update-report
+          if-no-files-found: ignore
+          retention-days: 7
+          path: |
+            output/report.json
+            output/source_report.candidate.json
+            output/worker_sync_report.json

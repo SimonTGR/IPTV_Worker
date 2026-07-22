@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "mode": "manual",
+  "upstream": {
+    "owner": "5d5d5f5f5f",
+    "repository": "abc",
+    "ref": "main"
+  },
+  "targets": {
+    "chaozhou": {
+      "path": "潮州/chaozhou.js",
+      "worker_name": "iptv-cz",
+      "production_url": "https://iptv-cz.tanguangrun88.workers.dev/",
+      "preview_alias": "iptv-sync-cz",
+      "preview_url": "https://iptv-sync-cz-iptv-cz.tanguangrun88.workers.dev/",
+      "max_size": 262144,
+      "smoke": {
+        "path": "/",
+        "allowed_status": [200, 301, 302, 307, 308],
+        "require_http_location_on_redirect": true,
+        "reject_html": true,
+        "require_body_on_200": true
+      }
+    },
+    "guangdong": {
+      "path": "广东/gdty.js",
+      "worker_name": "iptv-gd",
+      "production_url": "https://iptv-gd.tanguangrun88.workers.dev/",
+      "preview_alias": "iptv-sync-gd",
+      "preview_url": "https://iptv-sync-gd-iptv-gd.tanguangrun88.workers.dev/",
+      "max_size": 262144,
+      "smoke": {
+        "path": "/",
+        "allowed_status": [200],
+        "require_http_location_on_redirect": false,
+        "reject_html": true,
+        "require_body_on_200": true
+      }
+    }
+  }
+}

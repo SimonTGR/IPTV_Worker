@@ -1,0 +1,12 @@
+# 这是接口黑名单列表，符合关键字的接口将被拦截，一个关键字一行
+# This is the interface blacklist list, the interface matching the keyword will be blocked, one keyword line
+/audio/
+bxtv.3a.ink
+catvod.com
+iptv.catvod.com/live.php
+www.catvod.com/
+黄金华剧台
+黄金華劇臺
+62WM7
+freetv.fun
+t.freetv.fun/live
