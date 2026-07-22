@@ -132,7 +132,9 @@ class R2Client:
         request_headers.update(headers or {})
         try:
             response = self.session.request(
-                method, self._url(key, query), data=payload, headers=request_headers, timeout=30,
+                # R2 uploads can take longer than a short probe timeout on a
+                # hosted runner.  Keep source probing separate from storage IO.
+                method, self._url(key, query), data=payload, headers=request_headers, timeout=120,
             )
         except requests.RequestException as exc:
             raise R2Error(f"R2 request failed: {type(exc).__name__}") from exc
