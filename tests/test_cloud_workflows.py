@@ -24,6 +24,12 @@ def test_worker_sync_stays_manual_and_does_not_embed_credentials():
     assert "CLOUDFLARE_API_TOKEN =" not in source
 
 
+def test_pr_validation_recognizes_the_current_repository_owner():
+    source = (ROOT / ".github/workflows/validate-pr.yml").read_text(encoding="utf-8")
+    assert "const repoOwner = owner;" in source
+    assert "const repoOwner = 'Guovin';" not in source
+
+
 def test_runtime_outputs_are_not_ready_to_commit():
     source = (ROOT / ".gitignore").read_text(encoding="utf-8")
     assert "config/pending_sources/*" in source

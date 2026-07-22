@@ -27,7 +27,7 @@ jobs:
             const repo = context.repo.repo;
             const number = pr.number;
             const author = pr.user.login;
-            const repoOwner = 'Guovin';
+            const repoOwner = owner;
 
             const prInfo = await github.rest.pulls.get({
               owner,
