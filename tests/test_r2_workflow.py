@@ -61,6 +61,12 @@ class R2ClientTests(unittest.TestCase):
     def test_missing_object_returns_none(self):
         self.assertIsNone(fake_client(FakeR2Session()).get_bytes("state/missing.json"))
 
+    def test_list_prefix_encodes_path_separators_for_sigv4(self):
+        session = FakeR2Session()
+        fake_client(session).list_keys("input/pending_sources")
+        _, url, _, _ = session.calls[-1]
+        self.assertIn("prefix=input%2Fpending_sources%2F", url)
+
     def test_rejects_unsafe_object_key(self):
         with self.assertRaisesRegex(R2Error, "invalid object key"):
             fake_client(FakeR2Session()).get_bytes("../secret")

@@ -179,7 +179,10 @@ class R2Client:
 
     def list_keys(self, prefix: str) -> list[str]:
         safe_prefix = _safe_key(prefix).rstrip("/") + "/"
-        query = "list-type=2&prefix=" + quote(safe_prefix, safe="/-_.~")
+        # SigV4 canonical query values must encode path separators.  Leaving
+        # '/' literal changes the canonical request and R2 rejects it with
+        # SignatureDoesNotMatch.
+        query = "list-type=2&prefix=" + quote(safe_prefix, safe="-_.~")
         response = self._request("GET", query=query, expected=(200,))
         try:
             try:
