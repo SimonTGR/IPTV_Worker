@@ -3,6 +3,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import requests
+
 from cloud.r2 import R2Client, R2Error
 from cloud.workflow import WorkflowError, download_inputs, upload_published_outputs
 
@@ -39,10 +41,10 @@ class FakeR2Session:
         return FakeResponse(405)
 
 
-def fake_client(session):
+def fake_client(session, **kwargs):
     return R2Client(
         "https://account.r2.cloudflarestorage.com", "bucket", "access-key", "secret-key",
-        session=session,
+        session=session, retry_backoff_seconds=0, **kwargs,
     )
 
 
@@ -72,6 +74,35 @@ class R2ClientTests(unittest.TestCase):
             fake_client(FakeR2Session()).get_bytes("../secret")
         with self.assertRaisesRegex(R2Error, "invalid object key"):
             fake_client(FakeR2Session()).get_bytes("output/../secret")
+
+    def test_transient_timeout_is_retried_until_put_succeeds(self):
+        class TimeoutThenSuccessSession(FakeR2Session):
+            def __init__(self):
+                super().__init__()
+                self.failures_remaining = 2
+
+            def request(self, method, url, data=None, headers=None, timeout=None):
+                if self.failures_remaining:
+                    self.failures_remaining -= 1
+                    self.calls.append((method, url, data, dict(headers or {})))
+                    raise requests.ReadTimeout("simulated timeout")
+                return super().request(method, url, data=data, headers=headers, timeout=timeout)
+
+        session = TimeoutThenSuccessSession()
+        fake_client(session).put_bytes("output/user_result.m3u", b"#EXTM3U\n")
+        self.assertEqual(3, len(session.calls))
+        self.assertEqual(b"#EXTM3U\n", session.objects["output/user_result.m3u"])
+
+    def test_transient_timeout_reports_failure_after_retry_limit(self):
+        class AlwaysTimeoutSession(FakeR2Session):
+            def request(self, method, url, data=None, headers=None, timeout=None):
+                self.calls.append((method, url, data, dict(headers or {})))
+                raise requests.ReadTimeout("simulated timeout")
+
+        session = AlwaysTimeoutSession()
+        with self.assertRaisesRegex(R2Error, "after 3 attempts: ReadTimeout"):
+            fake_client(session).get_bytes("state/source_state.json")
+        self.assertEqual(3, len(session.calls))
 
 
 class WorkflowTests(unittest.TestCase):

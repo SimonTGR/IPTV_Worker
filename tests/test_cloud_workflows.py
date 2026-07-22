@@ -14,6 +14,8 @@ def test_playlist_workflow_is_scheduled_serialized_and_uses_secrets():
     assert "PLAYLIST_DEPLOY_KEY: ${{ secrets.PLAYLIST_DEPLOY_KEY }}" in source
     assert "git@github.com:SimonTGR/IPTV_Playlist.git" in source
     assert "public_output/live.m3u" in source
+    assert "always() && hashFiles('public_output/live.m3u')" in source
+    assert "if: success()" not in source
     assert "python -m cloud.workflow run" in source
     assert "sudo apt-get install --yes ffmpeg" in source
 
