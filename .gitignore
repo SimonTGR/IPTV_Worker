@@ -22,3 +22,5 @@ output/epg/
 output/ipv4/
 output/ipv6/
 output/hls.txt
+public_output/
+.codex-deploy-temp/

@@ -10,6 +10,9 @@ def test_final_playlist_worker_has_only_expected_routes_and_r2_binding():
     assert 'REPORT_KEY = "output/report.json"' in source
     assert "env.IPTV_BUCKET.get" in source
     assert 'path === "/m3u"' in source
+    assert 'path === "/playlist.m3u"' in source
+    assert 'tokenFromPath(path)' in source
+    assert '"playlist.m3u"' in source
     assert 'path === "/report"' in source
     assert 'path === "/health"' in source
     assert "fetch(" not in source.replace("async fetch(request, env)", "")
@@ -19,9 +22,11 @@ def test_final_playlist_worker_requires_secret_for_playlist_and_report():
     source = WORKER.read_text(encoding="utf-8")
     assert "env.PLAYLIST_TOKEN" in source
     assert "supplied === env.PLAYLIST_TOKEN" in source
-    assert 'if (!authorized(request, env))' in source
+    assert 'if (!authorized(request, env, path))' in source
     assert '"If-None-Match"' in source
     assert '"ETag"' in source
+    assert '"Content-Disposition"' in source
+    assert '"Access-Control-Allow-Origin"' in source
 
 
 def test_example_does_not_contain_real_secrets():

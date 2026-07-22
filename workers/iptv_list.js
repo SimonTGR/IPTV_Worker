@@ -11,30 +11,37 @@ function json(data, status = 200) {
   });
 }
 
-function authorized(request, env) {
-  const supplied = new URL(request.url).searchParams.get("token");
+function tokenFromPath(path) {
+  const match = path.match(/^\/playlist\/([^/]+)\.m3u$/);
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+function authorized(request, env, path) {
+  const supplied = new URL(request.url).searchParams.get("token") || tokenFromPath(path);
   return Boolean(env.PLAYLIST_TOKEN && supplied && supplied === env.PLAYLIST_TOKEN);
 }
 
-function objectHeaders(object, contentType) {
+function objectHeaders(object, contentType, filename = null) {
   const headers = new Headers({
     "Content-Type": contentType,
     "Cache-Control": "private, max-age=300",
     "X-Content-Type-Options": "nosniff",
+    "Access-Control-Allow-Origin": "*",
   });
+  if (filename) headers.set("Content-Disposition", `inline; filename="${filename}"`);
   if (object.httpEtag) headers.set("ETag", object.httpEtag);
   if (object.uploaded) headers.set("Last-Modified", object.uploaded.toUTCString());
   return headers;
 }
 
-async function objectResponse(request, env, key, contentType) {
+async function objectResponse(request, env, key, contentType, filename = null) {
   const object = await env.IPTV_BUCKET.get(key);
   if (!object) return json({ error: "not_ready" }, 404);
   if (request.headers.get("If-None-Match") === object.httpEtag) {
-    return new Response(null, { status: 304, headers: objectHeaders(object, contentType) });
+    return new Response(null, { status: 304, headers: objectHeaders(object, contentType, filename) });
   }
   return new Response(request.method === "HEAD" ? null : object.body, {
-    headers: objectHeaders(object, contentType),
+    headers: objectHeaders(object, contentType, filename),
   });
 }
 
@@ -65,9 +72,15 @@ export default {
     }
     try {
       if (path === "/health") return health(env);
-      if (!authorized(request, env)) return json({ error: "unauthorized" }, 401);
-      if (path === "/m3u") {
-        return objectResponse(request, env, PLAYLIST_KEY, "application/vnd.apple.mpegurl; charset=utf-8");
+      if (!authorized(request, env, path)) return json({ error: "unauthorized" }, 401);
+      if (path === "/m3u" || path === "/playlist.m3u" || /^\/playlist\/[^/]+\.m3u$/.test(path)) {
+        return objectResponse(
+          request,
+          env,
+          PLAYLIST_KEY,
+          "application/vnd.apple.mpegurl; charset=utf-8",
+          "playlist.m3u",
+        );
       }
       if (path === "/report") {
         return objectResponse(request, env, REPORT_KEY, "application/json; charset=utf-8");

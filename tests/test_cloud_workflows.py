@@ -11,6 +11,9 @@ def test_playlist_workflow_is_scheduled_serialized_and_uses_secrets():
     assert "concurrency:" in source
     assert "cancel-in-progress: false" in source
     assert "R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}" in source
+    assert "PLAYLIST_DEPLOY_KEY: ${{ secrets.PLAYLIST_DEPLOY_KEY }}" in source
+    assert "git@github.com:SimonTGR/IPTV_Playlist.git" in source
+    assert "public_output/live.m3u" in source
     assert "python -m cloud.workflow run" in source
     assert "sudo apt-get install --yes ffmpeg" in source
 
@@ -35,3 +38,4 @@ def test_runtime_outputs_are_not_ready_to_commit():
     assert "config/pending_sources/*" in source
     assert "output/log/" in source
     assert "workers/.wrangler/" in source
+    assert "public_output/" in source

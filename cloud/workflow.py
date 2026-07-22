@@ -9,6 +9,7 @@ import sys
 from pathlib import Path, PurePosixPath
 
 from cloud.r2 import R2Client, R2Error
+from cloud.publication import PublicationError, build_public_playlists
 
 
 INPUT_PREFIX = "input/pending_sources/"
@@ -82,7 +83,10 @@ def run_update(client: R2Client, root: Path) -> None:
     result = subprocess.run([sys.executable, "main.py"], cwd=root, check=False)
     if result.returncode:
         raise WorkflowError(f"playlist process failed with exit code {result.returncode}")
+    status = build_public_playlists(root)
     upload_published_outputs(client, root)
+    print(f"public_direct_channels={status['direct_channel_count']}")
+    print(f"public_full_channels={status['full_channel_count']}")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -106,7 +110,7 @@ def main(argv: list[str] | None = None) -> int:
             run_update(client, root)
             print("workflow_completed=true")
         return 0
-    except (R2Error, WorkflowError) as exc:
+    except (R2Error, WorkflowError, PublicationError) as exc:
         print(f"cloud workflow failed: {exc}", file=sys.stderr)
         return 1
 

@@ -37,7 +37,7 @@
       "enabled": true,
       "url": "https://iptv-cz.tanguangrun88.workers.dev",
       "response_mode": "redirect_base",
-      "output_url": "worker",
+      "output_url": "redirect",
       "channel_list_file": "config/worker_channels/chaozhou.txt",
       "priority": 80,
       "refresh_each_run": true,
