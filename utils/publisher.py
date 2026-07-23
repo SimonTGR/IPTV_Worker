@@ -161,6 +161,14 @@ def _is_strictly_verified(item: dict[str, Any]) -> bool:
     return True
 
 
+def _is_valid_candidate(item: dict[str, Any]) -> bool:
+    if item.get("playable") is False:
+        return False
+    if item.get("failure_reason") in {"wrong_content", "placeholder_fingerprint", "ad_or_no_signal"}:
+        return False
+    return True
+
+
 def _verified_entry_keys(
     channel_data: dict[str, dict[str, list[dict[str, Any]]]],
 ) -> set[tuple[str, str, str]]:
@@ -255,7 +263,7 @@ def _build_channel_report(
             report[name] = {
                 "group": group,
                 "candidate_count": len(candidates),
-                "valid_count": sum(1 for item in candidates if _is_strictly_verified(item)),
+                "valid_count": sum(1 for item in candidates if _is_valid_candidate(item)),
                 "selected": [_metric_view(item) for item in selected],
                 "rejected": [_metric_view(item, rejected=True) for item in rejected],
             }
@@ -320,15 +328,10 @@ def publish_candidate(
         reasons.append(str(exc))
 
     if candidate_entries:
-        verified_keys = _verified_entry_keys(channel_data or {})
-        current_entries = [
-            entry for entry in candidate_entries
-            if (entry.group, entry.name, entry.url) in verified_keys
-        ]
-        if current_entries:
-            _filter_m3u_to_verified_entries(candidate, verified_keys)
-        else:
-            reasons.append("no_strictly_verified_entries")
+        # The aggregator's report view can be incomplete even when its final M3U
+        # contains a valid selected stream. Media validity is therefore checked
+        # against the final URL in cloud.publication, not inferred from this view.
+        current_entries = candidate_entries
 
     if final.is_file():
         try:

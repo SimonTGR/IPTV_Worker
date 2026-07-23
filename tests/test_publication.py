@@ -27,7 +27,7 @@ def _fixture(root: Path, published: bool = True) -> None:
 
 def test_builds_direct_and_full_public_outputs(tmp_path):
     _fixture(tmp_path)
-    status = build_public_playlists(tmp_path)
+    status = build_public_playlists(tmp_path, media_probe=lambda block: True)
 
     direct = (tmp_path / "public_output" / "live.m3u").read_text(encoding="utf-8")
     full = (tmp_path / "public_output" / "full.m3u").read_text(encoding="utf-8")
@@ -44,13 +44,27 @@ def test_builds_direct_and_full_public_outputs(tmp_path):
         "direct_channel_count": 1,
         "full_channel_count": 2,
         "excluded_from_direct": 1,
+        "failed_final_media_probe": 0,
     }
 
 
 def test_refuses_unpublished_results(tmp_path):
     _fixture(tmp_path, published=False)
     with pytest.raises(PublicationError, match="unverified"):
-        build_public_playlists(tmp_path)
+        build_public_playlists(tmp_path, media_probe=lambda block: True)
+
+
+def test_final_media_probe_removes_failed_exact_output_url(tmp_path):
+    _fixture(tmp_path)
+    status = build_public_playlists(
+        tmp_path,
+        media_probe=lambda block: "183.10.180.73" in "\n".join(block),
+    )
+    full = (tmp_path / "public_output" / "full.m3u").read_text(encoding="utf-8")
+    assert "workers.dev" not in full
+    assert "183.10.180.73" in full
+    assert status["full_channel_count"] == 1
+    assert status["failed_final_media_probe"] == 1
 
 
 def test_chaozhou_uses_discovered_direct_base_but_guangdong_keeps_worker_proxy():
