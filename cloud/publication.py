@@ -3,7 +3,10 @@ from __future__ import annotations
 import json
 import re
 import shutil
+import subprocess
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+from typing import Callable
 from urllib.parse import urlsplit
 
 
@@ -59,7 +62,45 @@ def _blocked_for_direct(url: str | None) -> bool:
     return any(host == suffix[1:] or host.endswith(suffix) for suffix in BLOCKED_DIRECT_HOST_SUFFIXES)
 
 
-def build_public_playlists(root: Path) -> dict:
+def _probe_media_block(block: list[str]) -> bool:
+    url = _stream_url(block)
+    if not url:
+        return False
+    headers = []
+    for line in block[1:]:
+        value = line.strip()
+        if value.lower().startswith("#extvlcopt:http-user-agent="):
+            headers.append("User-Agent: " + value.split("=", 1)[1])
+        elif value.lower().startswith("#extvlcopt:http-referrer="):
+            headers.append("Referer: " + value.split("=", 1)[1])
+    command = [
+        "ffprobe", "-v", "error", "-rw_timeout", "12000000",
+        "-analyzeduration", "3000000", "-probesize", "3000000",
+    ]
+    if headers:
+        command += ["-headers", "\r\n".join(headers) + "\r\n"]
+    command += ["-show_entries", "stream=codec_type", "-of", "json", url]
+    try:
+        completed = subprocess.run(command, capture_output=True, text=True, timeout=18, check=False)
+        if completed.returncode != 0:
+            return False
+        data = json.loads(completed.stdout or "{}")
+        return any(stream.get("codec_type") in {"video", "audio"} for stream in data.get("streams", []))
+    except (OSError, subprocess.TimeoutExpired, ValueError):
+        return False
+
+
+def _media_verified_blocks(
+    blocks: list[list[str]], probe: Callable[[list[str]], bool],
+) -> list[list[str]]:
+    with ThreadPoolExecutor(max_workers=min(5, max(1, len(blocks)))) as executor:
+        verdicts = list(executor.map(probe, blocks))
+    return [block for block, valid in zip(blocks, verdicts) if valid]
+
+
+def build_public_playlists(
+    root: Path, *, media_probe: Callable[[list[str]], bool] | None = None,
+) -> dict:
     source = root / "output" / "user_result.m3u"
     report_path = root / "output" / "report.json"
     if not source.is_file() or not report_path.is_file():
@@ -80,13 +121,14 @@ def build_public_playlists(root: Path) -> dict:
     if not blocks:
         raise PublicationError("verified playlist has no channels")
 
-    direct_blocks = [block for block in blocks if not _blocked_for_direct(_stream_url(block))]
+    verified_blocks = _media_verified_blocks(blocks, media_probe or _probe_media_block)
+    direct_blocks = [block for block in verified_blocks if not _blocked_for_direct(_stream_url(block))]
     if not direct_blocks:
         raise PublicationError("direct playlist has no channels after filtering")
 
     public = root / "public_output"
     public.mkdir(parents=True, exist_ok=True)
-    full_lines = prefix + [line for block in blocks for line in block]
+    full_lines = prefix + [line for block in verified_blocks for line in block]
     direct_lines = prefix + [line for block in direct_blocks for line in block]
     (public / "full.m3u").write_text("\n".join(full_lines) + "\n", encoding="utf-8")
     (public / "live.m3u").write_text("\n".join(direct_lines) + "\n", encoding="utf-8")
@@ -100,8 +142,9 @@ def build_public_playlists(root: Path) -> dict:
         "generated_at": report.get("generated_at"),
         "published": True,
         "direct_channel_count": len(direct_blocks),
-        "full_channel_count": len(blocks),
-        "excluded_from_direct": len(blocks) - len(direct_blocks),
+        "full_channel_count": len(verified_blocks),
+        "excluded_from_direct": len(verified_blocks) - len(direct_blocks),
+        "failed_final_media_probe": len(blocks) - len(verified_blocks),
     }
     (public / "status.json").write_text(
         json.dumps(status, ensure_ascii=False, indent=2) + "\n",

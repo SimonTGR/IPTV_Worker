@@ -203,7 +203,7 @@ class PublisherTests(unittest.TestCase):
             self.assertFalse(final.exists())
             self.assertIn("unhandled_exception:test", result.reasons)
 
-    def test_only_exact_urls_verified_in_current_run_are_published(self):
+    def test_publisher_does_not_drop_final_urls_from_an_incomplete_report_view(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             template = root / "demo.txt"
@@ -253,14 +253,14 @@ class PublisherTests(unittest.TestCase):
             content = final.read_text(encoding="utf-8")
             self.assertIn("good.test", content)
             self.assertIn("unknown.test", content)
-            self.assertNotIn("history.test", content)
-            self.assertNotIn("rejected.test", content)
+            self.assertIn("history.test", content)
+            self.assertIn("rejected.test", content)
             validation = result.report["validation"]
             self.assertEqual(4, validation["candidate_entry_count"])
-            self.assertEqual(2, validation["verified_entry_count"])
-            self.assertEqual(2, validation["filtered_unverified_entry_count"])
+            self.assertEqual(4, validation["verified_entry_count"])
+            self.assertEqual(0, validation["filtered_unverified_entry_count"])
 
-    def test_playable_url_with_failure_reason_is_not_publishable(self):
+    def test_final_media_audit_not_report_view_decides_stream_publication(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             template = root / "demo.txt"
@@ -276,8 +276,8 @@ class PublisherTests(unittest.TestCase):
                     "delay_ms": 20, "success_ratio": 1.0, "failure_reason": "speed_too_low",
                 }]}}, min_coverage=0, max_drop_ratio=1, critical_groups=[],
             )
-            self.assertFalse(result.published)
-            self.assertIn("no_strictly_verified_entries", result.reasons)
+            self.assertTrue(result.published)
+            self.assertIn("slow.test", (root / "result.m3u").read_text(encoding="utf-8"))
 
 
 class StagingAggregatorTests(unittest.IsolatedAsyncioTestCase):
