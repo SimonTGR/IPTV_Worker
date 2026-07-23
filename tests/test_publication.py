@@ -73,3 +73,20 @@ def test_chaozhou_uses_discovered_direct_base_but_guangdong_keeps_worker_proxy()
     by_id = {source["id"]: source for source in sources}
     assert by_id["worker-chaozhou"]["output_url"] == "redirect"
     assert by_id["worker-guangdong"]["output_url"] == "worker"
+
+
+def test_china_inaccessible_chinacert_host_is_excluded_from_direct_playlist(tmp_path):
+    _fixture(tmp_path)
+    output = tmp_path / "output" / "user_result.m3u"
+    output.write_text(
+        output.read_text(encoding="utf-8")
+        + '#EXTINF:-1 group-title="satellite",Regional TV\n'
+        + 'https://live.chinacert.cftest5.cn/cnmg/live/608831231\n',
+        encoding="utf-8",
+    )
+    status = build_public_playlists(tmp_path, media_probe=lambda block: True)
+    direct = (tmp_path / "public_output" / "live.m3u").read_text(encoding="utf-8")
+    full = (tmp_path / "public_output" / "full.m3u").read_text(encoding="utf-8")
+    assert "chinacert" not in direct
+    assert "chinacert" in full
+    assert status["excluded_from_direct"] == 2

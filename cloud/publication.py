@@ -12,7 +12,7 @@ from urllib.parse import urlsplit
 
 PUBLIC_REPOSITORY = "SimonTGR/IPTV_Playlist"
 PUBLIC_EPG_URL = f"https://raw.githubusercontent.com/{PUBLIC_REPOSITORY}/main/epg.xml.gz"
-BLOCKED_DIRECT_HOST_SUFFIXES = (".workers.dev",)
+BLOCKED_DIRECT_HOST_SUFFIXES = (".workers.dev", ".chinacert.cftest5.cn")
 
 
 class PublicationError(RuntimeError):
