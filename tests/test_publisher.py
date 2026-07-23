@@ -49,6 +49,7 @@ class PublisherTests(unittest.TestCase):
             channel_data = {
                 group: {name: [{
                     "url": url, "playable": True, "source_id": "fixture",
+                    "content_verified": True,
                     "download_speed_mbps": 2.5, "bitrate_kbps": 3000,
                     "resolution": "1920x1080", "delay_ms": 30, "success_ratio": 1,
                 }]}
@@ -70,6 +71,8 @@ class PublisherTests(unittest.TestCase):
             report_data = json.loads(report_text)
             self.assertTrue(report_data["published"])
             self.assertEqual(1.0, report_data["validation"]["coverage"])
+            self.assertEqual(3, report_data["validation"]["verified_entry_count"])
+            self.assertEqual(0, report_data["validation"]["filtered_unverified_entry_count"])
             self.assertEqual(2.5, report_data["channels"]["CCTV-1"]["selected"][0]["download_speed_mbps"])
             self.assertFalse(list(root.rglob("*.tmp.*")))
 
@@ -113,7 +116,10 @@ class PublisherTests(unittest.TestCase):
             result = publish_candidate(
                 candidate, final_path=final, report_path=root / "report.json",
                 last_good_path=last_good, template_path=template,
-                min_coverage=1, critical_groups=[],
+                min_coverage=1, critical_groups=[], channel_data={"测试": {"一": [{
+                    "url": "https://new.test/one", "playable": True, "content_verified": True,
+                    "download_speed_mbps": 1, "delay_ms": 10, "failure_reason": None,
+                }]}},
             )
 
             self.assertTrue(result.published)
@@ -130,11 +136,20 @@ class PublisherTests(unittest.TestCase):
             write_m3u(final, [("测试", name, f"https://old.test/{index}") for index, name in enumerate(names)])
             original = final.read_bytes()
             write_m3u(candidate, [("测试", name, f"https://new.test/{index}") for index, name in enumerate(names[:3])])
+            channel_data = {"测试": {
+                name: [{
+                    "url": f"https://new.test/{index}", "playable": True,
+                    "content_verified": True, "download_speed_mbps": 1,
+                    "delay_ms": 10, "success_ratio": 1, "failure_reason": None,
+                }]
+                for index, name in enumerate(names[:3])
+            }}
 
             result = publish_candidate(
                 candidate, final_path=final, report_path=root / "report.json",
                 last_good_path=root / "last.m3u", template_path=template,
                 min_coverage=0.50, max_drop_ratio=0.20, critical_groups=[],
+                channel_data=channel_data,
             )
 
             self.assertFalse(result.published)
@@ -187,6 +202,73 @@ class PublisherTests(unittest.TestCase):
             self.assertFalse(result.published)
             self.assertFalse(final.exists())
             self.assertIn("unhandled_exception:test", result.reasons)
+
+    def test_only_exact_urls_verified_in_current_run_are_published(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            template = root / "demo.txt"
+            candidate = root / "candidate.m3u"
+            final = root / "user_result.m3u"
+            write_template(template, {"satellite": ["Good TV", "Stale TV", "Unverified TV"]})
+            write_m3u(candidate, [
+                ("satellite", "Good TV", "https://good.test/live.m3u8"),
+                ("satellite", "Stale TV", "https://history.test/stale.m3u8"),
+                ("satellite", "Unverified TV", "https://unknown.test/live.m3u8"),
+            ])
+            channel_data = {"satellite": {
+                "Good TV": [{
+                    "url": "https://good.test/live.m3u8", "playable": True,
+                    "content_verified": True, "download_speed_mbps": 2.0,
+                    "delay_ms": 25, "success_ratio": 1.0, "failure_reason": None,
+                }],
+                # A different URL passed; it must not authorize the stale output URL.
+                "Stale TV": [{
+                    "url": "https://fresh.test/live.m3u8", "playable": True,
+                    "content_verified": True, "download_speed_mbps": 2.0,
+                    "delay_ms": 25, "success_ratio": 1.0, "failure_reason": None,
+                }],
+                "Unverified TV": [{
+                    "url": "https://unknown.test/live.m3u8", "playable": True,
+                    "content_verified": None, "download_speed_mbps": 9.0,
+                    "delay_ms": 10, "success_ratio": 1.0, "failure_reason": None,
+                }],
+            }}
+
+            result = publish_candidate(
+                candidate, final_path=final, report_path=root / "report.json",
+                last_good_path=root / "last.m3u", template_path=template,
+                channel_data=channel_data, min_coverage=0, max_drop_ratio=1,
+                critical_groups=[],
+            )
+
+            self.assertTrue(result.published)
+            content = final.read_text(encoding="utf-8")
+            self.assertIn("good.test", content)
+            self.assertNotIn("history.test", content)
+            self.assertNotIn("unknown.test", content)
+            validation = result.report["validation"]
+            self.assertEqual(3, validation["candidate_entry_count"])
+            self.assertEqual(1, validation["verified_entry_count"])
+            self.assertEqual(2, validation["filtered_unverified_entry_count"])
+
+    def test_playable_url_with_failure_reason_is_not_publishable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            template = root / "demo.txt"
+            candidate = root / "candidate.m3u"
+            write_template(template, {"satellite": ["Slow TV"]})
+            write_m3u(candidate, [("satellite", "Slow TV", "https://slow.test/live.m3u8")])
+            result = publish_candidate(
+                candidate, final_path=root / "result.m3u", report_path=root / "report.json",
+                last_good_path=root / "last.m3u", template_path=template,
+                channel_data={"satellite": {"Slow TV": [{
+                    "url": "https://slow.test/live.m3u8", "playable": True,
+                    "content_verified": True, "download_speed_mbps": 0.1,
+                    "delay_ms": 20, "success_ratio": 1.0, "failure_reason": "speed_too_low",
+                }]}}, min_coverage=0, max_drop_ratio=1, critical_groups=[],
+            )
+            self.assertFalse(result.published)
+            self.assertIn("no_strictly_verified_entries", result.reasons)
 
 
 class StagingAggregatorTests(unittest.IsolatedAsyncioTestCase):

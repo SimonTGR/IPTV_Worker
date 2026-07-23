@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 import os
 import re
 import shutil
@@ -15,7 +16,6 @@ from sources.http_client import redact_url, sanitize_report_value
 
 
 SUPPORTED_PLAYLIST_SCHEMES = {"http", "https", "rtmp", "rtsp", "rtp", "udp"}
-REJECTED_CONTENT_REASONS = {"wrong_content", "placeholder_fingerprint", "ad_or_no_signal"}
 
 
 @dataclass(frozen=True)
@@ -135,12 +135,85 @@ def _load_json(path: str | os.PathLike[str] | None) -> dict[str, Any]:
         return {}
 
 
-def _is_valid_candidate(item: dict[str, Any]) -> bool:
-    if item.get("playable") is False:
+def _is_strictly_verified(item: dict[str, Any]) -> bool:
+    """Return True only for the exact URL that passed this run's media probes."""
+    if item.get("playable") is not True:
         return False
-    if item.get("failure_reason") in REJECTED_CONTENT_REASONS:
+    if item.get("content_verified") is not True or item.get("failure_reason"):
         return False
+    delay = item.get("delay_ms", item.get("delay"))
+    speed = item.get("download_speed_mbps", item.get("speed"))
+    try:
+        if delay in (None, -1) or speed is None or float(speed) <= 0 or math.isinf(float(speed)):
+            return False
+    except (TypeError, ValueError, OverflowError):
+        return False
+    stability = item.get("success_ratio", item.get("stability"))
+    if stability is not None:
+        try:
+            if float(stability) <= 0:
+                return False
+        except (TypeError, ValueError, OverflowError):
+            return False
     return True
+
+
+def _verified_entry_keys(
+    channel_data: dict[str, dict[str, list[dict[str, Any]]]],
+) -> set[tuple[str, str, str]]:
+    keys: set[tuple[str, str, str]] = set()
+    for group, channel_obj in channel_data.items():
+        for name, items in channel_obj.items():
+            for item in items:
+                url = item.get("url")
+                if url and _is_strictly_verified(item):
+                    keys.add((group, name, url))
+    return keys
+
+
+def _filter_m3u_to_verified_entries(
+    path: Path,
+    allowed: set[tuple[str, str, str]],
+) -> None:
+    """Preserve M3U metadata while removing blocks not in the exact probe allowlist."""
+    lines = path.read_text(encoding="utf-8-sig").splitlines()
+    prefix: list[str] = []
+    blocks: list[list[str]] = []
+    current: list[str] | None = None
+    for line in lines:
+        if line.strip().upper().startswith("#EXTINF"):
+            if current is not None:
+                blocks.append(current)
+            current = [line]
+        elif current is None:
+            prefix.append(line)
+        else:
+            current.append(line)
+    if current is not None:
+        blocks.append(current)
+
+    kept: list[list[str]] = []
+    for block in blocks:
+        info = block[0].strip()
+        match = re.search(r'group-title="([^"]*)"', info, re.IGNORECASE)
+        group = match.group(1).strip() if match else ""
+        name = info.rsplit(",", 1)[-1].strip() if "," in info else ""
+        url = next((line.strip() for line in block[1:] if line.strip() and not line.strip().startswith("#")), "")
+        if (group, name, url) in allowed:
+            kept.append(block)
+
+    content = "\n".join(prefix + [line for block in kept for line in block]) + "\n"
+    temp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            "w", encoding="utf-8", dir=path.parent, delete=False, prefix=path.name + ".tmp."
+        ) as file:
+            file.write(content)
+            temp_path = file.name
+        os.replace(temp_path, path)
+    finally:
+        if temp_path and os.path.exists(temp_path):
+            os.unlink(temp_path)
 
 
 def _metric_view(item: dict[str, Any], *, rejected: bool = False) -> dict[str, Any]:
@@ -179,7 +252,7 @@ def _build_channel_report(
             report[name] = {
                 "group": group,
                 "candidate_count": len(candidates),
-                "valid_count": sum(1 for item in candidates if _is_valid_candidate(item)),
+                "valid_count": sum(1 for item in candidates if _is_strictly_verified(item)),
                 "selected": [_metric_view(item) for item in selected],
                 "rejected": [_metric_view(item, rejected=True) for item in rejected],
             }
@@ -234,13 +307,25 @@ def publish_candidate(
     template = parse_template(template_path)
     expected_names = {name for names in template.values() for name in names}
     reasons = list(unhandled_errors or [])
+    candidate_entries: list[PlaylistEntry] = []
     current_entries: list[PlaylistEntry] = []
     previous_entries: list[PlaylistEntry] = []
 
     try:
-        current_entries = parse_m3u(candidate)
+        candidate_entries = parse_m3u(candidate)
     except (OSError, UnicodeError, ValueError) as exc:
         reasons.append(str(exc))
+
+    if candidate_entries:
+        verified_keys = _verified_entry_keys(channel_data or {})
+        current_entries = [
+            entry for entry in candidate_entries
+            if (entry.group, entry.name, entry.url) in verified_keys
+        ]
+        if current_entries:
+            _filter_m3u_to_verified_entries(candidate, verified_keys)
+        else:
+            reasons.append("no_strictly_verified_entries")
 
     if final.is_file():
         try:
@@ -272,13 +357,15 @@ def publish_candidate(
     now = datetime.now(timezone.utc).isoformat()
     approved = not reasons
     report = {
-        "schema_version": 2,
+        "schema_version": 3,
         "generated_at": now,
         "published": approved,
         "publish_reasons": reasons,
         "validation": {
-            "m3u_reparsed": bool(current_entries),
-            "candidate_entry_count": len(current_entries),
+            "m3u_reparsed": bool(candidate_entries),
+            "candidate_entry_count": len(candidate_entries),
+            "verified_entry_count": len(current_entries),
+            "filtered_unverified_entry_count": len(candidate_entries) - len(current_entries),
             "channel_count": len(current_names),
             "expected_channel_count": len(expected_names),
             "coverage": coverage,
