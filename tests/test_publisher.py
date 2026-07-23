@@ -209,11 +209,12 @@ class PublisherTests(unittest.TestCase):
             template = root / "demo.txt"
             candidate = root / "candidate.m3u"
             final = root / "user_result.m3u"
-            write_template(template, {"satellite": ["Good TV", "Stale TV", "Unverified TV"]})
+            write_template(template, {"satellite": ["Good TV", "Stale TV", "No Fingerprint TV", "Rejected TV"]})
             write_m3u(candidate, [
                 ("satellite", "Good TV", "https://good.test/live.m3u8"),
                 ("satellite", "Stale TV", "https://history.test/stale.m3u8"),
-                ("satellite", "Unverified TV", "https://unknown.test/live.m3u8"),
+                ("satellite", "No Fingerprint TV", "https://unknown.test/live.m3u8"),
+                ("satellite", "Rejected TV", "https://rejected.test/live.m3u8"),
             ])
             channel_data = {"satellite": {
                 "Good TV": [{
@@ -227,9 +228,16 @@ class PublisherTests(unittest.TestCase):
                     "content_verified": True, "download_speed_mbps": 2.0,
                     "delay_ms": 25, "success_ratio": 1.0, "failure_reason": None,
                 }],
-                "Unverified TV": [{
+                # Fingerprinting can be unavailable even when transport/media
+                # probing succeeded; this is not a rejection signal.
+                "No Fingerprint TV": [{
                     "url": "https://unknown.test/live.m3u8", "playable": True,
                     "content_verified": None, "download_speed_mbps": 9.0,
+                    "delay_ms": 10, "success_ratio": 1.0, "failure_reason": None,
+                }],
+                "Rejected TV": [{
+                    "url": "https://rejected.test/live.m3u8", "playable": True,
+                    "content_verified": False, "download_speed_mbps": 9.0,
                     "delay_ms": 10, "success_ratio": 1.0, "failure_reason": None,
                 }],
             }}
@@ -244,11 +252,12 @@ class PublisherTests(unittest.TestCase):
             self.assertTrue(result.published)
             content = final.read_text(encoding="utf-8")
             self.assertIn("good.test", content)
+            self.assertIn("unknown.test", content)
             self.assertNotIn("history.test", content)
-            self.assertNotIn("unknown.test", content)
+            self.assertNotIn("rejected.test", content)
             validation = result.report["validation"]
-            self.assertEqual(3, validation["candidate_entry_count"])
-            self.assertEqual(1, validation["verified_entry_count"])
+            self.assertEqual(4, validation["candidate_entry_count"])
+            self.assertEqual(2, validation["verified_entry_count"])
             self.assertEqual(2, validation["filtered_unverified_entry_count"])
 
     def test_playable_url_with_failure_reason_is_not_publishable(self):

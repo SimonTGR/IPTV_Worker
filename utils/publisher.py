@@ -139,7 +139,10 @@ def _is_strictly_verified(item: dict[str, Any]) -> bool:
     """Return True only for the exact URL that passed this run's media probes."""
     if item.get("playable") is not True:
         return False
-    if item.get("content_verified") is not True or item.get("failure_reason"):
+    # A missing fingerprint is not proof that a stream is bad. Some playable
+    # streams cannot be fingerprinted because of encryption, headers, codecs,
+    # or probe timeouts. Reject only an explicit negative verification result.
+    if item.get("content_verified") is False or item.get("failure_reason"):
         return False
     delay = item.get("delay_ms", item.get("delay"))
     speed = item.get("download_speed_mbps", item.get("speed"))
