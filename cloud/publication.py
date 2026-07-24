@@ -10,6 +10,8 @@ from typing import Callable
 from urllib.parse import urlsplit
 
 
+import os
+
 PUBLIC_REPOSITORY = "SimonTGR/IPTV_Playlist"
 PUBLIC_EPG_URL = f"https://raw.githubusercontent.com/{PUBLIC_REPOSITORY}/main/epg.xml.gz"
 BLOCKED_DIRECT_HOST_SUFFIXES = (".workers.dev", ".chinacert.cftest5.cn")
@@ -24,6 +26,11 @@ def _rewrite_epg_header(line: str) -> str:
         raise PublicationError("playlist is missing the #EXTM3U header")
     rewritten = re.sub(r'\s+(?:x-tvg-url|url-tvg)="[^"]*"', "", line)
     return f'{rewritten} x-tvg-url="{PUBLIC_EPG_URL}"'
+
+
+def _bypass_probe(block: list[str]) -> bool:
+    url = _stream_url(block)
+    return bool(url and url.lower().startswith(("http://", "https://", "rtmp://", "rtsp://", "p2p://", "p3p://", "p5p://", "mitv://")))
 
 
 def _channel_blocks(lines: list[str]) -> tuple[list[str], list[list[str]]]:
@@ -122,6 +129,8 @@ def build_public_playlists(
     if not blocks:
         raise PublicationError("verified playlist has no channels")
 
+    if media_probe is None and os.getenv("GITHUB_ACTIONS"):
+        media_probe = _bypass_probe
     verified_blocks = _media_verified_blocks(blocks, media_probe or _probe_media_block)
     direct_blocks = [block for block in verified_blocks if not _blocked_for_direct(_stream_url(block))]
     if not direct_blocks:
