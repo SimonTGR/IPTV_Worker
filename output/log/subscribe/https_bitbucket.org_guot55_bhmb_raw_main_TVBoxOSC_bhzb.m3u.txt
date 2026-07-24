@@ -1,0 +1,32 @@
+#EXTM3U x-tvg-url="https://epg.catvod.com/epg.xml"
+
+
+#EXTINF:-1 tvg-name="æ­¤çæ¬å°æ" tvg-logo="https://logo.catvod.com/ç»´æ¤ä¸æ.png" group-title="â¨ï¸â¨ï¸è·åæ°ç",æ­¤çæ¬å°æ
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="å¬ä¼å·" tvg-logo="https://logo.catvod.com/æè°¢æ¯æ.png" group-title="â¨ï¸â¨ï¸è·åæ°ç",å¬ä¼å·ãå®çèµæºã
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="è§å¾ä¸é" tvg-logo="https://logo.catvod.com/è§å¾ä¸é.png" group-title="â¨ï¸â¨ï¸è·åæ°ç",åå¤ãBHã
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="å¯ä»¥æèµ" tvg-logo="https://logo.catvod.com/å¯ä»¥æèµ.png" group-title="â¨ï¸â¨ï¸è·åæ°ç",è·åæ°ç
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+
+
+#EXTINF:-1 tvg-name="æ­¤çæ¬å°æ" tvg-logo="https://logo.catvod.com/ç»´æ¤ä¸æ.png" group-title="â¨ï¸â¨ï¸è·åæ°ç",æ­¤çæ¬å°æ
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="å¬ä¼å·" tvg-logo="https://logo.catvod.com/æè°¢æ¯æ.png" group-title="â¨ï¸â¨ï¸è·åæ°ç",å¬ä¼å·ãå®çèµæºã
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="è§å¾ä¸é" tvg-logo="https://logo.catvod.com/è§å¾ä¸é.png" group-title="â¨ï¸â¨ï¸è·åæ°ç",åå¤ãBHã
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+#EXTINF:-1 tvg-name="å¯ä»¥æèµ" tvg-logo="https://logo.catvod.com/å¯ä»¥æèµ.png" group-title="â¨ï¸â¨ï¸è·åæ°ç",è·åæ°ç
+https://gitee.com/guot55/ygbh888/raw/master/bhx.mp4
+
+
+
+#EXTINF:-1 tvg-name="ç»´æ¤ä¸æ" tvg-logo="https://logo.catvod.com/ç»´æ¤ä¸æ.png" group-title="â¨ï¸â¨ï¸èµèµæ¯æ",ç»´æ¤ä¸æ
+https://gitee.com/guot55/ygbh888/raw/master/bh.mp4
+#EXTINF:-1 tvg-name="æè°¢æ¯æ" tvg-logo="https://logo.catvod.com/æè°¢æ¯æ.png" group-title="â¨ï¸â¨ï¸èµèµæ¯æ",æè°¢æ¯æ
+https://gitee.com/guot55/ygbh888/raw/master/bh.mp4
+#EXTINF:-1 tvg-name="è§å¾ä¸é" tvg-logo="https://logo.catvod.com/è§å¾ä¸é.png" group-title="â¨ï¸â¨ï¸èµèµæ¯æ",è§å¾ä¸é
+https://gitee.com/guot55/ygbh888/raw/master/bh.mp4
+#EXTINF:-1 tvg-name="å¯ä»¥æèµ" tvg-logo="https://logo.catvod.com/å¯ä»¥æèµ.png" group-title="â¨ï¸â¨ï¸èµèµæ¯æ",å¯ä»¥æèµ
+https://gitee.com/guot55/ygbh888/raw/master/bh.mp4
