@@ -751,8 +751,6 @@ def is_valid_speed_result(info) -> bool:
     """
     Check if the speed test result is valid
     """
-    if not config.open_speed_test or os.getenv("GITHUB_ACTIONS"):
-        return True
     try:
         if info.get("playable") is False:
             if not info.get("failure_reason"):
@@ -762,6 +760,8 @@ def is_valid_speed_result(info) -> bool:
             return False
         if int(info.get("consecutive_failures") or 0) >= config.max_consecutive_failures:
             return False
+        if not config.open_speed_test or os.getenv("GITHUB_ACTIONS"):
+            return True
         delay = info.get("delay_ms", info.get("delay"))
         if delay is None or delay == -1:
             if not info.get("failure_reason"):
