@@ -1,7 +1,5 @@
-# 这是订阅源列表，只保留萧雨萌萌的广东电信及广东本地精选源
+# 这是订阅源列表：仅保留作者 5d5d5f5f5f 的广东电信及广东本地源
 https://raw.githubusercontent.com/5d5d5f5f5f/10102/refs/heads/main/%E5%B9%BF%E4%B8%9C%E7%94%B5%E4%BF%A1.txt
 https://raw.githubusercontent.com/5d5d5f5f5f/10102/refs/heads/main/gd.txt
-https://raw.githubusercontent.com/5d5d5f5f5f/10102/refs/heads/main/%E5%B9%BF%E4%B8%9C%E7%A7%BB%E5%8A%A8.txt
-https://raw.githubusercontent.com/5d5d5f5f5f/10102/refs/heads/main/%E5%B9%BF%E4%B8%9C%E8%81%94%E9%80%9A.txt
 
 [WHITELIST]
