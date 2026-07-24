@@ -751,6 +751,8 @@ def is_valid_speed_result(info) -> bool:
     """
     Check if the speed test result is valid
     """
+    if not config.open_speed_test or os.getenv("GITHUB_ACTIONS"):
+        return True
     try:
         if info.get("playable") is False:
             if not info.get("failure_reason"):
