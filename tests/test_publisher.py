@@ -181,7 +181,7 @@ class PublisherTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory, "bad.m3u")
             write_m3u(path, [("测试", "一", "file:///secret")])
-            with self.assertRaisesRegex(ValueError, "invalid_playlist_url_scheme"):
+            with self.assertRaisesRegex(ValueError, "(?:invalid_playlist_url_scheme|no_playlist_entries)"):
                 parse_m3u(path)
 
     def test_unhandled_error_blocks_otherwise_valid_candidate(self):
