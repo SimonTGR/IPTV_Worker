@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "run_started_at": "2026-07-24T08:10:21.661927+00:00",
+  "run_finished_at": "2026-07-24T08:10:21.662284+00:00",
+  "sources": [
+    {
+      "source_id": "forum-inbox",
+      "source_type": "file_inbox",
+      "success": false,
+      "status": "empty",
+      "candidate_count": 0,
+      "files": [],
+      "errors": [
+        "no_files_matched"
+      ],
+      "metadata": {}
+    }
+  ],
+  "candidate_count": 0,
+  "channels": {}
+}
