@@ -11,11 +11,7 @@ def test_playlist_workflow_is_scheduled_serialized_and_uses_secrets():
     assert "concurrency:" in source
     assert "cancel-in-progress: false" in source
     assert "R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}" in source
-    assert "PLAYLIST_DEPLOY_KEY: ${{ secrets.PLAYLIST_DEPLOY_KEY }}" in source
-    assert "git@github.com:SimonTGR/IPTV_Playlist.git" in source
-    assert "public_output/live.m3u" in source
-    assert "always() && hashFiles('public_output/live.m3u')" in source
-    assert "if: success()" not in source
+    assert "output/user_result.m3u" in source
     assert "python main.py" in source
     assert "sudo apt-get install --yes ffmpeg" in source
 

@@ -12,8 +12,8 @@ from urllib.parse import urlsplit
 
 import os
 
-PUBLIC_REPOSITORY = "SimonTGR/IPTV_Playlist"
-PUBLIC_EPG_URL = f"https://raw.githubusercontent.com/{PUBLIC_REPOSITORY}/main/epg.xml.gz"
+PUBLIC_REPOSITORY = "SimonTGR/IPTV_Worker"
+PUBLIC_EPG_URL = f"https://raw.githubusercontent.com/{PUBLIC_REPOSITORY}/main/public_output/epg.xml.gz"
 BLOCKED_DIRECT_HOST_SUFFIXES = (".workers.dev", ".chinacert.cftest5.cn")
 
 
