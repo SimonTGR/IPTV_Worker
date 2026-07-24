@@ -85,7 +85,7 @@ def parse_m3u(path: str | os.PathLike[str]) -> list[PlaylistEntry]:
             continue
         parsed = urlsplit(line)
         if parsed.scheme.lower() not in SUPPORTED_PLAYLIST_SCHEMES:
-            raise ValueError(f"invalid_playlist_url_scheme:{parsed.scheme or 'missing'}")
+            continue
         entries.append(PlaylistEntry(pending_name, pending_group, line))
         pending_name = ""
         pending_group = ""
