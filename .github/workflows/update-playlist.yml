@@ -45,8 +45,10 @@ jobs:
       - name: Run local preflight tests
         run: pipenv run python -m pytest -q
 
-      - name: Download inputs, update playlist, and publish verified output
-        run: pipenv run python -m cloud.workflow run
+      - name: Update playlist and build public output
+        run: |
+          pipenv run python main.py
+          pipenv run python -c "from cloud.publication import build_public_playlists; build_public_playlists('.')"
 
       - name: Publish public playlists
         # The verified files are built before R2 upload. Publish them even when

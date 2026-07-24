@@ -10,41 +10,9 @@
         "config/pending_sources/*.m3u8",
         "config/pending_sources/*.txt"
       ],
-      "required": true,
+      "required": false,
       "priority": 50,
       "max_file_size": 10485760
-    },
-    {
-      "id": "worker-guangdong",
-      "type": "worker_discovery",
-      "enabled": true,
-      "url": "https://iptv-gd.tanguangrun88.workers.dev",
-      "response_mode": "proxy",
-      "output_url": "worker",
-      "channel_paths": {
-        "广东体育": "/hls/1/index.m3u8"
-      },
-      "priority": 80,
-      "refresh_each_run": true,
-      "cache_ttl_seconds": 300,
-      "timeout": 15,
-      "retries": 2,
-      "max_redirects": 5
-    },
-    {
-      "id": "worker-chaozhou",
-      "type": "worker_discovery",
-      "enabled": true,
-      "url": "https://iptv-cz.tanguangrun88.workers.dev",
-      "response_mode": "redirect_base",
-      "output_url": "redirect",
-      "channel_list_file": "config/worker_channels/chaozhou.txt",
-      "priority": 80,
-      "refresh_each_run": true,
-      "cache_ttl_seconds": 300,
-      "timeout": 15,
-      "retries": 2,
-      "max_redirects": 5
     }
   ]
 }

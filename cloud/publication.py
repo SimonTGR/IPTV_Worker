@@ -99,10 +99,11 @@ def _media_verified_blocks(
 
 
 def build_public_playlists(
-    root: Path, *, media_probe: Callable[[list[str]], bool] | None = None,
+    root: Path | str, *, media_probe: Callable[[list[str]], bool] | None = None,
 ) -> dict:
-    source = root / "output" / "user_result.m3u"
-    report_path = root / "output" / "report.json"
+    root_path = Path(root)
+    source = root_path / "output" / "user_result.m3u"
+    report_path = root_path / "output" / "report.json"
     if not source.is_file() or not report_path.is_file():
         raise PublicationError("verified playlist or report is missing")
 
@@ -126,14 +127,14 @@ def build_public_playlists(
     if not direct_blocks:
         raise PublicationError("direct playlist has no channels after filtering")
 
-    public = root / "public_output"
+    public = root_path / "public_output"
     public.mkdir(parents=True, exist_ok=True)
     full_lines = prefix + [line for block in verified_blocks for line in block]
     direct_lines = prefix + [line for block in direct_blocks for line in block]
     (public / "full.m3u").write_text("\n".join(full_lines) + "\n", encoding="utf-8")
     (public / "live.m3u").write_text("\n".join(direct_lines) + "\n", encoding="utf-8")
 
-    epg_source = root / "output" / "epg" / "epg.gz"
+    epg_source = root_path / "output" / "epg" / "epg.gz"
     if epg_source.is_file():
         shutil.copyfile(epg_source, public / "epg.xml.gz")
 
