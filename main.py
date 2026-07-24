@@ -362,7 +362,7 @@ class UpdateSource:
             final_result = {}
             report_results = {}
             try:
-                if config.open_speed_test:
+                if config.open_speed_test and not os.getenv("GITHUB_ACTIONS"):
                     clear_cache()
                     await self._run_speed_test()
                 else:
