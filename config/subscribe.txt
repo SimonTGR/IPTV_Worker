@@ -1,10 +1,10 @@
-# 订阅源列表：包含萧雨萌萌广东/华南电信源及全网高可用公网单播源
-https://raw.githubusercontent.com/5d5d5f5f5f/10102/refs/heads/main/%E5%B9%BF%E4%B8%9C%E7%94%B5%E4%BF%A1.txt
-https://raw.githubusercontent.com/5d5d5f5f5f/10102/refs/heads/main/gd.txt
-https://raw.githubusercontent.com/5d5d5f5f5f/10102/refs/heads/main/%E5%B9%BF%E8%A5%BF%E7%94%B5%E4%BF%A1.txt
-https://raw.githubusercontent.com/5d5d5f5f5f/10102/refs/heads/main/%E7%A6%8F%E5%BB%BA%E7%94%B5%E4%BF%A1.txt
-https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u
-https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
-https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u
+# 订阅源列表：使用国内极速 CDN 镜像解决 raw.githubusercontent.com 国内直连超时问题
+https://cdn.jsdmirror.com/gh/5d5d5f5f5f/10102@main/广东电信.txt
+https://cdn.jsdmirror.com/gh/5d5d5f5f5f/10102@main/gd.txt
+https://cdn.jsdmirror.com/gh/5d5d5f5f5f/10102@main/广西电信.txt
+https://cdn.jsdmirror.com/gh/5d5d5f5f5f/10102@main/福建电信.txt
+https://cdn.jsdmirror.com/gh/fanmingming/live@main/tv/m3u/ipv6.m3u
+https://cdn.jsdmirror.com/gh/YanG-1989/m3u@main/Gather.m3u
+https://cdn.jsdmirror.com/gh/YueChan/Live@main/IPTV.m3u
 
 [WHITELIST]
