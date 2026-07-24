@@ -1,11 +1,4 @@
 # 这是订阅源列表，每行一个订阅地址
-# 支持设置UA：https://xxx.com/subscribe.m3u UA="xxx"
-
-https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/v4.m3u
-https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u
-https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
-https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u
-https://raw.githubusercontent.com/vxiaov/IPTV/main/live.m3u
-https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u
+https://raw.githubusercontent.com/5d5d5f5f5f/10102/refs/heads/main/0623.txt
 
 [WHITELIST]
