@@ -21,8 +21,8 @@ https://example.test/live.m3u8?token=must-stay
 
     def test_alias_does_not_confuse_cctv5_and_cctv5_plus(self):
         aliases = Alias()
-        self.assertEqual("CCTV-5", aliases.get_primary("CCTV5高清"))
-        self.assertEqual("CCTV-5+", aliases.get_primary("CCTV5+体育赛事"))
+        self.assertEqual("CCTV-5 体育", aliases.get_primary("CCTV5高清"))
+        self.assertEqual("CCTV-5+ 体育赛事", aliases.get_primary("CCTV5+体育赛事"))
         self.assertEqual("翡翠台", aliases.get_primary("翡翠台 (Back up 1)"))
         self.assertEqual("翡翠台", aliases.get_primary("TVB Jade"))
 

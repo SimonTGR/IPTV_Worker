@@ -16,7 +16,7 @@ def test_playlist_workflow_is_scheduled_serialized_and_uses_secrets():
     assert "public_output/live.m3u" in source
     assert "always() && hashFiles('public_output/live.m3u')" in source
     assert "if: success()" not in source
-    assert "python -m cloud.workflow run" in source
+    assert "python main.py" in source
     assert "sudo apt-get install --yes ffmpeg" in source
 
 

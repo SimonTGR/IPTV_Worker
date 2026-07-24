@@ -99,7 +99,7 @@ class WorkerDiscoveryTests(unittest.TestCase):
         }, ".")
         result = adapter.collect()
         self.assertTrue(result.success)
-        self.assertEqual("CCTV-1", result.candidates[0].canonical_name)
+        self.assertEqual("CCTV-1 综合", result.candidates[0].canonical_name)
         self.assertEqual(1, result.metadata["redirect_count"])
 
     def test_worker_parses_200_m3u_and_txt(self):

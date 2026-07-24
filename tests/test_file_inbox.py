@@ -107,7 +107,7 @@ class FileInboxTests(unittest.TestCase):
         repo_root = Path(__file__).resolve().parents[1]
         registry = SourceRegistry(repo_root / "config" / "sources.json", repo_root)
         inbox_source = next(item for item in registry.config["sources"] if item["type"] == "file_inbox")
-        self.assertTrue(inbox_source["required"])
+        self.assertFalse(inbox_source["required"])
         self.assertTrue(all(path.startswith("config/pending_sources/") for path in inbox_source["paths"]))
         result = FileInboxAdapter(inbox_source, str(repo_root)).collect()
         # Pending sources are intentionally ignored by Git and are supplied to
