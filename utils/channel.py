@@ -455,6 +455,10 @@ def get_channel_url(text):
     url_search = constants.url_pattern.search(text)
     if url_search:
         url = url_search.group()
+        if not url.startswith(("http://", "https://", "rtmp://", "rtsp://", "p2p://", "mitv://")):
+            return None
+        if any("\u4e00" <= c <= "\u9fff" for c in url):
+            return None
     return url
 
 
