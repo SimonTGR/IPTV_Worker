@@ -244,8 +244,10 @@ def get_total_urls(
 
         categorized_urls = supply_urls if info.get("supply") else primary_urls
         if ipv_prefer_bool:
-            if url_ipv_type in ipv_type_prefer:
-                categorized_urls[origin][url_ipv_type].append(info)
+            target_type = url_ipv_type if url_ipv_type in ipv_type_prefer else (ipv_type_prefer[0] if ipv_type_prefer else "all")
+            if target_type not in categorized_urls[origin]:
+                categorized_urls[origin][target_type] = []
+            categorized_urls[origin][target_type].append(info)
         else:
             categorized_urls[origin]["all"].append(info)
 
