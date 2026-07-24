@@ -658,6 +658,9 @@ def get_sort_result(
     """
     total_result = []
     for result in results:
+        if not config.open_speed_test or os.getenv("GITHUB_ACTIONS"):
+            total_result.append(result)
+            continue
         if not ipv6_support and result.get("ipv_type") == "ipv6":
             result.update(default_ipv6_result)
         result_speed, result_delay, resolution = (
