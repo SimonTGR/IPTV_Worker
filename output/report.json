@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-07-25T06:00:00.616021+00:00",
+  "generated_at": "2026-07-26T06:18:46.141099+00:00",
   "published": true,
   "publish_reasons": [],
   "validation": {
@@ -12,7 +12,7 @@
     "expected_channel_count": 56,
     "coverage": 0.9821428571428571,
     "minimum_coverage": 0.0,
-    "previous_channel_count": 48,
+    "previous_channel_count": 55,
     "drop_ratio": 0.0,
     "maximum_drop_ratio": 1.0,
     "critical_groups": []
@@ -5023,8 +5023,8 @@
     },
     "凤凰资讯": {
       "group": "🌊港·澳·台",
-      "candidate_count": 9,
-      "valid_count": 9,
+      "candidate_count": 8,
+      "valid_count": 8,
       "selected": [
         {
           "url": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
@@ -5056,20 +5056,6 @@
         }
       ],
       "rejected": [
-        {
-          "url": "https://fh.qquu.bid/stream.php?id=yt_fN9uYWCjQaw&expires=1784969916&token=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": null,
-          "content_verified": null,
-          "download_speed_mbps": null,
-          "bitrate_kbps": null,
-          "bitrate_estimated": null,
-          "resolution": null,
-          "delay_ms": null,
-          "stability": null,
-          "failure_reason": "not_selected_by_rank"
-        },
         {
           "url": "https://cdn6.cc.cd/163189/fhzx",
           "source_id": null,
@@ -9705,114 +9691,12 @@
   },
   "changes": {
     "added_channels": [
-      "2026-07-25 13:59:58",
-      "viuTV6",
-      "安徽卫视",
-      "广东公共",
-      "广东影视",
-      "广东新闻",
-      "新疆卫视",
-      "重庆卫视"
+      "2026-07-26 14:18:44"
     ],
     "removed_channels": [
-      "2026-07-24 17:25:04"
+      "2026-07-25 13:59:58"
     ],
     "main_source_changes": [
-      {
-        "channel": "CCTV-1 综合",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/608807420",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv1&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-10 科教",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/624878405",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv10&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-11 戏曲",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/667987558",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv11&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-12 社会与法",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/673168185",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv12&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-13 新闻",
-        "before": "http://ali-m-l.cztv.com/channels/lantian/channel21/1080p.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv13&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-14 少儿",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/624878440",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv14"
-      },
-      {
-        "channel": "CCTV-15 音乐",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/673168223",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv15&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-16 奥林匹克",
-        "before": "http://drive.mxmy.net:8888/udp/239.3.1.184:8001",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv16&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-17 农业农村",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/673168256",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv17&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-2 财经",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/631780532",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv2&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-3 综艺",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/624878271",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv3&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-4 中文国际",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/631780421",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv4&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-4K",
-        "before": "http://vip1.xinketongxun.fun:8082/tsfile/live/1026_1.m3u8",
-        "after": "http://220.173.24.168:4022/udp/239.81.0.196:4056"
-      },
-      {
-        "channel": "CCTV-5 体育",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/641886683",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv5&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-5+ 体育赛事",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/641886773",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv5p&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-6 电影",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/624878396",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv6&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-7 国防军事",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/673168121",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv7&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-8 电视剧",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/624878356",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv8&zy.m3u8="
-      },
-      {
-        "channel": "CCTV-9 纪录",
-        "before": "https://live.chinacert.cftest5.cn/cnmg/live/673168140",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv9&zy.m3u8="
-      },
       {
         "channel": "TVB Plus",
         "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
@@ -9824,69 +9708,9 @@
         "after": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A"
       },
       {
-        "channel": "凤凰中文",
+        "channel": "viuTV6",
         "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
-        "after": "http://120.40.62.241:1000/rtp/239.61.2.184:9092"
-      },
-      {
-        "channel": "凤凰资讯",
-        "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
-        "after": "http://120.40.62.241:1000/rtp/239.61.2.183:9086"
-      },
-      {
-        "channel": "四川卫视",
-        "before": "http://222.134.245.16:9901/tsfile/live/0123_1.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=scws&zy.m3u8="
-      },
-      {
-        "channel": "大湾区卫视",
-        "before": "http://183.11.239.36:808/hls/132/index.m3u8",
-        "after": "http://113.64.146.6:2024/hls/63/index.m3u8"
-      },
-      {
-        "channel": "天津卫视",
-        "before": "http://124.116.183.146:9901/tsfile/live/0135_1.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=tjws&zy.m3u8="
-      },
-      {
-        "channel": "宁夏卫视",
-        "before": "http://cssbyd.imwork.net:8082/hls/45/index.m3u8",
-        "after": "http://111.29.9.33:6610/000000001000/1000000002000031451/index.m3u8?channel-id=bestzb&Contentid=1000000002000031451&livemode=1&stbId=3"
-      },
-      {
-        "channel": "山东卫视",
-        "before": "http://183.11.239.36:808/hls/43/index.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=sdws&zy.m3u8="
-      },
-      {
-        "channel": "山西卫视",
-        "before": "http://119.39.9.8:9901/tsfile/live/0118_1.m3u8",
-        "after": "http://113.64.146.6:2024/hls/74/index.m3u8"
-      },
-      {
-        "channel": "广东体育",
-        "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
-        "after": "http://113.64.146.6:2024/hls/39/index.m3u8"
-      },
-      {
-        "channel": "广东卫视",
-        "before": "https://txmov2.a.kwimgs.com/upic/2023/01/26/09/BMjAyMzAxMjYwOTE3NDVfNzM5MzQzNzIyXzk0NjI1OTUwNTA3XzBfMw==_b_B81ddda927d33445d544befd008e60109.mp4",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=gdws&zy.m3u8="
-      },
-      {
-        "channel": "广东民生",
-        "before": "http://183.11.239.36:808/hls/18/index.m3u8",
-        "after": "http://58.63.67.183:8888/udp/239.77.0.225:5146"
-      },
-      {
-        "channel": "广东珠江",
-        "before": "https://cdn.qd.je/163189/gdzj",
-        "after": "http://113.64.146.6:2024/hls/36/index.m3u8"
-      },
-      {
-        "channel": "广西卫视",
-        "before": "https://hlscdn.liangtv.cn/live/de0f97348eb84f62aa6b7d8cf0430770/dd505d87880c478f901f38560ca4d4e6.m3u8",
-        "after": "http://111.29.9.33:6610/000000001000/1000000002000019837/index.m3u8?channel-id=bestzb&Contentid=1000000002000019837&livemode=1&stbId=3"
+        "after": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A"
       },
       {
         "channel": "无线新闻台",
@@ -9899,64 +9723,9 @@
         "after": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A"
       },
       {
-        "channel": "江苏卫视",
-        "before": "http://218.13.170.98:9901/tsfile/live/1003_1.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=jsws&zy.m3u8="
-      },
-      {
-        "channel": "江西卫视",
-        "before": "http://182.150.23.74:808/hls/30/index.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=jxws&zy.m3u8="
-      },
-      {
-        "channel": "河北卫视",
-        "before": "http://123.130.84.106:8154/tsfile/live/0117_1.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=hbws&zy.m3u8="
-      },
-      {
-        "channel": "浙江卫视",
-        "before": "https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=zjws&zy.m3u8="
-      },
-      {
-        "channel": "海南卫视",
-        "before": "http://cssbyd.imwork.net:8082/hls/31/index.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=hinws&zy.m3u8="
-      },
-      {
-        "channel": "深圳卫视",
-        "before": "http://38.64.72.148:80/hls/modn/list/4007/playlist.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=szws&zy.m3u8="
-      },
-      {
-        "channel": "湖南卫视",
-        "before": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=hunws&zy.m3u8="
-      },
-      {
-        "channel": "甘肃卫视",
-        "before": "http://live.zohi.tv/video/s10001-fztv-3/index.m3u8",
-        "after": "http://111.29.9.33:6610/000000001000/1000000002000017827/index.m3u8?channel-id=bestzb&Contentid=1000000002000017827&livemode=1&stbId=3"
-      },
-      {
-        "channel": "福建卫视",
-        "before": "http://61.136.172.236:9901/tsfile/live/0137_1.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=dnws&zy.m3u8="
-      },
-      {
         "channel": "翡翠台",
-        "before": "https://cdn.qd.je/163189/fct",
+        "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
         "after": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A"
-      },
-      {
-        "channel": "陕西卫视",
-        "before": "http://112.27.235.94:8000/hls/43/index.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=sxws&zy.m3u8="
-      },
-      {
-        "channel": "青海卫视",
-        "before": "http://123.130.84.106:8154/tsfile/live/0140_1.m3u8",
-        "after": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=qhws&zy.m3u8="
       }
     ]
   },
