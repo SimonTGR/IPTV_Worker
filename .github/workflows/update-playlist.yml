@@ -3,8 +3,8 @@ name: Update IPTV playlist
 on:
   workflow_dispatch:
   schedule:
-    # UTC 03:17; avoid the top-of-hour congestion common to scheduled workflows.
-    - cron: "17 3 * * *"
+    # UTC 03:17 and 15:17 (Beijing Time 11:17 AM & 23:17 PM)
+    - cron: "17 3,15 * * *"
 
 permissions:
   contents: write
