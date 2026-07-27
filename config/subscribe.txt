@@ -5,5 +5,7 @@ https://cdn.jsdmirror.com/gh/YanG-1989/m3u@main/Gather.m3u
 https://cdn.jsdmirror.com/gh/yuanzl77/IPTV@main/live.txt
 https://cdn.jsdmirror.com/gh/ssili126/tv@main/itvlist.m3u
 https://cdn.jsdmirror.com/gh/vxiaov/IPTV@main/iptv.m3u
+https://cdn.jsdmirror.com/gh/iptv-org/iptv@master/streams/hk.m3u
+https://cdn.jsdmirror.com/gh/iptv-org/iptv@master/streams/mo.m3u
 
 [WHITELIST]
