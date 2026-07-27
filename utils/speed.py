@@ -682,7 +682,9 @@ def get_sort_result(
             bitrate = result.get("bitrate_kbps")
             if config.open_filter_bitrate and bitrate is not None and bitrate < config.min_bitrate_kbps:
                 continue
-            if filter_resolution and resolution:
+            if filter_resolution:
+                if not resolution:
+                    continue
                 resolution_value = get_resolution_value(resolution)
                 if resolution_value < min_resolution or resolution_value > max_resolution:
                     continue
