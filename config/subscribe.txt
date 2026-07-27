@@ -1,11 +1,9 @@
-# 订阅源列表：包含 Jsnzkpg 永久IPTV订阅源、萧雨萌萌广东/华南电信源及全网高可用公网单播源
+# 订阅源列表：全网每日自动更新的顶级高可用公网单播源（使用 CDN 加速，保障 GitHub Actions 与国内均可高速访问）
 https://live.445569.xyz/live.m3u
-https://cdn.jsdmirror.com/gh/5d5d5f5f5f/10102@main/广东电信.txt
-https://cdn.jsdmirror.com/gh/5d5d5f5f5f/10102@main/gd.txt
-https://cdn.jsdmirror.com/gh/5d5d5f5f5f/10102@main/广西电信.txt
-https://cdn.jsdmirror.com/gh/5d5d5f5f5f/10102@main/福建电信.txt
 https://cdn.jsdmirror.com/gh/fanmingming/live@main/tv/m3u/ipv6.m3u
 https://cdn.jsdmirror.com/gh/YanG-1989/m3u@main/Gather.m3u
-https://cdn.jsdmirror.com/gh/YueChan/Live@main/IPTV.m3u
+https://cdn.jsdmirror.com/gh/yuanzl77/IPTV@main/live.txt
+https://cdn.jsdmirror.com/gh/ssili126/tv@main/itvlist.m3u
+https://cdn.jsdmirror.com/gh/vxiaov/IPTV@main/iptv.m3u
 
 [WHITELIST]
