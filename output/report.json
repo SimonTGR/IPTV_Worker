@@ -1,19 +1,19 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-07-27T03:10:56.808079+00:00",
+  "generated_at": "2026-07-27T03:39:29.433749+00:00",
   "published": true,
   "publish_reasons": [],
   "validation": {
     "m3u_reparsed": true,
-    "candidate_entry_count": 97,
-    "verified_entry_count": 97,
+    "candidate_entry_count": 94,
+    "verified_entry_count": 94,
     "filtered_unverified_entry_count": 0,
-    "channel_count": 49,
+    "channel_count": 48,
     "expected_channel_count": 56,
-    "coverage": 0.875,
+    "coverage": 0.8571428571428571,
     "minimum_coverage": 0.0,
-    "previous_channel_count": 55,
-    "drop_ratio": 0.10909090909090909,
+    "previous_channel_count": 49,
+    "drop_ratio": 0.02040816326530612,
     "maximum_drop_ratio": 1.0,
     "critical_groups": []
   },
@@ -50,34 +50,20 @@
     },
     "CCTV-1 综合": {
       "group": "📺央视频道",
-      "candidate_count": 217,
-      "valid_count": 76,
+      "candidate_count": 215,
+      "valid_count": 68,
       "selected": [
         {
-          "url": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv1&zy.m3u8=",
-          "source_id": null,
-          "source_type": null,
-          "playable": true,
-          "content_verified": true,
-          "download_speed_mbps": 23.92288410258908,
-          "bitrate_kbps": 3409.548717948718,
-          "bitrate_estimated": true,
-          "resolution": null,
-          "delay_ms": 168,
-          "stability": 1.0,
-          "failure_reason": null
-        },
-        {
-          "url": "http://drive.mxmy.net:8888/udp/239.3.1.129:8008",
+          "url": "http://120.76.248.139/live/bfgd/4200000484.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.08663738886440113,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
+          "download_speed_mbps": 1.1465310563992042,
+          "bitrate_kbps": 5151.696174863388,
+          "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 535,
+          "delay_ms": 3001,
           "stability": 1.0,
           "failure_reason": null
         }
@@ -252,7 +238,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://60.12.183.46:9901/tsfile/live/0001_1.m3u8",
+          "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000004000002226&livemode=1&stbId=yu&mode=1",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -266,7 +252,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=bestzb&Contentid=5000000004000002226&livemode=1&stbId=yu&mode=1",
+          "url": "http://60.12.183.46:9901/tsfile/live/0001_1.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -294,7 +280,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://220.164.192.48:50085/tsfile/live/0002_1.m3u8",
+          "url": "http://kxrj.site:64325/86/mg.php?id=cctv1",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -308,7 +294,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://kxrj.site:64325/86/mg.php?id=cctv1",
+          "url": "http://220.164.192.48:50085/tsfile/live/0002_1.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -336,20 +322,6 @@
           "failure_reason": "invalid_playlist"
         },
         {
-          "url": "http://47.104.178.59:3566/608807420",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "http://58.19.244.92:1111/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -365,6 +337,20 @@
         },
         {
           "url": "http://182.92.109.190:1668/migu720/migu720.php?id=cctv1",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://47.104.178.59:3566/608807420",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -406,7 +392,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://211.101.246.28:3000/608807420",
+          "url": "http://wfenf.x3322.net:7788/608807420",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -417,10 +403,10 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "timeout"
+          "failure_reason": "http_error"
         },
         {
-          "url": "http://wfenf.x3322.net:7788/608807420",
+          "url": "http://211.101.246.28:3000/608807420",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -602,35 +588,21 @@
           "failure_reason": "timeout"
         },
         {
+          "url": "https://api.olelive.com/dis/live/CCTV1HD/hls.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "invalid_playlist"
+        },
+        {
           "url": "http://www.zzlag.top:9087/tsfile/live/1010_1.m3u8?key=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "http://mail.petzhu.top:7000/rtp/239.254.200.45:8008",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "http://58.57.21.166:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -658,7 +630,7 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "https://api.olelive.com/dis/live/CCTV1HD/hls.m3u8",
+          "url": "http://mail.petzhu.top:7000/rtp/239.254.200.45:8008",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -669,10 +641,24 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "invalid_playlist"
+          "failure_reason": "http_error"
         },
         {
-          "url": "http://jxcbn.ws-cdn.gitv.tv/hls/CCTV1HD/index.m3u8?gMac=unknown&livodToken=%2A%2A%2A&fromCDN=ws",
+          "url": "http://58.51.111.46:1111/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://171.8.247.154:808/hls/1/index.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -700,6 +686,20 @@
           "failure_reason": "http_error"
         },
         {
+          "url": "http://jxcbn.ws-cdn.gitv.tv/hls/CCTV1HD/index.m3u8?gMac=unknown&livodToken=%2A%2A%2A&fromCDN=ws",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
           "url": "http://218.76.32.193:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -714,7 +714,7 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://58.51.111.46:1111/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "http://58.57.21.166:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -742,21 +742,7 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://183.185.105.197:8082/rtp/226.0.2.153:9136",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "timeout"
-        },
-        {
-          "url": "http://171.8.247.154:808/hls/1/index.m3u8",
+          "url": "http://171.108.239.79:8181/tsfile/live/1027_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -770,7 +756,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://171.213.196.134:8088/udp/239.93.0.184:5140",
+          "url": "http://183.185.105.197:8082/rtp/226.0.2.153:9136",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -798,7 +784,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://114.228.152.34:8888/rtp/239.49.8.129:6000",
+          "url": "http://171.213.196.134:8088/udp/239.93.0.184:5140",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -812,7 +798,7 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://171.108.239.79:8181/tsfile/live/1027_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "http://110.80.17.38:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -868,7 +854,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://110.80.17.38:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A",
+          "url": "http://114.228.152.34:8888/rtp/239.49.8.129:6000",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -879,7 +865,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "timeout"
         },
         {
           "url": "http://180.119.183.89:8800/rtp/239.49.8.129:6000",
@@ -1064,20 +1050,6 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://36.248.137.69:60033/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "http://alvin.ergotron.net:8000/udp/239.77.1.17:5146",
           "source_id": null,
           "source_type": null,
@@ -1090,6 +1062,20 @@
           "delay_ms": -1,
           "stability": 0.0,
           "failure_reason": "timeout"
+        },
+        {
+          "url": "http://36.248.137.69:60033/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
         },
         {
           "url": "http://218.241.192.50:8808/rtp/239.3.1.129:8008",
@@ -1176,7 +1162,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://dsm.huarunguoji.top:35455/itv/1000000005000265001.m3u8?cdn=ystenlive",
+          "url": "http://iptv.0564.org:35455/itv/1000000005000265001.m3u8?cdn=ystenlive",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1190,7 +1176,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://iptv.0564.org:35455/itv/1000000005000265001.m3u8?cdn=ystenlive",
+          "url": "http://dsm.huarunguoji.top:35455/itv/1000000005000265001.m3u8?cdn=ystenlive",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1218,20 +1204,6 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://php.jdshipin.com/TVOD/iptv.php?id=rthk33",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "invalid_playlist"
-        },
-        {
           "url": "http://171.108.239.98:8181/tsfile/live/1027_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -1244,6 +1216,20 @@
           "delay_ms": -1,
           "stability": 0.0,
           "failure_reason": "timeout"
+        },
+        {
+          "url": "http://php.jdshipin.com/TVOD/iptv.php?id=rthk33",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "invalid_playlist"
         },
         {
           "url": "http://59.62.8.250:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=0&authid=%2A%2A%2A",
@@ -1288,20 +1274,6 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://60.172.130.146:352/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "http://113.57.93.165:9900/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -1316,7 +1288,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "rtsp://115.153.254.81/PLTV/88888888/224/3221225699/iptv8040.smil",
+          "url": "http://60.172.130.146:352/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1327,7 +1299,21 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "no_media_stream"
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://61.136.67.238:50085/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
         },
         {
           "url": "http://117.27.190.42:9998/tsfile/live/23232_1.m3u8?key=%2A%2A%2A",
@@ -1344,7 +1330,7 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://61.136.67.238:50085/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "rtsp://115.153.254.81/PLTV/88888888/224/3221225699/iptv8040.smil",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1355,7 +1341,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "no_media_stream"
         },
         {
           "url": "http://171.108.239.99:8181/tsfile/live/1027_1.m3u8?key=%2A%2A%2A",
@@ -1412,6 +1398,20 @@
           "delay_ms": -1,
           "stability": 0.0,
           "failure_reason": "invalid_playlist"
+        },
+        {
+          "url": "http://183.11.239.36:808/hls/19/index.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": true,
+          "content_verified": null,
+          "download_speed_mbps": 0.021579493637190042,
+          "bitrate_kbps": 135.80100000000002,
+          "bitrate_estimated": true,
+          "resolution": null,
+          "delay_ms": 3001,
+          "stability": 1.0,
+          "failure_reason": "not_selected_by_rank"
         },
         {
           "url": "https://www.freetv.top/migu/608807420.m3u8?migutoken=%2A%2A%2A",
@@ -1484,34 +1484,6 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://183.11.239.36:808/hls/19/index.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": true,
-          "content_verified": null,
-          "download_speed_mbps": 0.044283628795551686,
-          "bitrate_kbps": 247.185,
-          "bitrate_estimated": true,
-          "resolution": null,
-          "delay_ms": 3001,
-          "stability": 1.0,
-          "failure_reason": "not_selected_by_rank"
-        },
-        {
-          "url": "http://223.105.252.60/PLTV/4/224/3221228581/index.m3u8?servicetype=1",
-          "source_id": null,
-          "source_type": null,
-          "playable": true,
-          "content_verified": null,
-          "download_speed_mbps": 0.0004651574802869881,
-          "bitrate_kbps": 0.1904,
-          "bitrate_estimated": true,
-          "resolution": null,
-          "delay_ms": 1698,
-          "stability": 1.0,
-          "failure_reason": "not_selected_by_rank"
-        },
-        {
           "url": "http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225501/index.m3u8?fmt=ts2hls",
           "source_id": null,
           "source_type": null,
@@ -1524,6 +1496,34 @@
           "delay_ms": -1,
           "stability": 0.0,
           "failure_reason": "timeout"
+        },
+        {
+          "url": "http://qjrhc.jydjd.top:2911/udp/224.1.100.90:11111",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://60.214.104.110:352/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
         },
         {
           "url": "http://115.153.254.81/PLTV/88888888/224/3221225699/iptv8040.smil/index.m3u8?fmt=ts2hls",
@@ -1554,20 +1554,6 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://qjrhc.jydjd.top:2911/udp/224.1.100.90:11111",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "http://175.18.189.238:9998/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -1582,7 +1568,7 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://60.214.104.110:352/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "http://182.91.124.224:9901/tsfile/live/1037_1.m3u8?key=%2A%2A%2A&playlive=0&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1597,20 +1583,6 @@
         },
         {
           "url": "http://183.66.15.146:60901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "http://182.91.124.224:9901/tsfile/live/1037_1.m3u8?key=%2A%2A%2A&playlive=0&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1652,6 +1624,34 @@
           "failure_reason": "http_error"
         },
         {
+          "url": "https://cdn5.163189.xyz/live/cctv1/stream.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://223.105.252.60/PLTV/4/224/3221228581/index.m3u8?servicetype=1",
+          "source_id": null,
+          "source_type": null,
+          "playable": true,
+          "content_verified": null,
+          "download_speed_mbps": 0.0001815102236896629,
+          "bitrate_kbps": 0.7616,
+          "bitrate_estimated": true,
+          "resolution": null,
+          "delay_ms": 3002,
+          "stability": 1.0,
+          "failure_reason": "not_selected_by_rank"
+        },
+        {
           "url": "http://110.42.45.89:35455/itv/1000000005000265001.m3u8?cdn=ystenlive",
           "source_id": null,
           "source_type": null,
@@ -1666,7 +1666,7 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "https://cdn5.163189.xyz/live/cctv1/stream.m3u8",
+          "url": "http://psp94525.iask.in:6688/udp/239.93.0.148:5140",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1708,7 +1708,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://psp94525.iask.in:6688/udp/239.93.0.148:5140",
+          "url": "https://ldncctvwbndhwy.cntv.myhwcdn.cn/ldncctvwbnd/ldcctv1_2/index.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1736,20 +1736,6 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "https://ldncctvwbndhwy.cntv.myhwcdn.cn/ldncctvwbnd/ldcctv1_2/index.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "http://wouu.net:9977/udp/239.93.0.184:5140",
           "source_id": null,
           "source_type": null,
@@ -1764,35 +1750,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://e1.woc.iiiya.cn:8888/rtp/239.61.3.61:9884",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "http://home.wwang.pw:35455/itv/1000000005000265001.m3u8?cdn=ystenlive",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "http://120.192.226.35:8009/hls/501/index.m3u8",
+          "url": "http://123.130.84.106:8154/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1820,6 +1778,48 @@
           "failure_reason": "http_error"
         },
         {
+          "url": "http://home.wwang.pw:35455/itv/1000000005000265001.m3u8?cdn=ystenlive",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://e1.woc.iiiya.cn:8888/rtp/239.61.3.61:9884",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://120.192.226.35:8009/hls/501/index.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "timeout"
+        },
+        {
           "url": "http://60.29.124.66:6080/hls/12/index.m3u8",
           "source_id": null,
           "source_type": null,
@@ -1834,115 +1834,73 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://123.130.84.106:8154/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "http://110.53.52.63:8888/newlive/live/hls/2/live.m3u8",
           "source_id": null,
           "source_type": null,
-          "playable": true,
+          "playable": false,
           "content_verified": null,
-          "download_speed_mbps": 0.00020928929818200048,
+          "download_speed_mbps": 0.0,
           "bitrate_kbps": null,
           "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": 1955,
-          "stability": 1.0,
-          "failure_reason": "not_selected_by_rank"
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "timeout"
         },
         {
-          "url": "http://110.7.131.4:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "http://116.9.204.242:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
-          "playable": null,
+          "playable": false,
           "content_verified": null,
-          "download_speed_mbps": null,
+          "download_speed_mbps": 0.0,
           "bitrate_kbps": null,
-          "bitrate_estimated": null,
+          "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": null,
+          "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "not_selected_by_rank"
-        },
-        {
-          "url": "http://110.7.131.193:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": null,
-          "content_verified": null,
-          "download_speed_mbps": null,
-          "bitrate_kbps": null,
-          "bitrate_estimated": null,
-          "resolution": null,
-          "delay_ms": null,
-          "stability": 0.0,
-          "failure_reason": "not_selected_by_rank"
+          "failure_reason": "timeout"
         },
         {
           "url": "http://110.7.131.231:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
-          "playable": null,
+          "playable": false,
           "content_verified": null,
-          "download_speed_mbps": null,
+          "download_speed_mbps": 0.0,
           "bitrate_kbps": null,
-          "bitrate_estimated": null,
+          "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": null,
+          "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "not_selected_by_rank"
+          "failure_reason": "http_error"
         },
         {
           "url": "http://121.11.160.7:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
-          "playable": null,
+          "playable": false,
           "content_verified": null,
-          "download_speed_mbps": null,
+          "download_speed_mbps": 0.0,
           "bitrate_kbps": null,
-          "bitrate_estimated": null,
+          "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": null,
+          "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "not_selected_by_rank"
+          "failure_reason": "http_error"
         },
         {
-          "url": "http://182.150.23.74:808/hls/1/index.m3u8",
+          "url": "http://112.46.85.60:8009/hls/501/index.m3u8",
           "source_id": null,
           "source_type": null,
-          "playable": null,
+          "playable": true,
           "content_verified": null,
-          "download_speed_mbps": null,
-          "bitrate_kbps": null,
-          "bitrate_estimated": null,
+          "download_speed_mbps": 0.04764973574239878,
+          "bitrate_kbps": 283.45619999999997,
+          "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": null,
-          "stability": 0.0,
-          "failure_reason": "not_selected_by_rank"
-        },
-        {
-          "url": "http://222.219.183.103:8089/hls/1/index.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": null,
-          "content_verified": null,
-          "download_speed_mbps": null,
-          "bitrate_kbps": null,
-          "bitrate_estimated": null,
-          "resolution": null,
-          "delay_ms": null,
-          "stability": 0.0,
-          "failure_reason": "not_selected_by_rank"
-        },
-        {
-          "url": "http://58.19.43.46:9901/tsfile/live/1020_1.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": null,
-          "content_verified": null,
-          "download_speed_mbps": null,
-          "bitrate_kbps": null,
-          "bitrate_estimated": null,
-          "resolution": null,
-          "delay_ms": null,
-          "stability": 0.0,
+          "delay_ms": 3002,
+          "stability": 1.0,
           "failure_reason": "not_selected_by_rank"
         },
         {
@@ -2828,7 +2786,7 @@
           "failure_reason": "not_selected_by_rank"
         },
         {
-          "url": "http://110.53.52.63:8888/newlive/live/hls/2/live.m3u8",
+          "url": "http://222.169.85.8:9901/tsfile/live/0001_1.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -2840,65 +2798,23 @@
           "delay_ms": -1,
           "stability": 0.0,
           "failure_reason": "http_error"
-        },
-        {
-          "url": "http://116.9.204.242:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "http://112.46.85.60:8009/hls/501/index.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": true,
-          "content_verified": null,
-          "download_speed_mbps": 0.03405400494559935,
-          "bitrate_kbps": 214.2932,
-          "bitrate_estimated": true,
-          "resolution": null,
-          "delay_ms": 3001,
-          "stability": 1.0,
-          "failure_reason": "not_selected_by_rank"
-        },
-        {
-          "url": "http://120.76.248.139/live/bfgd/4200000484.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": 3001,
-          "stability": 0.0,
-          "failure_reason": "invalid_playlist"
-        },
-        {
-          "url": "http://113.218.229.47:8081/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "timeout"
         },
         {
           "url": "http://218.93.208.172:35455/migu/608807420.m3u8?migutoken=%2A%2A%2A",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://113.218.229.47:8081/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -2926,20 +2842,6 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://222.169.85.8:9901/tsfile/live/0001_1.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "timeout"
-        },
-        {
           "url": "http://220.202.110.48:9003/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -2954,6 +2856,20 @@
           "failure_reason": "timeout"
         },
         {
+          "url": "http://182.150.23.74:808/hls/1/index.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": true,
+          "content_verified": null,
+          "download_speed_mbps": 0.042859229407075136,
+          "bitrate_kbps": 249.72185185185182,
+          "bitrate_estimated": true,
+          "resolution": null,
+          "delay_ms": 3001,
+          "stability": 1.0,
+          "failure_reason": "not_selected_by_rank"
+        },
+        {
           "url": "http://39.164.180.36:19901/tsfile/live/0001_2.m3u8?key=%2A%2A%2A&playlive=0&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -2965,7 +2881,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "timeout"
+          "failure_reason": "http_error"
         },
         {
           "url": "http://39.170.52.236:808/hls/1/index.m3u8",
@@ -2979,7 +2895,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "timeout"
+          "failure_reason": "http_error"
         },
         {
           "url": "http://211.101.234.24:866/aishang/migu.php/migu.php?id=cctv1",
@@ -2993,7 +2909,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "timeout"
+          "failure_reason": "http_error"
         },
         {
           "url": "http://116.117.104.34:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
@@ -3035,7 +2951,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "timeout"
         },
         {
           "url": "http://116.117.107.20:8096/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
@@ -3049,7 +2965,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "timeout"
         },
         {
           "url": "http://110.7.131.79:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
@@ -3063,7 +2979,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "timeout"
         },
         {
           "url": "http://110.7.131.146:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
@@ -3077,7 +2993,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "timeout"
         },
         {
           "url": "http://110.7.131.40:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
@@ -3091,14 +3007,70 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "timeout"
+        },
+        {
+          "url": "http://110.7.131.4:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "timeout"
+        },
+        {
+          "url": "http://110.7.131.193:9901/tsfile/live/0001_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "timeout"
+        },
+        {
+          "url": "http://222.219.183.103:8089/hls/1/index.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "timeout"
+        },
+        {
+          "url": "http://58.19.43.46:9901/tsfile/live/1020_1.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "timeout"
         }
       ]
     },
     "CCTV-2 财经": {
       "group": "📺央视频道",
       "candidate_count": 31,
-      "valid_count": 0,
+      "valid_count": 1,
       "selected": [],
       "rejected": [
         {
@@ -3130,7 +3102,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://5.itv.nctv.top:5000/TVOD/6000000001000014161/wasusyt/index.m3u8",
+          "url": "http://1752e145z8.vicp.fun:35455/gaoma/cctv2.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -3158,7 +3130,21 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://1752e145z8.vicp.fun:35455/gaoma/cctv2.m3u8",
+          "url": "http://5.itv.nctv.top:5000/TVOD/6000000001000014161/wasusyt/index.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://webmail.axxe.top:4022/rtp/239.3.1.60:8084",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -3200,7 +3186,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://webmail.axxe.top:4022/rtp/239.3.1.60:8084",
+          "url": "http://tv.20191209.xyz:37377/migu/631780532.m3u8?migutoken=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -3228,20 +3214,6 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://tv.20191209.xyz:37377/migu/631780532.m3u8?migutoken=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "http://218.58.136.82:352/tsfile/live/0002_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -3256,7 +3228,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://116.77.32.59:8277/streams/d/cctv2/playlist.m3u8",
+          "url": "http://123.138.216.44:9902/tsfile/live/0002_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -3270,7 +3242,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://123.138.216.44:9902/tsfile/live/0002_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "http://116.77.32.59:8277/streams/d/cctv2/playlist.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -3525,22 +3497,22 @@
           "url": "http://218.13.170.98:9901/tsfile/live/0002_1.m3u8",
           "source_id": null,
           "source_type": null,
-          "playable": false,
+          "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.0,
+          "download_speed_mbps": 0.00018062805146055376,
           "bitrate_kbps": null,
           "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": 3002,
-          "stability": 0.0,
-          "failure_reason": "timeout"
+          "delay_ms": 2266,
+          "stability": 1.0,
+          "failure_reason": "not_selected_by_rank"
         }
       ]
     },
     "CCTV-3 综艺": {
       "group": "📺央视频道",
       "candidate_count": 13,
-      "valid_count": 2,
+      "valid_count": 1,
       "selected": [],
       "rejected": [
         {
@@ -3633,11 +3605,11 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.04707799983330939,
-          "bitrate_kbps": 282.1982857142857,
+          "download_speed_mbps": 0.025383904289095854,
+          "bitrate_kbps": 143.2062857142857,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 3002,
+          "delay_ms": 3001,
           "stability": 1.0,
           "failure_reason": "not_selected_by_rank"
         },
@@ -3645,15 +3617,15 @@
           "url": "http://223.105.252.59/PLTV/4/224/3221228499/index.m3u8?servicetype=1",
           "source_id": null,
           "source_type": null,
-          "playable": true,
+          "playable": false,
           "content_verified": null,
-          "download_speed_mbps": 0.0008075975461188492,
-          "bitrate_kbps": 0.1904,
-          "bitrate_estimated": true,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": 1730,
-          "stability": 1.0,
-          "failure_reason": "not_selected_by_rank"
+          "delay_ms": 295,
+          "stability": 0.0,
+          "failure_reason": "invalid_playlist"
         },
         {
           "url": "http://111.29.9.38:6610/000000001000/1000000001000011218/index.m3u8?channel-id=ystenlive&Contentid=1000000001000011218&livemode=1&stbId=3",
@@ -3738,11 +3710,11 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.41104530644458454,
+          "download_speed_mbps": 0.6089259272460564,
           "bitrate_kbps": null,
           "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": 514,
+          "delay_ms": 405,
           "stability": 1.0,
           "failure_reason": null
         }
@@ -3810,11 +3782,11 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.3230296731610873,
-          "bitrate_kbps": 1614.2116443836271,
+          "download_speed_mbps": 0.31675423455557544,
+          "bitrate_kbps": 1657.0729626808836,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 3002,
+          "delay_ms": 3001,
           "stability": 1.0,
           "failure_reason": "not_selected_by_rank"
         },
@@ -3981,6 +3953,20 @@
           "failure_reason": "http_error"
         },
         {
+          "url": "http://223.105.252.61/PLTV/4/224/3221228502/index.m3u8?servicetype=1",
+          "source_id": null,
+          "source_type": null,
+          "playable": true,
+          "content_verified": null,
+          "download_speed_mbps": 0.0012237402057744258,
+          "bitrate_kbps": 0.1904,
+          "bitrate_estimated": true,
+          "resolution": null,
+          "delay_ms": 1650,
+          "stability": 1.0,
+          "failure_reason": "not_selected_by_rank"
+        },
+        {
           "url": "http://121.19.134.225:808/tsfile/live/0018_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -4037,20 +4023,6 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://223.105.252.61/PLTV/4/224/3221228502/index.m3u8?servicetype=1",
-          "source_id": null,
-          "source_type": null,
-          "playable": true,
-          "content_verified": null,
-          "download_speed_mbps": 4.537499766452218e-05,
-          "bitrate_kbps": 0.1904,
-          "bitrate_estimated": true,
-          "resolution": null,
-          "delay_ms": 3002,
-          "stability": 1.0,
-          "failure_reason": "not_selected_by_rank"
-        },
-        {
           "url": "http://182.241.192.110:8899/tsfile/live/1008_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -4077,8 +4049,8 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.18268614913441736,
-          "bitrate_kbps": 437.65344,
+          "download_speed_mbps": 0.27478491346654965,
+          "bitrate_kbps": 691.7232,
           "bitrate_estimated": true,
           "resolution": null,
           "delay_ms": 3001,
@@ -4087,6 +4059,20 @@
         }
       ],
       "rejected": [
+        {
+          "url": "http://www.douzhicloud.site:35455/gaoma/cctv5p.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
         {
           "url": "http://hms184nc1972679574.live.aikan.miguvideo.com/wh7f454c46tw4035956330_-1197773273/wd_r2/cctv/cctv5plusnew/2500/01.m3u8?msisdn=guest&Channel_ID=0119_04102000-99000_400300000040002&client_ip=112.45.97.120&timestamp=20230208130700&ContentId=265106763&timezone=UTC&mtv_session=b1d7170ccd660150baa2e9435d787064&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=dfe2cfbc447ddc224a226f33be3d0f39",
           "source_id": null,
@@ -4103,20 +4089,6 @@
         },
         {
           "url": "http://fangke.blueswords.com:9901/tsfile/live/0016_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "http://www.douzhicloud.site:35455/gaoma/cctv5p.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -4163,8 +4135,8 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.058623130570021956,
-          "bitrate_kbps": 368.902,
+          "download_speed_mbps": 0.06415777612726235,
+          "bitrate_kbps": 403.7148,
           "bitrate_estimated": true,
           "resolution": null,
           "delay_ms": 3001,
@@ -4194,20 +4166,6 @@
       "selected": [],
       "rejected": [
         {
-          "url": "http://123.189.36.39:9901/tsfile/live/1005_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "http://mobilelive-timeshift.ysp.cctv.cn/timeshift/ysp/2013693901/timeshift.m3u8?delay=0",
           "source_id": null,
           "source_type": null,
@@ -4222,7 +4180,21 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://mobilelive-ds.ysp.cctv.cn/ysp/2013693901.m3u8",
+          "url": "http://123.189.36.39:9901/tsfile/live/1005_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://cdn.jdshipin.com:8880/ysp.php?id=cctv6",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -4250,7 +4222,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://cdn.jdshipin.com:8880/ysp.php?id=cctv6",
+          "url": "http://mobilelive-ds.ysp.cctv.cn/ysp/2013693901.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -4314,7 +4286,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://182.37.169.94:352/tsfile/live/0007_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "http://218.13.14.6:60050/tsfile/live/1007_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -4328,7 +4300,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://218.13.14.6:60050/tsfile/live/1007_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "http://182.37.169.94:352/tsfile/live/0007_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -4439,8 +4411,8 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.00018153832404080859,
-          "bitrate_kbps": 0.45696,
+          "download_speed_mbps": 9.07600892003143e-05,
+          "bitrate_kbps": 0.22848,
           "bitrate_estimated": true,
           "resolution": null,
           "delay_ms": 3001,
@@ -4816,8 +4788,8 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.03604093916589424,
-          "bitrate_kbps": 169.9712,
+          "download_speed_mbps": 0.024618958954023787,
+          "bitrate_kbps": 123.92831999999999,
           "bitrate_estimated": true,
           "resolution": null,
           "delay_ms": 3001,
@@ -5026,7 +4998,7 @@
     },
     "翡翠台": {
       "group": "🌊港·澳·台",
-      "candidate_count": 23,
+      "candidate_count": 22,
       "valid_count": 3,
       "selected": [
         {
@@ -5035,11 +5007,11 @@
           "source_type": null,
           "playable": true,
           "content_verified": true,
-          "download_speed_mbps": 4.922943163618271,
+          "download_speed_mbps": 1.2966550758529567,
           "bitrate_kbps": 459.86546091824243,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 114,
+          "delay_ms": 416,
           "stability": 1.0,
           "failure_reason": null
         }
@@ -5051,25 +5023,11 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 60.45287189189338,
-          "bitrate_kbps": 8573.774581939799,
+          "download_speed_mbps": 39.40955085191508,
+          "bitrate_kbps": 8592.384641068447,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 239,
-          "stability": 1.0,
-          "failure_reason": "not_selected_by_rank"
-        },
-        {
-          "url": "https://cdn.qd.je/163189/fct4k",
-          "source_id": null,
-          "source_type": null,
-          "playable": true,
-          "content_verified": null,
-          "download_speed_mbps": 80.80561062611658,
-          "bitrate_kbps": 15322.26857142857,
-          "bitrate_estimated": true,
-          "resolution": null,
-          "delay_ms": 263,
+          "delay_ms": 352,
           "stability": 1.0,
           "failure_reason": "not_selected_by_rank"
         },
@@ -5088,7 +5046,21 @@
           "failure_reason": "invalid_playlist"
         },
         {
-          "url": "http://grandprix2023.asuscomm.com:8889/bysid/1.m3u8",
+          "url": "https://cdn.qd.je/163189/fct4k",
+          "source_id": null,
+          "source_type": null,
+          "playable": true,
+          "content_verified": null,
+          "download_speed_mbps": 75.63211370957877,
+          "bitrate_kbps": 14936.062857142857,
+          "bitrate_estimated": true,
+          "resolution": null,
+          "delay_ms": 367,
+          "stability": 1.0,
+          "failure_reason": "not_selected_by_rank"
+        },
+        {
+          "url": "http://zw9999.cnstream.top:80/play/ubI0Nrlni6TwusjXuSxNxA5oJl8b5Icz-0MXK7POxcc/ts",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5102,7 +5074,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://zw9999.cnstream.top:80/play/ubI0Nrlni6TwusjXuSxNxA5oJl8b5Icz-0MXK7POxcc/ts",
+          "url": "http://v2h.jdshipin.com/jade2/jade.stream/chunklist_w100.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5130,20 +5102,6 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://cdn5.1678520.xyz/live/?id=fct",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "https://cdn.163189.xyz/live/fct4k/stream.m3u8",
           "source_id": null,
           "source_type": null,
@@ -5158,7 +5116,21 @@
           "failure_reason": "invalid_playlist"
         },
         {
-          "url": "http://v2h.jdshipin.com/jade2/jade.stream/chunklist_w100.m3u8",
+          "url": "http://cdn5.1678520.xyz/live/?id=fct",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://grandprix2023.asuscomm.com:8889/bysid/1.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5186,7 +5158,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://m.osvs.asia:8000/bysid/1",
+          "url": "https://aktv.top/AKTV/live/aktv/null-16/AKTV.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5197,7 +5169,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "invalid_playlist"
         },
         {
           "url": "http://r.jdshipin.com/GeWKr?id=fct406",
@@ -5214,21 +5186,7 @@
           "failure_reason": "invalid_playlist"
         },
         {
-          "url": "https://aktv.top/AKTV/live/aktv/null-16/AKTV.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "invalid_playlist"
-        },
-        {
-          "url": "http://mzitv.cn:32/tsfile/live/1016_1.m3u8",
+          "url": "http://m.osvs.asia:8000/bysid/1",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5242,21 +5200,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://185.243.7.13:80/play/live.php?mac=00%3A1A%3A79%3A45%3A5E%3A9A&stream=941619&extension=ts&play_token=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": 193,
-          "stability": 0.0,
-          "failure_reason": "invalid_playlist"
-        },
-        {
-          "url": "http://fm1077.serv00.net/Smart.php?id=jade_twn",
+          "url": "http://mzitv.cn:32/tsfile/live/1016_1.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5298,20 +5242,6 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://ali.hlspull.yximgs.com/live/l3w1tt2dkzvpukkliu64ah005-golive.flv",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
@@ -5326,7 +5256,35 @@
           "failure_reason": "invalid_playlist"
         },
         {
-          "url": "http://tvdrs.wsrtv.com.cn:8100/channellive/ch1.flv",
+          "url": "http://fm1077.serv00.net/Smart.php?id=jade_twn",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://ali.hlspull.yximgs.com/live/l3w1tt2dkzvpukkliu64ah005-golive.flv",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://cdn9.163189.xyz/smt1.1.php?id=jade_twn",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5340,7 +5298,7 @@
           "failure_reason": "timeout"
         },
         {
-          "url": "http://cdn9.163189.xyz/smt1.1.php?id=jade_twn",
+          "url": "http://tvdrs.wsrtv.com.cn:8100/channellive/ch1.flv",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5366,11 +5324,11 @@
           "source_type": null,
           "playable": true,
           "content_verified": true,
-          "download_speed_mbps": 32.812868971373895,
-          "bitrate_kbps": 4395.466857142857,
+          "download_speed_mbps": 24.13004105761989,
+          "bitrate_kbps": 4382.521714285715,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 269,
+          "delay_ms": 330,
           "stability": 1.0,
           "failure_reason": null
         }
@@ -5382,8 +5340,8 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.0815048528140277,
-          "bitrate_kbps": 172.57864,
+          "download_speed_mbps": 0.15635712007261518,
+          "bitrate_kbps": 319.63008,
           "bitrate_estimated": true,
           "resolution": null,
           "delay_ms": 3001,
@@ -5432,11 +5390,11 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 1.5943617215158739,
-          "bitrate_kbps": 2308.613933333333,
+          "download_speed_mbps": 0.38920186835580983,
+          "bitrate_kbps": 744.4794666666667,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 1107,
+          "delay_ms": 1496,
           "stability": 1.0,
           "failure_reason": null
         }
@@ -5500,20 +5458,6 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://cdn.163189.xyz/live/fhzw/stream.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "invalid_playlist"
-        },
-        {
           "url": "http://122.117.71.103:8574/http/61.222.53.250:8078/hls/21/80/phoenixch.m3u8",
           "source_id": null,
           "source_type": null,
@@ -5526,6 +5470,20 @@
           "delay_ms": -1,
           "stability": 0.0,
           "failure_reason": "http_error"
+        },
+        {
+          "url": "http://cdn.163189.xyz/live/fhzw/stream.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "invalid_playlist"
         },
         {
           "url": "http://223.109.210.41/1301-tx.otvstream.otvcloud.com/otv/skcc/live/channel52003/index.m3u8",
@@ -5570,7 +5528,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://yujukoo.gicp.net:8888/udp/239.93.0.162:2192",
+          "url": "http://116.162.6.192/1.v.smtcdns.net/qctv.fengshows.cn/live/0701pcc72.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5584,7 +5542,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://116.162.6.192/1.v.smtcdns.net/qctv.fengshows.cn/live/0701pcc72.m3u8",
+          "url": "http://yujukoo.gicp.net:8888/udp/239.93.0.162:2192",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5651,7 +5609,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "timeout"
         },
         {
           "url": "http://www.terrykang.cn:5678/sxg.php?id=test1_4000",
@@ -5736,11 +5694,11 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.23462244675957672,
-          "bitrate_kbps": 586.31728,
+          "download_speed_mbps": 0.3442177829038098,
+          "bitrate_kbps": 883.4180799999999,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 3002,
+          "delay_ms": 3001,
           "stability": 1.0,
           "failure_reason": null
         },
@@ -5750,8 +5708,8 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.36423127760674845,
-          "bitrate_kbps": 1587.8428800000002,
+          "download_speed_mbps": 0.6663106587048129,
+          "bitrate_kbps": 2620.8316800000002,
           "bitrate_estimated": true,
           "resolution": null,
           "delay_ms": 3001,
@@ -5789,6 +5747,20 @@
           "failure_reason": "http_error"
         },
         {
+          "url": "http://108.181.20.197/livehttpplay?channel_id=30015",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
           "url": "http://cdn3.163189.xyz/live/fhzx/stream.m3u8",
           "source_id": null,
           "source_type": null,
@@ -5803,7 +5775,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://108.181.20.197/livehttpplay?channel_id=30015",
+          "url": "https://ali.hlspull.yximgs.com/live/qq491695550-fh.flv",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5831,20 +5803,6 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://wo.xiang.lai.ge.bi.jiao.chang.de.yu.ming.wan.wan.jie.xi.bu.zhi.dao.ke.bu.ke.xing.hk3.345888.xyz.cdn.cloudflare.net/gt/aktv.php?variable=null-4",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "https://playtv-live.ifeng.com/live/06OLEEWQKN4.m3u8",
           "source_id": null,
           "source_type": null,
@@ -5859,7 +5817,7 @@
           "failure_reason": "invalid_playlist"
         },
         {
-          "url": "https://ali.hlspull.yximgs.com/live/qq491695550-fh.flv",
+          "url": "http://wo.xiang.lai.ge.bi.jiao.chang.de.yu.ming.wan.wan.jie.xi.bu.zhi.dao.ke.bu.ke.xing.hk3.345888.xyz.cdn.cloudflare.net/gt/aktv.php?variable=null-4",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -5937,20 +5895,6 @@
           "failure_reason": "invalid_playlist"
         },
         {
-          "url": "http://120.238.84.44:9901/tsfile/live/1009_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
           "url": "http://cdn2.132.us.kg/live/gdzj/stream.m3u8",
           "source_id": null,
           "source_type": null,
@@ -5966,6 +5910,20 @@
         },
         {
           "url": "http://mh0.asia:35455/itv/1000000004000011655.m3u8?cdn=ystenlive",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://120.238.84.44:9901/tsfile/live/1009_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -6188,7 +6146,7 @@
     "广东卫视": {
       "group": "📡卫视频道",
       "candidate_count": 31,
-      "valid_count": 1,
+      "valid_count": 0,
       "selected": [],
       "rejected": [
         {
@@ -6402,7 +6360,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://gf.you123.fun:35455/itv/1000000005000265034.m3u8?cdn=ystenlive",
+          "url": "http://cfss.cc/api/ysp/gdws.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -6416,7 +6374,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://cfss.cc/api/ysp/gdws.m3u8",
+          "url": "http://gf.you123.fun:35455/itv/1000000005000265034.m3u8?cdn=ystenlive",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -6615,15 +6573,15 @@
           "url": "http://223.105.252.8/PLTV/4/224/3221227445/index.m3u8",
           "source_id": null,
           "source_type": null,
-          "playable": true,
+          "playable": false,
           "content_verified": null,
-          "download_speed_mbps": 0.0004543323927061544,
+          "download_speed_mbps": 0.0,
           "bitrate_kbps": null,
           "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": 836,
-          "stability": 1.0,
-          "failure_reason": "not_selected_by_rank"
+          "delay_ms": 713,
+          "stability": 0.0,
+          "failure_reason": "no_media_stream"
         }
       ]
     },
@@ -6673,12 +6631,12 @@
           "source_id": null,
           "source_type": null,
           "playable": true,
-          "content_verified": true,
-          "download_speed_mbps": 23.718213630702426,
-          "bitrate_kbps": 1433.0789346246972,
+          "content_verified": null,
+          "download_speed_mbps": 1.9666712390714989,
+          "bitrate_kbps": 1431.8242934091872,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 990,
+          "delay_ms": 514,
           "stability": 1.0,
           "failure_reason": null
         }
@@ -6741,7 +6699,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://cc-ynbit-wszhibo.ifengli.com:2000/live/hnws-hd/2500.m3u8?innersid=2025",
+          "url": "http://36.249.151.138:9901/tsfile/live/0128_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -6755,7 +6713,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://36.249.151.138:9901/tsfile/live/0128_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A",
+          "url": "http://cc-ynbit-wszhibo.ifengli.com:2000/live/hnws-hd/2500.m3u8?innersid=2025",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -6774,11 +6732,11 @@
           "source_type": null,
           "playable": true,
           "content_verified": null,
-          "download_speed_mbps": 0.45414609790430155,
-          "bitrate_kbps": 911.2666666666667,
+          "download_speed_mbps": 0.8887880223806917,
+          "bitrate_kbps": 1553.570588235294,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 2174,
+          "delay_ms": 2334,
           "stability": 1.0,
           "failure_reason": "not_selected_by_rank"
         },
@@ -6889,20 +6847,6 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://2d026c.tv.netsite.cc/proxy/1924965376/1924965376.m3u8",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "invalid_playlist"
-        },
-        {
           "url": "http://ygbh.live/js.php?id=jsws",
           "source_id": null,
           "source_type": null,
@@ -6915,6 +6859,20 @@
           "delay_ms": -1,
           "stability": 0.0,
           "failure_reason": "http_error"
+        },
+        {
+          "url": "http://2d026c.tv.netsite.cc/proxy/1924965376/1924965376.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "invalid_playlist"
         },
         {
           "url": "https://svipsvip.ffzyread1.com/20250101/34720_0d5e4b60/index.m3u8",
@@ -6980,77 +6938,21 @@
       "valid_count": 2,
       "selected": [
         {
-          "url": "http://ali-vl.cztv.com/channels/lantian/channel001/360p.m3u8",
+          "url": "https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": true,
-          "content_verified": true,
-          "download_speed_mbps": 0.07355941967426805,
-          "bitrate_kbps": 86.33301587301587,
+          "content_verified": null,
+          "download_speed_mbps": 0.5284666557682507,
+          "bitrate_kbps": 698.6443333333334,
           "bitrate_estimated": true,
           "resolution": null,
-          "delay_ms": 1217,
+          "delay_ms": 1444,
           "stability": 1.0,
           "failure_reason": null
         }
       ],
       "rejected": [
-        {
-          "url": "<invalid-url>",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "<invalid-url>",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "<invalid-url>",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
-        {
-          "url": "http://zhfivel02.cztv.com/channel01/1080p.m3u8?auth_key=%2A%2A%2A",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "http_error"
-        },
         {
           "url": "http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8",
           "source_id": null,
@@ -7064,6 +6966,62 @@
           "delay_ms": -1,
           "stability": 0.0,
           "failure_reason": "http_error"
+        },
+        {
+          "url": "<invalid-url>",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "<invalid-url>",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "<invalid-url>",
+          "source_id": null,
+          "source_type": null,
+          "playable": false,
+          "content_verified": null,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
+        },
+        {
+          "url": "http://ali-vl.cztv.com/channels/lantian/channel001/360p.m3u8",
+          "source_id": null,
+          "source_type": null,
+          "playable": true,
+          "content_verified": null,
+          "download_speed_mbps": 0.1298272034741969,
+          "bitrate_kbps": 141.8595238095238,
+          "bitrate_estimated": true,
+          "resolution": null,
+          "delay_ms": 1113,
+          "stability": 1.0,
+          "failure_reason": "not_selected_by_rank"
         },
         {
           "url": "https://www.yangshipin.cn/tv/home?pid=600002520",
@@ -7080,18 +7038,18 @@
           "failure_reason": "invalid_playlist"
         },
         {
-          "url": "https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8",
+          "url": "http://zhfivel02.cztv.com/channel01/1080p.m3u8?auth_key=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
-          "playable": true,
+          "playable": false,
           "content_verified": null,
-          "download_speed_mbps": 0.28691725492444053,
-          "bitrate_kbps": 398.271,
-          "bitrate_estimated": true,
+          "download_speed_mbps": 0.0,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": 1479,
-          "stability": 1.0,
-          "failure_reason": "not_selected_by_rank"
+          "delay_ms": -1,
+          "stability": 0.0,
+          "failure_reason": "http_error"
         }
       ]
     },
@@ -7310,8 +7268,23 @@
     "河北卫视": {
       "group": "📡卫视频道",
       "candidate_count": 6,
-      "valid_count": 0,
-      "selected": [],
+      "valid_count": 1,
+      "selected": [
+        {
+          "url": "http://139.196.214.238/rtp/239.45.1.44:5140",
+          "source_id": null,
+          "source_type": null,
+          "playable": true,
+          "content_verified": null,
+          "download_speed_mbps": 0.04258402049869377,
+          "bitrate_kbps": null,
+          "bitrate_estimated": false,
+          "resolution": null,
+          "delay_ms": 2386,
+          "stability": 1.0,
+          "failure_reason": null
+        }
+      ],
       "rejected": [
         {
           "url": "<invalid-url>",
@@ -7382,20 +7355,6 @@
           "delay_ms": -1,
           "stability": 0.0,
           "failure_reason": "http_error"
-        },
-        {
-          "url": "http://139.196.214.238/rtp/239.45.1.44:5140",
-          "source_id": null,
-          "source_type": null,
-          "playable": false,
-          "content_verified": null,
-          "download_speed_mbps": 0.0,
-          "bitrate_kbps": null,
-          "bitrate_estimated": false,
-          "resolution": null,
-          "delay_ms": -1,
-          "stability": 0.0,
-          "failure_reason": "invalid_playlist"
         }
       ]
     },
@@ -7508,7 +7467,7 @@
       "selected": [],
       "rejected": [
         {
-          "url": "http://60.11.200.120:35455/itv/1000000005000265019.m3u8?cdn=ystenlive",
+          "url": "http://lives.jnnews.tv/video/s10001-SDTV/index.m3u8",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -7522,7 +7481,7 @@
           "failure_reason": "http_error"
         },
         {
-          "url": "http://lives.jnnews.tv/video/s10001-SDTV/index.m3u8",
+          "url": "http://60.11.200.120:35455/itv/1000000005000265019.m3u8?cdn=ystenlive",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -7547,7 +7506,7 @@
           "resolution": null,
           "delay_ms": -1,
           "stability": 0.0,
-          "failure_reason": "http_error"
+          "failure_reason": "timeout"
         }
       ]
     },
@@ -7595,9 +7554,9 @@
           "bitrate_kbps": null,
           "bitrate_estimated": false,
           "resolution": null,
-          "delay_ms": -1,
+          "delay_ms": 204,
           "stability": 0.0,
-          "failure_reason": "timeout"
+          "failure_reason": "invalid_playlist"
         }
       ]
     },
@@ -7891,97 +7850,192 @@
   },
   "changes": {
     "added_channels": [
-      "2026-07-27 11:10:56"
+      "2026-07-27 11:39:27"
     ],
     "removed_channels": [
-      "2026-07-26 14:18:44",
-      "CCTV-4K",
-      "viuTV6",
-      "山西卫视",
-      "广东公共",
-      "广东影视",
-      "广东新闻"
+      "2026-07-27 11:10:56",
+      "陕西卫视"
     ],
     "main_source_changes": [
       {
-        "channel": "TVB Plus",
-        "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
-        "after": "https://cdn3.indevs.in/stream/tvb/tvbp/"
+        "channel": "CCTV-1 综合",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv1&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000201.m3u8"
       },
       {
-        "channel": "viuTV",
-        "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
-        "after": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8"
+        "channel": "CCTV-10 科教",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv10&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000129.m3u8"
       },
       {
-        "channel": "凤凰中文",
-        "before": "http://120.40.62.241:1000/rtp/239.61.2.184:9092",
-        "after": "https://cdn.qd.je/163189/fhzw"
+        "channel": "CCTV-11 戏曲",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv11&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000130.m3u8"
       },
       {
-        "channel": "凤凰资讯",
-        "before": "http://120.40.62.241:1000/rtp/239.61.2.183:9086",
-        "after": "http://221.7.175.154:8445/tsfile/live/1021_1.m3u8?key=%2A%2A%2A&playlive=1&authid=%2A%2A%2A"
+        "channel": "CCTV-12 社会与法",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv12&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000131.m3u8"
       },
       {
-        "channel": "大湾区卫视",
-        "before": "http://113.64.146.6:2024/hls/63/index.m3u8",
-        "after": "http://183.11.239.36:808/hls/132/index.m3u8"
+        "channel": "CCTV-13 新闻",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv13&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000067.m3u8"
+      },
+      {
+        "channel": "CCTV-14 少儿",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv14",
+        "after": "http://120.76.248.139/live/bfgd/4200000132.m3u8"
+      },
+      {
+        "channel": "CCTV-15 音乐",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv15&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000133.m3u8"
+      },
+      {
+        "channel": "CCTV-16 奥林匹克",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv16&zy.m3u8=",
+        "after": "http://home.yulei.online:9999/rtp/226.0.2.169:9264"
+      },
+      {
+        "channel": "CCTV-17 农业农村",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv17&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000204.m3u8"
+      },
+      {
+        "channel": "CCTV-2 财经",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv2&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000061.m3u8"
+      },
+      {
+        "channel": "CCTV-3 综艺",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv3&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000062.m3u8"
+      },
+      {
+        "channel": "CCTV-4 中文国际",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv4&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000063.m3u8"
+      },
+      {
+        "channel": "CCTV-5 体育",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv5&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000064.m3u8"
+      },
+      {
+        "channel": "CCTV-5+ 体育赛事",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv5p&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000246.m3u8"
+      },
+      {
+        "channel": "CCTV-6 电影",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv6&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000065.m3u8"
+      },
+      {
+        "channel": "CCTV-7 国防军事",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv7&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000127.m3u8"
+      },
+      {
+        "channel": "CCTV-8 电视剧",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv8&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000066.m3u8"
+      },
+      {
+        "channel": "CCTV-9 纪录",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cctv9&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000128.m3u8"
+      },
+      {
+        "channel": "四川卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=scws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000103.m3u8"
+      },
+      {
+        "channel": "天津卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=tjws&zy.m3u8=",
+        "after": "http://112.46.85.60:8009/hls/44/index.m3u8"
       },
       {
         "channel": "宁夏卫视",
-        "before": "http://111.29.9.33:6610/000000001000/1000000002000031451/index.m3u8?channel-id=bestzb&Contentid=1000000002000031451&livemode=1&stbId=3",
-        "after": "http://cssbyd.imwork.net:8082/hls/45/index.m3u8"
+        "before": "http://cssbyd.imwork.net:8082/hls/45/index.m3u8",
+        "after": "http://120.76.248.139/live/bfgd/4200000118.m3u8"
       },
       {
-        "channel": "广东体育",
-        "before": "http://113.64.146.6:2024/hls/39/index.m3u8",
-        "after": "http://183.11.239.36:808/hls/2/index.m3u8"
+        "channel": "安徽卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=ahws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000096.m3u8"
       },
       {
-        "channel": "广东民生",
-        "before": "http://58.63.67.183:8888/udp/239.77.0.225:5146",
-        "after": "http://183.11.239.36:808/hls/18/index.m3u8"
+        "channel": "山东卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=sdws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000099.m3u8"
       },
       {
-        "channel": "广东珠江",
-        "before": "http://113.64.146.6:2024/hls/36/index.m3u8",
-        "after": "http://183.11.239.36:808/hls/83/index.m3u8"
+        "channel": "广东卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=gdws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000092.m3u8"
       },
       {
         "channel": "广西卫视",
-        "before": "http://111.29.9.33:6610/000000001000/1000000002000019837/index.m3u8?channel-id=bestzb&Contentid=1000000002000019837&livemode=1&stbId=3",
-        "after": "http://cssbyd.imwork.net:8082/hls/33/index.m3u8"
+        "before": "http://cssbyd.imwork.net:8082/hls/33/index.m3u8",
+        "after": "http://120.76.248.139/live/bfgd/4200000116.m3u8"
       },
       {
-        "channel": "无线新闻台",
-        "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
-        "after": "https://cdn.qd.je/163189/wxxw"
+        "channel": "新疆卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=xjws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000150.m3u8"
       },
       {
-        "channel": "明珠台",
-        "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
-        "after": "https://cdn.qd.je/163189/mzt"
+        "channel": "江苏卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=jsws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000085.m3u8"
+      },
+      {
+        "channel": "江西卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=jxws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000098.m3u8"
+      },
+      {
+        "channel": "河北卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=hbws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000108.m3u8"
       },
       {
         "channel": "浙江卫视",
-        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=zjws&zy.m3u8=",
-        "after": "http://ali-vl.cztv.com/channels/lantian/channel001/360p.m3u8"
+        "before": "http://ali-vl.cztv.com/channels/lantian/channel001/360p.m3u8",
+        "after": "http://120.76.248.139/live/bfgd/4200000094.m3u8"
       },
       {
-        "channel": "湖南卫视",
-        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=hunws&zy.m3u8=",
-        "after": "http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8"
+        "channel": "海南卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=hinws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000473.m3u8"
+      },
+      {
+        "channel": "深圳卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=szws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000100.m3u8"
       },
       {
         "channel": "甘肃卫视",
-        "before": "http://111.29.9.33:6610/000000001000/1000000002000017827/index.m3u8?channel-id=bestzb&Contentid=1000000002000017827&livemode=1&stbId=3",
-        "after": "http://cssbyd.imwork.net:8082/hls/48/index.m3u8"
+        "before": "http://cssbyd.imwork.net:8082/hls/48/index.m3u8",
+        "after": "http://120.76.248.139/live/bfgd/4200000119.m3u8"
       },
       {
-        "channel": "翡翠台",
-        "before": "http://www.kaniptv.cn/uadl.php?etoken=%2A%2A%2A",
-        "after": "http://122.152.202.33/s/81a8a44f/index.m3u8?id=53"
+        "channel": "福建卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=dnws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000483.m3u8"
+      },
+      {
+        "channel": "重庆卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=cqws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000107.m3u8"
+      },
+      {
+        "channel": "青海卫视",
+        "before": "http://110.42.52.180:6688/live/live.php?token=%2A%2A%2A&id=qhws&zy.m3u8=",
+        "after": "http://120.76.248.139/live/bfgd/4200000111.m3u8"
       }
     ]
   },
