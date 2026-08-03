@@ -1,11 +1,4 @@
-# 订阅源列表：全网每日自动更新的顶级高可用公网单播源（使用 CDN 加速，保障 GitHub Actions 与国内均可高速访问）
-https://live.445569.xyz/live.m3u
-https://cdn.jsdmirror.com/gh/fanmingming/live@main/tv/m3u/ipv6.m3u
-https://cdn.jsdmirror.com/gh/YanG-1989/m3u@main/Gather.m3u
-https://cdn.jsdmirror.com/gh/yuanzl77/IPTV@main/live.txt
-https://cdn.jsdmirror.com/gh/ssili126/tv@main/itvlist.m3u
-https://cdn.jsdmirror.com/gh/vxiaov/IPTV@main/iptv.m3u
-https://cdn.jsdmirror.com/gh/iptv-org/iptv@master/streams/hk.m3u
-https://cdn.jsdmirror.com/gh/iptv-org/iptv@master/streams/mo.m3u
+# 订阅源列表：仅保留用户指定的新 Catvod 独家订阅源
+https://live.catvod.com/?tk=14c87fd3c910296aa64a3029bd7d5f48
 
 [WHITELIST]

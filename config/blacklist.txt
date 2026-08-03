@@ -2,9 +2,6 @@
 # This is the interface blacklist list, the interface matching the keyword will be blocked, one keyword line
 /audio/
 bxtv.3a.ink
-catvod.com
-iptv.catvod.com/live.php
-www.catvod.com/
 黄金华剧台
 黄金華劇臺
 62WM7
@@ -13,7 +10,6 @@ t.freetv.fun/live
 110.42.52.180
 mxmy.net
 vulci.online
-live.php
 /udc/
 /rtp/226.0.2.156:9168
 made with Flixier
