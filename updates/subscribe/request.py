@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from logging import INFO
 from threading import Lock
 from time import time
+import os
 import sys
 
 from tqdm.asyncio import tqdm_asyncio
