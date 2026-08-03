@@ -109,7 +109,7 @@ async def get_channels_by_subscribe_urls(
                     content = response.text
                 else:
                     content = str(response)
-            if not content:
+            if not content or len(content) < 100 or ("#EXTM3U" not in content and "," not in content):
                 from utils.tools import sanitize_filename_from_url
                 cache_candidates = [
                     os.path.join("config", "subscribe_cache.m3u"),
