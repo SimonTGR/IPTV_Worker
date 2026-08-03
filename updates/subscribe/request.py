@@ -88,6 +88,7 @@ async def get_channels_by_subscribe_urls(
         channels = defaultdict(list)
         in_whitelist = whitelist and (subscribe_url in whitelist)
         disable_reason = None
+        content = ""
         try:
             response = None
             try:
@@ -100,7 +101,7 @@ async def get_channels_by_subscribe_urls(
                     name=subscribe_url,
                 )
             except Exception as e:
-                print(e, flush=True)
+                print(f"Fetch subscribe url {subscribe_url} failed: {e}", flush=True)
                 disable_reason = t("msg.auto_disable_request_failed")
             if response:
                 if hasattr(response, 'text'):
