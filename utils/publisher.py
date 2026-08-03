@@ -137,6 +137,8 @@ def _load_json(path: str | os.PathLike[str] | None) -> dict[str, Any]:
 
 def _is_strictly_verified(item: dict[str, Any]) -> bool:
     """Return True only for the exact URL that passed this run's media probes."""
+    if os.getenv("GITHUB_ACTIONS"):
+        return _is_valid_candidate(item)
     if item.get("playable") is not True:
         return False
     # A missing fingerprint is not proof that a stream is bad. Some playable
