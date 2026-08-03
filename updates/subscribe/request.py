@@ -135,48 +135,48 @@ async def get_channels_by_subscribe_urls(
                     save_url_content('subscribe', subscribe_url, content)
             except Exception:
                 pass
-                if content:
-                    m3u_type = True if "#EXTM3U" in content else False
-                    if open_subscribe_epg and m3u_type:
-                        found_epg_urls = get_m3u_epg_urls(content)
-                        if found_epg_urls:
-                            with epg_discover_lock:
-                                discovered_epg_urls.update(found_epg_urls)
-                    data = get_name_value(
-                        content,
-                        pattern=(
-                            constants.multiline_m3u_pattern
-                            if m3u_type
-                            else constants.multiline_txt_pattern
-                        ),
-                        open_headers=open_headers if m3u_type else False
-                    )
-                    for item in data:
-                        data_name = item.get("name", "").strip()
-                        url = item.get("value", "").strip()
-                        if data_name and url:
-                            name = format_channel_name(data_name)
-                            if normalized_names and name not in normalized_names:
-                                logger.info(f"{data_name},{url}")
-                                if not open_unmatch_category:
-                                    continue
-                            url_partition = url.partition("$")
-                            url = url_partition[0]
-                            info = url_partition[2]
-                            item_headers = {**(headers or {}), **(item.get("headers") or {})}
-                            value = {
-                                "url": url,
-                                "headers": item_headers or None,
-                                "tvg_logo": item.get("tvg_logo") or None,
-                                "extra_info": info
-                            }
-                            if in_whitelist:
-                                value["origin"] = "whitelist"
-                            if name in channels:
-                                if value not in channels[name]:
-                                    channels[name].append(value)
-                            else:
-                                channels[name] = [value]
+            if content:
+                m3u_type = True if "#EXTM3U" in content else False
+                if open_subscribe_epg and m3u_type:
+                    found_epg_urls = get_m3u_epg_urls(content)
+                    if found_epg_urls:
+                        with epg_discover_lock:
+                            discovered_epg_urls.update(found_epg_urls)
+                data = get_name_value(
+                    content,
+                    pattern=(
+                        constants.multiline_m3u_pattern
+                        if m3u_type
+                        else constants.multiline_txt_pattern
+                    ),
+                    open_headers=open_headers if m3u_type else False
+                )
+                for item in data:
+                    data_name = item.get("name", "").strip()
+                    url = item.get("value", "").strip()
+                    if data_name and url:
+                        name = format_channel_name(data_name)
+                        if normalized_names and name not in normalized_names:
+                            logger.info(f"{data_name},{url}")
+                            if not open_unmatch_category:
+                                continue
+                        url_partition = url.partition("$")
+                        url = url_partition[0]
+                        info = url_partition[2]
+                        item_headers = {**(headers or {}), **(item.get("headers") or {})}
+                        value = {
+                            "url": url,
+                            "headers": item_headers or None,
+                            "tvg_logo": item.get("tvg_logo") or None,
+                            "extra_info": info
+                        }
+                        if in_whitelist:
+                            value["origin"] = "whitelist"
+                        if name in channels:
+                            if value not in channels[name]:
+                                channels[name].append(value)
+                        else:
+                            channels[name] = [value]
                 if not channels and not disable_reason:
                     disable_reason = t("msg.auto_disable_no_match")
         except Exception as e:
