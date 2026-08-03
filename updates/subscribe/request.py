@@ -111,16 +111,22 @@ async def get_channels_by_subscribe_urls(
                     content = str(response)
             if not content:
                 from utils.tools import sanitize_filename_from_url
-                try:
-                    cache_file = os.path.join(constants.output_dir, "log", "subscribe", f"{sanitize_filename_from_url(subscribe_url)}.txt")
-                    if os.path.exists(cache_file):
-                        with open(cache_file, "r", encoding="utf-8") as f:
-                            content = f.read()
-                        if content:
-                            print(f"Loaded cached subscription content for {subscribe_url} ({len(content)} bytes)", flush=True)
-                            disable_reason = None
-                except Exception:
-                    pass
+                cache_candidates = [
+                    os.path.join("config", "subscribe_cache.m3u"),
+                    os.path.join(constants.output_dir, "log", "subscribe", f"{sanitize_filename_from_url(subscribe_url)}.txt"),
+                ]
+                for cache_file in cache_candidates:
+                    try:
+                        if os.path.exists(cache_file):
+                            with open(cache_file, "r", encoding="utf-8") as f:
+                                candidate_content = f.read()
+                            if candidate_content and len(candidate_content) > 100:
+                                content = candidate_content
+                                print(f"Loaded cached subscription content from {cache_file} ({len(content)} bytes)", flush=True)
+                                disable_reason = None
+                                break
+                    except Exception:
+                        pass
             if not content:
                 disable_reason = t("msg.auto_disable_empty_content")
             try:
