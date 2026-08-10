@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-08-10T04:53:20.260633+00:00",
+  "generated_at": "2026-08-10T16:09:16.753528+00:00",
   "published": true,
   "publish_reasons": [],
   "validation": {
@@ -54,7 +54,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MWhkXzMwMDAmZXhwPTE3ODYzMzM1NDEmc2lnbj0xMmE5YTg5Y2Q5MzU4MzljM2MzYWNjMGZmOGFlZWZmNzNkOTc3YjlhNTQ3NGJjMGE1YmQwZGNiMDljYWJmMzJj&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UTJqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPWM3MWQzNzk4JmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -68,7 +68,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UTJqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPWM3MWQzNzk4JmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MWhkXzMwMDAmZXhwPTE3ODYzMzM1NDEmc2lnbj0xMmE5YTg5Y2Q5MzU4MzljM2MzYWNjMGZmOGFlZWZmNzNkOTc3YjlhNTQ3NGJjMGE1YmQwZGNiMDljYWJmMzJj&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -156,7 +156,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UWxqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPTA5OWY0MmMxJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2M2hkXzMwMDAmZXhwPTE3ODYzMzM1NDEmc2lnbj1iMTlmOTlmODQyNmQwMWVkNGMwNjU3NTRhNGU1OGM5NWFlYTYyOWExZTMyMTFmOTUzM2M2Y2M1OWJlOWE2MGZm&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -170,7 +170,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2M2hkXzMwMDAmZXhwPTE3ODYzMzM1NDEmc2lnbj1iMTlmOTlmODQyNmQwMWVkNGMwNjU3NTRhNGU1OGM5NWFlYTYyOWExZTMyMTFmOTUzM2M2Y2M1OWJlOWE2MGZm&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UWxqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPTA5OWY0MmMxJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -207,7 +207,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPakJuTDY1UUJqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPTYzYWFjNmFhJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UUJqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPWVhNzRkYzlhJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -221,7 +221,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UUJqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPWVhNzRkYzlhJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPakJuTDY1UUJqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPTYzYWFjNmFhJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -237,7 +237,7 @@
       ],
       "rejected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2NF8xMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249ZjQ5YzllZmQ5ZjY2Y2IyZDAzZTYyMTkxYWIzYjc5ODBhNjYwNmNkOGU4ZTY2MjlhOTJlYWNiOTY4M2IwY2M3NA&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vbWlndT9pZD02MzE3ODA0MjEmdG9rZW49NDE3MTE0YTg3YTdkNTczYWI5ZGE4NzAyOGE5MDRkNDM&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -251,7 +251,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vbWlndT9pZD02MzE3ODA0MjEmdG9rZW49NDE3MTE0YTg3YTdkNTczYWI5ZGE4NzAyOGE5MDRkNDM&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2NF8xMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249ZjQ5YzllZmQ5ZjY2Y2IyZDAzZTYyMTkxYWIzYjc5ODBhNjYwNmNkOGU4ZTY2MjlhOTJlYWNiOTY4M2IwY2M3NA&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -272,7 +272,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2NWhkXzMwMDAmZXhwPTE3ODYzMzM1NDEmc2lnbj1hZmUxMjllZjAzY2Y1NmRlNGMyZmYzZDQxMmIzZWEwZTRjYTY2ZjE4NjM4YTQyMTMzNzIwMTE4NGMwNmMwN2Mz&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UWFqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPWFlNjc2OTBkJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -286,7 +286,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UWFqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTA4ZTgwNDBlJmNuPTFlMGQ1ODRjJmNwPWFlNjc2OTBkJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2NWhkXzMwMDAmZXhwPTE3ODYzMzM1NDEmc2lnbj1hZmUxMjllZjAzY2Y1NmRlNGMyZmYzZDQxMmIzZWEwZTRjYTY2ZjE4NjM4YTQyMTMzNzIwMTE4NGMwNmMwN2Mz&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -323,7 +323,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UWFwQzJhcDdmT1ZDc0lWQ2VsNmlJTWROMGh8Y2Q9MDhlODA0MGUmY249MWUwZDU4NGMmY3A9MzRkYjQ0OWYmY3U9OTcwZjA2OWYmcnA9ZFBfQmpMZEJqTDFsbmloMm5FRg&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2NWpoZF8zMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249OGM1OGI3MGJjMzZjYjYzOTg5Yjk3NGI0ZDU4OGFhZTQ4ZWZjMzc4ZDQ4MGI0OTc5ZGRmYWRkYWRkOGIyOTE0MQ&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -337,7 +337,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2NWpoZF8zMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249OGM1OGI3MGJjMzZjYjYzOTg5Yjk3NGI0ZDU4OGFhZTQ4ZWZjMzc4ZDQ4MGI0OTc5ZGRmYWRkYWRkOGIyOTE0MQ&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UWFwQzJhcDdmT1ZDc0lWQ2VsNmlJTWROMGh8Y2Q9MDhlODA0MGUmY249MWUwZDU4NGMmY3A9MzRkYjQ0OWYmY3U9OTcwZjA2OWYmcnA9ZFBfQmpMZEJqTDFsbmloMm5FRg&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -578,7 +578,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MTBoZF8zMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249MzhjYzNkZGExYjY5MDg5NDI4YzQ0ZjJjNDY3MDhmMTVlN2FkZmVkMWUzOWUwYjJlZTZiMWE2YmY1OGQ4YjUwOA&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UTJkQ3k5ak50OFFaZTh2Wm5CalJCbDZQRnxjZD0wOGU4MDQwZSZjbj0xZTBkNTg0YyZjcD1kMmNjZDlhYyZjdT05NzBmMDY5ZiZycD1kUF9CakxkQmpMMWxuaWgybkVG&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -592,7 +592,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UTJkQ3k5ak50OFFaZTh2Wm5CalJCbDZQRnxjZD0wOGU4MDQwZSZjbj0xZTBkNTg0YyZjcD1kMmNjZDlhYyZjdT05NzBmMDY5ZiZycD1kUF9CakxkQmpMMWxuaWgybkVG&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MTBoZF8zMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249MzhjYzNkZGExYjY5MDg5NDI4YzQ0ZjJjNDY3MDhmMTVlN2FkZmVkMWUzOWUwYjJlZTZiMWE2YmY1OGQ4YjUwOA&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -629,7 +629,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MTFfMTAwMCZleHA9MTc4NjMzMzU0MSZzaWduPTI4YjQwZDhmY2QxODUyNTU0NjI0NDkxZGM0ZGI2M2RjNjllY2JhZmU3MzFmNzcyNzk2MmNmYmU3Y2E3ZDIwN2U&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UTJkM2ZPVkNzSVZDZWw2aUlNZE4waHxjZD0wOGU4MDQwZSZjbj0xZTBkNTg0YyZjcD1jZmFjM2U5NCZjdT05NzBmMDY5ZiZycD1kUF9CakxkQmpMMWxuaWgybkVG&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -643,7 +643,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UTJkM2ZPVkNzSVZDZWw2aUlNZE4waHxjZD0wOGU4MDQwZSZjbj0xZTBkNTg0YyZjcD1jZmFjM2U5NCZjdT05NzBmMDY5ZiZycD1kUF9CakxkQmpMMWxuaWgybkVG&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MTFfMTAwMCZleHA9MTc4NjMzMzU0MSZzaWduPTI4YjQwZDhmY2QxODUyNTU0NjI0NDkxZGM0ZGI2M2RjNjllY2JhZmU3MzFmNzcyNzk2MmNmYmU3Y2E3ZDIwN2U&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -680,7 +680,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UTJkcmZPVkNzSVZDZWw2aUlNZE4waHxjZD0wOGU4MDQwZSZjbj0xZTBkNTg0YyZjcD1iOTg1YjE2NiZjdT05NzBmMDY5ZiZycD1kUF9CakxkQmpMMWxuaWgybkVG&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MTJoZF8zMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249OGY0NjBiNTA1N2VkNTc3OGY0OTZhNzhkZmI0YjIyOTg2ZjNjNjA0ZWM5NTViYWEyMjYzOWU3OTM2YTIxN2MxNQ&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -694,7 +694,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MTJoZF8zMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249OGY0NjBiNTA1N2VkNTc3OGY0OTZhNzhkZmI0YjIyOTg2ZjNjNjA0ZWM5NTViYWEyMjYzOWU3OTM2YTIxN2MxNQ&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPalduTDY1UTJkcmZPVkNzSVZDZWw2aUlNZE4waHxjZD0wOGU4MDQwZSZjbj0xZTBkNTg0YyZjcD1iOTg1YjE2NiZjdT05NzBmMDY5ZiZycD1kUF9CakxkQmpMMWxuaWgybkVG&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -906,7 +906,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MTRoZF8zMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249YzA1ODY4M2UyODlhMjZhODM1NGE5ZDIyMDEyZmJiM2ZlMTUxNTU4OGJkNTI4NzQxOTEzZjEzYzMwODI5OGZlMw&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vbWlndT9pZD02NzMxNjgyNTYmdG9rZW49MmViYTFiYWYzN2E2NTc1Mzg0OTQ4NDdkMGQwYTk2YWI&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -920,7 +920,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vbWlndT9pZD02NzMxNjgyNTYmdG9rZW49MmViYTFiYWYzN2E2NTc1Mzg0OTQ4NDdkMGQwYTk2YWI&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jY3R2MTRoZF8zMDAwJmV4cD0xNzg2MzMzNTQxJnNpZ249YzA1ODY4M2UyODlhMjZhODM1NGE5ZDIyMDEyZmJiM2ZlMTUxNTU4OGJkNTI4NzQxOTEzZjEzYzMwODI5OGZlMw&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1343,7 +1343,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vZ2R0dj9pZD00NiZ0PTE3ODYzNDA3NDImdG9rZW49M2E0NjI2NzUyMWYyM2Y4ZTc2NzZjZjZmZjI5Y2QzMzkxM2ZkMGM2ZGM5M2U2NzQ4YjU0YjJmZDhjOGU3MTMwOQ&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vZ2R0dj9pZD01MSZ0PTE3ODYzNDA3NDImdG9rZW49YWZjYjQ4YjhhN2JhOGZjYWFlYzI1MTI2ZWFkNTVkMGIyMWI4MTEzMDgwOTcyZWZhN2UwMmE2NGRjMjcxYzY2NA&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1357,7 +1357,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vZ2R0dj9pZD01MSZ0PTE3ODYzNDA3NDImdG9rZW49YWZjYjQ4YjhhN2JhOGZjYWFlYzI1MTI2ZWFkNTVkMGIyMWI4MTEzMDgwOTcyZWZhN2UwMmE2NGRjMjcxYzY2NA&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vZ2R0dj9pZD00NiZ0PTE3ODYzNDA3NDImdG9rZW49M2E0NjI2NzUyMWYyM2Y4ZTc2NzZjZjZmZjI5Y2QzMzkxM2ZkMGM2ZGM5M2U2NzQ4YjU0YjJmZDhjOGU3MTMwOQ&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1394,7 +1394,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cDovL2hsc2FsLWxkdnQucWluZy5tZ3R2LmNvbS9ubl9saXZlL25uX3g2NC9ZMlJ1WlhoZmFXUTlZV3hmYUd4elgyeGtkblFtWlQwMk9URTBOakEwSm5ZOU1TWnBaRDFJVGxkVFdrZFRWQ1p6UFRjd04yUmlZVGMyWXpKak5tSm1NVFE0TW1VeVpHWXpPV1UyTldNM1lXRmkvSE5XU1pHU1QubTN1OA&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPald5YVZSczRaTlNOVnJmT1ZDc0lWQ2VsNmlJTWROMGh8Y2Q9MDhlODA0MGUmY249MWUwZDU4NGMmY3A9ZmI4ZWRmZmImY3U9OTcwZjA2OWYmcnA9ZFBfQmpMZEJqTDFsbmloMm5FRg&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1408,7 +1408,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPald5YVZSczRaTlNOVnJmT1ZDc0lWQ2VsNmlJTWROMGh8Y2Q9MDhlODA0MGUmY249MWUwZDU4NGMmY3A9ZmI4ZWRmZmImY3U9OTcwZjA2OWYmcnA9ZFBfQmpMZEJqTDFsbmloMm5FRg&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cDovL2hsc2FsLWxkdnQucWluZy5tZ3R2LmNvbS9ubl9saXZlL25uX3g2NC9ZMlJ1WlhoZmFXUTlZV3hmYUd4elgyeGtkblFtWlQwMk9URTBOakEwSm5ZOU1TWnBaRDFJVGxkVFdrZFRWQ1p6UFRjd04yUmlZVGMyWXpKak5tSm1NVFE0TW1VeVpHWXpPV1UyTldNM1lXRmkvSE5XU1pHU1QubTN1OA&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1424,7 +1424,7 @@
       ],
       "rejected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1obndzaGRfMzAwMCZleHA9MTc4NjMzMzU0MSZzaWduPWM5MjdmYjc3NGQ3ZjViZmUzYTE4MDgyOTgwOThlZDgxZGM0YTFmMTYxOTIwNmE5MDkyOWJiMWQwN2Y3Mzk1Njc&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cDovL2hsc2FsLWxkdnQucWluZy5tZ3R2LmNvbS9ubl9saXZlL25uX3g2NC9kV2x3UFRFeU55NHdMakF1TVNaMWFXUTljV2x1WnkxamJYTW1ibTVmZEdsdFpYcHZibVU5T0NaalpHNWxlRjlwWkQxaGJGOW9iSE5mYkdSMmRDWjFkV2xrUFRsaU9EWTRObVU1WlRNMll6WXdNbU1tWlQwMk9URTBOakEwSm5ZOU1TWnBaRDFJVGxkVFdrZFRWQ1p6UFRjd04yUmlZVGMyWXpKak5tSm1NVFE0TW1VeVpHWXpPV1UyTldNM1lXRmkvSE5XU1pHU1QubTN1OA&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1438,7 +1438,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cDovL2hsc2FsLWxkdnQucWluZy5tZ3R2LmNvbS9ubl9saXZlL25uX3g2NC9kV2x3UFRFeU55NHdMakF1TVNaMWFXUTljV2x1WnkxamJYTW1ibTVmZEdsdFpYcHZibVU5T0NaalpHNWxlRjlwWkQxaGJGOW9iSE5mYkdSMmRDWjFkV2xrUFRsaU9EWTRObVU1WlRNMll6WXdNbU1tWlQwMk9URTBOakEwSm5ZOU1TWnBaRDFJVGxkVFdrZFRWQ1p6UFRjd04yUmlZVGMyWXpKak5tSm1NVFE0TW1VeVpHWXpPV1UyTldNM1lXRmkvSE5XU1pHU1QubTN1OA&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1obndzaGRfMzAwMCZleHA9MTc4NjMzMzU0MSZzaWduPWM5MjdmYjc3NGQ3ZjViZmUzYTE4MDgyOTgwOThlZDgxZGM0YTFmMTYxOTIwNmE5MDkyOWJiMWQwN2Y3Mzk1Njc&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1880,7 +1880,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vbWlndT9pZD03Mzg5MTA5MTQmdG9rZW49YjQ0NGI3NzBiOGEzZTkxMzJhNDFjZGRjM2U0ZTVmMWU&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jcXdzaGRfMzAwMCZleHA9MTc4NjMzMzU0MSZzaWduPTYyNTRkMTY1ZTY0NWRkY2U3YTc3OTMxMGI0MTYzZDIzYjFkYTZlMWE5ZGI5M2EyOWJlNzUzYWVkYWQ3NThkZWM&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -1894,7 +1894,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1jcXdzaGRfMzAwMCZleHA9MTc4NjMzMzU0MSZzaWduPTYyNTRkMTY1ZTY0NWRkY2U3YTc3OTMxMGI0MTYzZDIzYjFkYTZlMWE5ZGI5M2EyOWJlNzUzYWVkYWQ3NThkZWM&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vbWlndT9pZD03Mzg5MTA5MTQmdG9rZW49YjQ0NGI3NzBiOGEzZTkxMzJhNDFjZGRjM2U0ZTVmMWU&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -2010,7 +2010,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vbWlndT9pZD03Mzg5MTA1MzUmdG9rZW49NWM3YWQ5NGI1OTRmOGFmMzQ5ZmQ0NTY4OTMxNjY2YzA&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1ueHdzXzEwMDAmZXhwPTE3ODYzMzM1NDEmc2lnbj01YTRkZTNiOTQ4N2NhYThiNGFjODk4MjJkZWNiNzM1NTYxNzBiNDgwMTc5OTc2MWNhNDdjY2E1NTIzOGVkNDhl&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -2024,7 +2024,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1ueHdzXzEwMDAmZXhwPTE3ODYzMzM1NDEmc2lnbj01YTRkZTNiOTQ4N2NhYThiNGFjODk4MjJkZWNiNzM1NTYxNzBiNDgwMTc5OTc2MWNhNDdjY2E1NTIzOGVkNDhl&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vbWlndT9pZD03Mzg5MTA1MzUmdG9rZW49NWM3YWQ5NGI1OTRmOGFmMzQ5ZmQ0NTY4OTMxNjY2YzA&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -2068,7 +2068,7 @@
       "valid_count": 0,
       "selected": [
         {
-          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1zendzaGRfMzAwMCZleHA9MTc4NjMzMzU0MSZzaWduPWI5YTM3YzVlZjMwZDc5YTdkYmE0MmJkNTYyMjBjNTJlZmUzMWRlYzFhMjQwNmNhZjFkYWE4NTZjMTc2NWM3NzY&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPak5uR3pVSW92Q3E0ak50OFFaZTh2Wm5CalJCbDZQRnxjZD0wOGU4MDQwZSZjbj0xZTBkNTg0YyZjcD04MTEzMTVjMiZjdT05NzBmMDY5ZiZycD1kUF9CakxkQmpMMWxuaWgybkVG&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -2082,7 +2082,7 @@
           "failure_reason": "relay_token_expired"
         },
         {
-          "url": "https://live.catvod.com/?id=L2xyL2RMUU9BRVRPak5uR3pVSW92Q3E0ak50OFFaZTh2Wm5CalJCbDZQRnxjZD0wOGU4MDQwZSZjbj0xZTBkNTg0YyZjcD04MTEzMTVjMiZjdT05NzBmMDY5ZiZycD1kUF9CakxkQmpMMWxuaWgybkVG&tk=%2A%2A%2A",
+          "url": "https://live.catvod.com/?id=fx%3AaHR0cHM6Ly9pcHR2LmNhdHZvZC5jb20vaHJ0bj9pZD1zendzaGRfMzAwMCZleHA9MTc4NjMzMzU0MSZzaWduPWI5YTM3YzVlZjMwZDc5YTdkYmE0MmJkNTYyMjBjNTJlZmUzMWRlYzFhMjQwNmNhZjFkYWE4NTZjMTc2NWM3NzY&tk=%2A%2A%2A",
           "source_id": null,
           "source_type": null,
           "playable": false,
@@ -2101,10 +2101,10 @@
   },
   "changes": {
     "added_channels": [
-      "2026-08-10 12:53:18"
+      "2026-08-11 00:09:15"
     ],
     "removed_channels": [
-      "2026-08-10 09:47:14"
+      "2026-08-10 12:53:18"
     ],
     "main_source_changes": []
   },
