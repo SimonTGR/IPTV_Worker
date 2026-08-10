@@ -61,6 +61,9 @@ ad_filter_keywords = [
     "cctv_off",
     "/ad/",
     "/ads/",
+    "backup.m3u8",
+    "catvod.com/backup",
+    "backup",
 ]
 ad_max_loop_duration = 90
 
@@ -249,6 +252,10 @@ async def get_result(url: str, headers: dict = None, resolution: str = None,
             res_headers = await get_headers(url, headers, session)
             location = res_headers.get('Location') if res_headers else None
             if location:
+                if any(keyword in location.lower() for keyword in ad_filter_keywords):
+                    info['playable'] = False
+                    info['failure_reason'] = 'ad_redirect_filtered'
+                    return info
                 info.update(await get_result(location, headers, resolution, filter_resolution, timeout))
             else:
                 url_content = await get_url_content(url, headers, session, timeout)
