@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "run_started_at": "2026-08-14T06:06:41.547487+00:00",
-  "run_finished_at": "2026-08-14T06:06:41.547848+00:00",
+  "run_started_at": "2026-08-14T16:05:32.350297+00:00",
+  "run_finished_at": "2026-08-14T16:05:32.350648+00:00",
   "sources": [
     {
       "source_id": "forum-inbox",
