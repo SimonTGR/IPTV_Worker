@@ -1,22 +1,22 @@
 #EXTM3U x-tvg-url="https://raw.githubusercontent.com/SimonTGR/IPTV_Worker/refs/heads/main/output/epg/epg.gz"
-#EXTINF:-1 tvg-id="CCTV-4K" tvg-name="CCTV-4K" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4K.png" group-title="🕘️更新时间",2026-08-14 11:44:26
+#EXTINF:-1 tvg-id="CCTV-4K" tvg-name="CCTV-4K" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-4K.png" group-title="🕘️更新时间",2026-08-14 13:08:14
 https://cdn.qd.je/163189/fct4k
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.112114.xyz/logo/%E7%BF%A1%E7%BF%A0%E5%8F%B04K(%E5%AD%97%E5%B9%95).png" group-title="🌊港·澳·台",翡翠台
 https://cdn.qd.je/163189/fct4k
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.112114.xyz/logo/%E7%BF%A1%E7%BF%A0%E5%8F%B0.png" group-title="🌊港·澳·台",翡翠台
 https://cdn.qd.je/163189/fct
-#EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://epg.112114.xyz/logo/TVB%20Plus(WebVTT%E5%AD%97%E5%B9%95).png" group-title="🌊港·澳·台",TVB Plus
-https://cdn.qd.je/163189/tvbpvtt
 #EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://epg.112114.xyz/logo/TVBPlus.png" group-title="🌊港·澳·台",TVB Plus
 https://cdn3.indevs.in/stream/tvb/tvbp/
+#EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://epg.112114.xyz/logo/TVB%20Plus(%E5%AD%97%E5%B9%95).png" group-title="🌊港·澳·台",TVB Plus
+https://cdn.qd.je/163189/tvbp
 #EXTINF:-1 tvg-id="无线新闻台" tvg-name="无线新闻台" tvg-logo="https://epg.112114.xyz/logo/%E6%97%A0%E7%BA%BF%E6%96%B0%E9%97%BB%E5%8F%B0.png" group-title="🌊港·澳·台",无线新闻台
 https://cdn.qd.je/163189/wxxwt
 #EXTINF:-1 tvg-id="无线新闻台" tvg-name="无线新闻台" tvg-logo="https://epg.112114.xyz/logo/%E6%97%A0%E7%BA%BF%E6%96%B0%E9%97%BB%E5%8F%B0.png" group-title="🌊港·澳·台",无线新闻台
 https://cdn.qd.je/163189/wxxw
-#EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://epg.112114.xyz/logo/%E6%98%8E%E7%8F%A0%E5%8F%B0(WebVTT%E5%AD%97%E5%B9%95).png" group-title="🌊港·澳·台",明珠台
-https://cdn.qd.je/163189/mztvtt
 #EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://epg.112114.xyz/logo/%E6%98%8E%E7%8F%A0%E5%8F%B0(%E5%AD%97%E5%B9%95).png" group-title="🌊港·澳·台",明珠台
 https://cdn.qd.je/163189/mzt
+#EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://epg.112114.xyz/logo/%E6%98%8E%E7%8F%A0%E5%8F%B0(WebVTT%E5%AD%97%E5%B9%95).png" group-title="🌊港·澳·台",明珠台
+https://cdn.qd.je/163189/mztvtt
 #EXTINF:-1 tvg-id="viuTV" tvg-name="viuTV" tvg-logo="https://epg.112114.xyz/logo/ViuTV.png" group-title="🌊港·澳·台",viuTV
 https://cdn.qd.je/163189/viu
 #EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://epg.112114.xyz/logo/%E5%87%A4%E5%87%B0%E4%B8%AD%E6%96%87.png" group-title="🌊港·澳·台",凤凰中文
