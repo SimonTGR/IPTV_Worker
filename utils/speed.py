@@ -666,7 +666,7 @@ def get_sort_result(
     """
     total_result = []
     for result in results:
-        if not config.open_speed_test or os.getenv("GITHUB_ACTIONS"):
+        if not config.open_speed_test:
             total_result.append(result)
             continue
         if not ipv6_support and result.get("ipv_type") == "ipv6":
@@ -677,14 +677,15 @@ def get_sort_result(
             result.get("resolution")
         )
         playable = result.get("playable", result_delay not in (None, -1) and result_speed > 0)
-        if not playable or result_delay == -1:
+        if not playable or result_delay in (None, -1) or result_speed <= 0:
             continue
-        if result.get("failure_reason") in {"wrong_content", "placeholder_fingerprint", "ad_or_no_signal"}:
+        if result.get("failure_reason") in {"wrong_content", "placeholder_fingerprint", "ad_or_no_signal", "ad_redirect_filtered"}:
             continue
         if int(result.get("consecutive_failures") or 0) >= config.max_consecutive_failures:
             continue
         if not supply:
-            if filter_speed and result_speed < resolution_speed_map.get(resolution, min_speed):
+            req_speed = resolution_speed_map.get(resolution, min_speed) if resolution else min_speed
+            if filter_speed and result_speed < req_speed:
                 continue
             bitrate = result.get("bitrate_kbps")
             if config.open_filter_bitrate and bitrate is not None and bitrate < config.min_bitrate_kbps:
