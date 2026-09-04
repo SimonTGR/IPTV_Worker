@@ -32,6 +32,13 @@ viuTV,VIUTV1,ViuTV,Viu TV,ViuTV99
 viuTV6,Viu6,ViuTV6,Viu TV6,ViuTV96
 凤凰中文,鳳凰中文,凤凰卫视中文台,凤凰中文台
 凤凰资讯,鳳凰資訊,凤凰卫视资讯台,凤凰资讯台
+凤凰香港,鳳凰香港,凤凰卫视香港台,凤凰香港台
+HOY TV,Hoy TV,香港开电视,奇妙电视,HOY 77,Hoy 77
+Now 新闻台,Now新闻台,now新闻台,Now新闻,Now TV,NOW TV
+港台电视31,港台電視31,RTHK31,RTHK 31,香港电台31
+港台电视32,港台電視32,RTHK32,RTHK 32,香港电台32
+TVB 星河,TVB星河,无线星河,TVB Xinghe,tvb星河
+
 
 # 广东频道对齐 user_demo.txt
 广东珠江,GDTV-2,珠江,珠江频道,珠江台,广东珠江高清,珠江高清

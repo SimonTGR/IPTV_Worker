@@ -4,9 +4,18 @@
 # This is the whitelist for interfaces. Interfaces in the whitelist will not be speed tested and will always be kept at the top of the results;
 # Filling in the channel name will directly retain the record to the final result of the channel, such as: CCTV-1, interface address;
 # If the channel name is not filled in, the address will be added to the results of all channels, with multiple records entered on new lines.
-翡翠台,http://cdn6.cc.cd/163189/jade
-翡翠台,https://cdn6.cc.cd/163189/jade
-明珠台,http://cdn6.cc.cd/163189/mzt
+翡翠台,https://cdn.qd.je/163189/jade
+明珠台,https://cdn.qd.je/163189/mzt
+无线新闻台,https://cdn.qd.je/163189/wxxw
+凤凰中文,https://cdn.qd.je/163189/fhzw
+凤凰资讯,https://cdn.qd.je/163189/fhzx
+凤凰香港,https://cdn.qd.je/163189/fhhk
+HOY TV,https://cdn.qd.je/163189/hoy
+Now 新闻台,https://cdn.qd.je/163189/now
+港台电视31,https://cdn.qd.je/163189/rthk31
+港台电视32,https://cdn.qd.je/163189/rthk32
+TVB 星河,https://cdn.qd.je/163189/xinghe
+TVB Plus,https://cdn.qd.je/163189/tvb1
 
 
 [KEYWORDS]
