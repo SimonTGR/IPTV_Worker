@@ -17,3 +17,10 @@ made with Flixier
 链接过期或失效
 backup.m3u8
 catvod.com/backup
+.mp4
+kwimgs.com
+kuaishou.com
+douyin.com
+bilibili.com
+/upic/
+/video-hls/

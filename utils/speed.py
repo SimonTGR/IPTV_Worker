@@ -204,9 +204,9 @@ def is_ad_playlist(media_playlist, base_url: str = "") -> bool:
     if any(keyword in haystack for keyword in ad_filter_keywords):
         return True
     if getattr(media_playlist, "is_endlist", False):
-        total_duration = sum(segment.duration or 0 for segment in segments)
-        if 0 < total_duration <= ad_max_loop_duration:
-            return True
+        return True
+    if getattr(media_playlist, "playlist_type", None) == "VOD":
+        return True
     return False
 
 
@@ -248,6 +248,15 @@ async def get_result(url: str, headers: dict = None, resolution: str = None,
     location = None
     try:
         url = quote(url, safe=':/?$&=@[]%').partition('$')[0]
+        parsed_path = urlsplit(url).path.lower()
+        if any(parsed_path.endswith(ext) for ext in ('.mp4', '.mkv', '.avi', '.mov', '.wmv', '.webm')):
+            info['playable'] = False
+            info['failure_reason'] = 'static_video_filtered'
+            return info
+        if any(domain in url.lower() for domain in ('kwimgs.com', 'kuaishou.com', 'douyin.com', 'bilibili.com', 'weibo.com', '/upic/', '/video-hls/')):
+            info['playable'] = False
+            info['failure_reason'] = 'vod_platform_filtered'
+            return info
         async with ClientSession(connector=TCPConnector(ssl=False), trust_env=True) as session:
             res_headers = await get_headers(url, headers, session)
             location = res_headers.get('Location') if res_headers else None
