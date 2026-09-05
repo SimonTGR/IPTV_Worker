@@ -4,19 +4,29 @@
 # This is the whitelist for interfaces. Interfaces in the whitelist will not be speed tested and will always be kept at the top of the results;
 # Filling in the channel name will directly retain the record to the final result of the channel, such as: CCTV-1, interface address;
 # If the channel name is not filled in, the address will be added to the results of all channels, with multiple records entered on new lines.
-翡翠台,https://cdn.qd.je/163189/jade
-明珠台,https://cdn.qd.je/163189/mzt
-无线新闻台,https://cdn.qd.je/163189/wxxw
-凤凰中文,https://cdn.qd.je/163189/fhzw
-凤凰资讯,https://cdn.qd.je/163189/fhzx
-凤凰香港,https://cdn.qd.je/163189/fhhk
-HOY TV,https://cdn.qd.je/163189/hoy
-Now 新闻台,https://cdn.qd.je/163189/now
-港台电视31,https://cdn.qd.je/163189/rthk31
-港台电视32,https://cdn.qd.je/163189/rthk32
-TVB 星河,https://cdn.qd.je/163189/xinghe
-TVB Plus,https://cdn.qd.je/163189/tvb1
-
+翡翠台,http://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.flv
+翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
+明珠台,http://183.62.8.58:50085/tsfile/live/0018_1.m3u8?key=txiptv&playlive=1&authid=0
+明珠台,http://183.239.108.37:1698/hls/93/index.m3u8
+无线新闻台,https://h5cdn3.kylintv.tv/live/tvbnews_iphone.m3u8
+TVB Plus,http://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.flv
+TVB Plus,http://183.239.108.37:1698/hls/130/index.m3u8
+TVB 星河,http://120.238.5.44:1698/hls/88/index.m3u8
+黄金翡翠台,https://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.flv
+HOY TV,http://play.wenxiang.cn/live/43dc6fc9b1af5af8ec332f3c88b95e4a.flv
+HOY 资讯台,http://play.wenxiang.cn/live/cf4526f51988d0ed065b5c3fa4bc925d.flv
+港台电视31,http://play.wenxiang.cn/live/0f4b100c9ed81fdd547ba0a1a20dea49.flv
+港台电视32,http://play.wenxiang.cn/live/1c84d2c289c82f92f588aaa566858174.flv
+澳视澳门,https://live5.tdm.com.mo/ch1/ch1.live/playlist.m3u8
+澳门资讯,https://live5.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8
+澳门综艺,https://live5.tdm.com.mo/ch6/hd_ch6.live/playlist.m3u8
+澳视卫星,https://live5.tdm.com.mo/ch3/ch3.live/playlist.m3u8
+凤凰中文,http://221.7.175.154:85/tsfile/live/1020_1.m3u8?key=txiptv&playlive=1&authid=0
+凤凰中文,http://bobohome.ignorelist.com:20247/fengshows?id=2.m3u8
+凤凰资讯,http://221.7.175.154:85/tsfile/live/1021_1.m3u8?key=txiptv&playlive=1&authid=0
+凤凰资讯,http://bobohome.ignorelist.com:20247/fengshows?id=1.m3u8
+凤凰香港,http://bobohome.ignorelist.com:20247/fengshows?id=3.m3u8
+凤凰香港,http://183.239.108.37:1698/hls/97/index.m3u8
 
 [KEYWORDS]
 # 以下区域是关键字白名单，某频道获取到的接口地址中含有指定关键字，则该接口会被加入该频道的白名单，多条记录换行输入。
