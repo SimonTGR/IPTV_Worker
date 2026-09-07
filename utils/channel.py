@@ -67,6 +67,7 @@ min_speed = config.min_speed
 open_filter_resolution = config.open_filter_resolution
 min_resolution_value = config.min_resolution_value
 resolution_speed_map = config.resolution_speed_map
+resolution_bitrate_map = config.resolution_bitrate_map
 open_history = config.open_history
 open_local = config.open_local
 open_rtmp = config.open_rtmp
@@ -784,9 +785,11 @@ def is_valid_speed_result(info) -> bool:
                 return False
 
         bitrate = info.get("bitrate_kbps")
-        if config.open_filter_bitrate and bitrate is not None and bitrate < config.min_bitrate_kbps:
-            info["failure_reason"] = "bitrate_too_low"
-            return False
+        if config.open_filter_bitrate and bitrate is not None:
+            min_req_bitrate = resolution_bitrate_map.get(res_str, config.min_bitrate_kbps)
+            if bitrate < min_req_bitrate:
+                info["failure_reason"] = "bitrate_too_low"
+                return False
 
         if open_filter_resolution:
             try:

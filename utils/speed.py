@@ -28,6 +28,7 @@ sort_by = config.sort_by
 open_filter_speed = config.open_filter_speed
 min_speed_value = config.min_speed
 resolution_speed_map = config.resolution_speed_map
+resolution_bitrate_map = config.resolution_bitrate_map
 speed_test_limit = config.speed_test_limit
 open_filter_ad = config.open_filter_ad
 m3u8_headers = ['application/x-mpegurl', 'application/vnd.apple.mpegurl', 'audio/mpegurl', 'audio/x-mpegurl']
@@ -688,23 +689,27 @@ def get_sort_result(
         playable = result.get("playable", result_delay not in (None, -1) and result_speed > 0)
         if not playable or result_delay in (None, -1) or result_speed <= 0:
             continue
-        if result.get("failure_reason") in {"wrong_content", "placeholder_fingerprint", "ad_or_no_signal", "ad_redirect_filtered"}:
+        if result.get("failure_reason") in {"wrong_content", "placeholder_fingerprint", "ad_or_no_signal", "ad_redirect_filtered", "resolution_too_low"}:
             continue
         if int(result.get("consecutive_failures") or 0) >= config.max_consecutive_failures:
             continue
+
+        # Hard floor: strictly enforce resolution boundary (e.g. >= 1280x720) regardless of supply
+        if filter_resolution and resolution:
+            resolution_value = get_resolution_value(resolution)
+            if resolution_value < min_resolution or resolution_value > max_resolution:
+                continue
+
         if not supply:
             req_speed = resolution_speed_map.get(resolution, min_speed) if resolution else min_speed
             if filter_speed and result_speed < req_speed:
                 continue
+            req_bitrate = resolution_bitrate_map.get(resolution, config.min_bitrate_kbps) if resolution else config.min_bitrate_kbps
             bitrate = result.get("bitrate_kbps")
-            if config.open_filter_bitrate and bitrate is not None and bitrate < config.min_bitrate_kbps:
+            if config.open_filter_bitrate and bitrate is not None and bitrate < req_bitrate:
                 continue
-            if filter_resolution:
-                if not resolution:
-                    continue
-                resolution_value = get_resolution_value(resolution)
-                if resolution_value < min_resolution or resolution_value > max_resolution:
-                    continue
+            if filter_resolution and not resolution:
+                continue
         total_result.append(result)
 
     def sort_key(item):
@@ -739,6 +744,7 @@ def get_sort_result(
     primary_speed = primary.get("download_speed_mbps", primary.get("speed")) or 0
     primary_stability = primary.get("stability", primary.get("success_ratio")) or 0
     primary_verified = primary.get("content_verified")
+    primary_res = get_resolution_value(primary.get("resolution") or "")
     chosen = [primary]
     chosen_hosts = {urlsplit(primary.get("url") or "").hostname}
     remaining = total_result[1:]
@@ -746,6 +752,13 @@ def get_sort_result(
         host = urlsplit(item.get("url") or "").hostname
         item_speed = item.get("download_speed_mbps", item.get("speed")) or 0
         item_stability = item.get("stability", item.get("success_ratio")) or 0
+        item_res = get_resolution_value(item.get("resolution") or "")
+
+        # If primary is 1080p/4K, do not pick 720p for backup if more 1080p/4K items exist
+        if primary_res >= 1920 * 1080 and item_res < 1920 * 1080:
+            if any(get_resolution_value(r.get("resolution") or "") >= 1920 * 1080 for r in remaining):
+                continue
+
         quality_close = (
             item.get("content_verified") == primary_verified
             and item_speed >= primary_speed * 0.75

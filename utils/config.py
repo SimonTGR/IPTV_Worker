@@ -476,6 +476,20 @@ class ConfigManager:
         return mapping
 
     @property
+    def resolution_bitrate_map(self):
+        mapping = {}
+        for item in self.config.get("Settings", "resolution_bitrate_map", fallback="").split(","):
+            if ":" in item:
+                resolution_part, bitrate_part = item.split(":", 1)
+                resolution = resolution_part.strip()
+                try:
+                    bitrate = float(bitrate_part.strip())
+                    mapping[resolution] = bitrate
+                except ValueError:
+                    pass
+        return mapping
+
+    @property
     def open_unmatch_category(self):
         return self.config.getboolean("Settings", "open_unmatch_category", fallback=False)
 
