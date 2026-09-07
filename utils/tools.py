@@ -890,9 +890,9 @@ def get_datetime_now():
     """
     Get the datetime now
     """
-    now = datetime.datetime.now()
     time_zone = pytz.timezone(config.time_zone)
-    return now.astimezone(time_zone).strftime("%Y-%m-%d %H:%M:%S")
+    now = datetime.datetime.now(datetime.timezone.utc).astimezone(time_zone)
+    return now.strftime("%Y-%m-%d %H:%M:%S")
 
 
 def get_version_info():
