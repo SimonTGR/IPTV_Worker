@@ -4,6 +4,7 @@
 # This is the whitelist for interfaces. Interfaces in the whitelist will not be speed tested and will always be kept at the top of the results;
 # Filling in the channel name will directly retain the record to the final result of the channel, such as: CCTV-1, interface address;
 # If the channel name is not filled in, the address will be added to the results of all channels, with multiple records entered on new lines.
+翡翠台,http://74.91.26.218:82/live/jade.m3u8
 翡翠台,http://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.flv
 翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
 明珠台,http://183.62.8.58:50085/tsfile/live/0018_1.m3u8?key=txiptv&playlive=1&authid=0
