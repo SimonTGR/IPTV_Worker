@@ -104,5 +104,8 @@ print(" 📺 你的播放器订阅地址（即刻刷新即可享受最新 1080p 
 print("    👉 主力推荐 (直连透传): https://ghproxy.net/https://raw.githubusercontent.com/SimonTGR/IPTV_Worker/main/output/user_result.m3u")
 print("    👉 CDN加速源:           https://cdn.jsdmirror.com/gh/SimonTGR/IPTV_Worker@main/output/user_result.m3u")
 print("=" * 65)
-print()
-input("按回车键退出窗口...")
+try:
+    if sys.stdin and sys.stdin.isatty():
+        input("按回车键退出窗口...")
+except Exception:
+    pass
