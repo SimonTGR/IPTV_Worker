@@ -37,7 +37,7 @@ except Exception as e:
 
 # 3. 运行本地测速与画质/码率分析
 print()
-print("🚀 [3/5] 开始执行全量真实网络测速（优先筛选 1080p / 高码率 / 高下行带宽）...")
+print("🚀 [3/5] 开始执行全量真实网络测速（速率>码率>帧率>分辨率，保障流畅不卡顿）...")
 print("   (提示：正在对所有频道进行实际流媒体切片采样，请耐心等待几分钟)")
 print()
 
@@ -100,7 +100,7 @@ secs = int(elapsed % 60)
 print()
 print("=" * 65)
 print(f" 🎉 全流程处理完成！总耗时: {mins}分{secs}秒")
-print(" 📺 你的播放器订阅地址（即刻刷新即可享受最新 1080p 超清源）：")
+print(" 📺 你的播放器订阅地址（即刻刷新即可享受流畅高清源）：")
 print("    👉 主力推荐 (直连透传): https://ghproxy.net/https://raw.githubusercontent.com/SimonTGR/IPTV_Worker/main/output/user_result.m3u")
 print("    👉 CDN加速源:           https://cdn.jsdmirror.com/gh/SimonTGR/IPTV_Worker@main/output/user_result.m3u")
 print("=" * 65)
