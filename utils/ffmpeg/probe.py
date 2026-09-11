@@ -80,6 +80,8 @@ async def probe_url(url: str, headers: dict = None, timeout: int = 10) -> dict |
         header_str = ''.join(f'{k}: {v}\r\n' for k, v in (headers or {}).items()) if headers else ''
         args = [
             'ffprobe',
+            '-extension_picky', '0',
+            '-allowed_segment_extensions', 'ALL',
             '-v', 'error',
             '-show_format',
             '-show_streams',
@@ -153,6 +155,8 @@ def probe_url_sync(url: str, headers: dict = None, timeout: int = 10) -> dict | 
     header_str = ''.join(f'{k}: {v}\r\n' for k, v in (headers or {}).items()) if headers else ''
     args = [
         'ffprobe',
+        '-extension_picky', '0',
+        '-allowed_segment_extensions', 'ALL',
         '-v', 'error',
         '-show_format',
         '-show_streams',
