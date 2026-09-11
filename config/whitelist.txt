@@ -4,24 +4,27 @@
 # This is the whitelist for interfaces. Interfaces in the whitelist will not be speed tested and will always be kept at the top of the results;
 # Filling in the channel name will directly retain the record to the final result of the channel, such as: CCTV-1, interface address;
 # If the channel name is not filled in, the address will be added to the results of all channels, with multiple records entered on new lines.
-# 翡翠台 (1080P & 4K 翡翠台直播源，如在国内电信/移动直连若遇运营商限速，可开启分流代理畅享12x极速)
-翡翠台,https://cdn.qd.je/163189/fct2
-翡翠台,https://cdn.qd.je/163189/fct4k
+# 翡翠台 (国内电信/全网直连 1080P，实测秒开流畅)
+翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
+翡翠台,http://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.flv
 
-# 明珠台 (高清 1080P)
-明珠台,https://cdn.qd.je/163189/mzt
+# 明珠台 (国内电信直连 1080P)
+明珠台,http://183.62.8.58:50085/tsfile/live/0018_1.m3u8?key=txiptv&playlive=1&authid=0
 
-# TVB Plus (高清 1080P)
-TVB Plus,https://cdn.qd.je/163189/j1
+# TVB Plus (国内直连 1080P)
+TVB Plus,http://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.flv
 
 # 无线新闻台 (720P 国内极速直连秒开)
 无线新闻台,https://h5cdn3.kylintv.tv/live/tvbnews_iphone.m3u8
 
-# TVBS新闻台 (高清 720P 60FPS 直连秒开)
+# TVBS新闻台 (高清 1080P 60FPS 中华电信直连秒开)
 TVBS新闻台,http://61.221.215.25:8800/hls/9/index.m3u8
 
-# TVB 星河 (高清 1080P)
-TVB 星河,https://cdn.qd.je/163189/hlt
+# TVB 星河 / 黄金翡翠台
+黄金翡翠台,https://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.flv
+HOY TV,http://play.wenxiang.cn/live/43dc6fc9b1af5af8ec332f3c88b95e4a.flv
+港台电视31,http://play.wenxiang.cn/live/0f4b100c9ed81fdd547ba0a1a20dea49.flv
+港台电视32,http://play.wenxiang.cn/live/1c84d2c289c82f92f588aaa566858174.flv
 
 # 凤凰卫视系列
 凤凰中文,http://221.7.175.154:85/tsfile/live/1020_1.m3u8?key=txiptv&playlive=1&authid=0
