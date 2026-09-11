@@ -46,7 +46,8 @@ ret = subprocess.run([sys.executable, "-X", "utf8", "main.py"])
 
 if ret.returncode != 0:
     print(f"\n❌ 测速过程中出现异常，退出码: {ret.returncode}")
-    input("\n按回车键退出窗口...")
+    if sys.stdin and sys.stdin.isatty():
+        input("\n按回车键退出窗口...")
     sys.exit(ret.returncode)
 
 # 4. 重新构建公共发布列表 (public_output)
