@@ -726,6 +726,13 @@ def get_sort_result(
                 keys.append(-(item.get("download_speed_mbps", item.get("speed")) or 0))
             elif dim == "bitrate":
                 keys.append(-(item.get("bitrate_kbps") or 0))
+            elif dim == "fps":
+                fps_val = item.get("fps")
+                try:
+                    fps_val = float(fps_val) if fps_val not in (None, "未知", "") else 0.0
+                except (ValueError, TypeError):
+                    fps_val = 0.0
+                keys.append(-fps_val)
             elif dim == "delay":
                 delay = item.get("delay_ms", item.get("delay"))
                 keys.append(delay if isinstance(delay, (int, float)) and delay >= 0 else float("inf"))
@@ -744,7 +751,6 @@ def get_sort_result(
     primary_speed = primary.get("download_speed_mbps", primary.get("speed")) or 0
     primary_stability = primary.get("stability", primary.get("success_ratio")) or 0
     primary_verified = primary.get("content_verified")
-    primary_res = get_resolution_value(primary.get("resolution") or "")
     chosen = [primary]
     chosen_hosts = {urlsplit(primary.get("url") or "").hostname}
     remaining = total_result[1:]
@@ -752,12 +758,6 @@ def get_sort_result(
         host = urlsplit(item.get("url") or "").hostname
         item_speed = item.get("download_speed_mbps", item.get("speed")) or 0
         item_stability = item.get("stability", item.get("success_ratio")) or 0
-        item_res = get_resolution_value(item.get("resolution") or "")
-
-        # If primary is 1080p/4K, do not pick 720p for backup if more 1080p/4K items exist
-        if primary_res >= 1920 * 1080 and item_res < 1920 * 1080:
-            if any(get_resolution_value(r.get("resolution") or "") >= 1920 * 1080 for r in remaining):
-                continue
 
         quality_close = (
             item.get("content_verified") == primary_verified

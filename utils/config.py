@@ -236,7 +236,7 @@ class ConfigManager:
         )
         allowed = (
             "playable", "content_verified", "stability", "download_speed", "bitrate",
-            "resolution", "delay", "source_priority", "speed",
+            "fps", "resolution", "delay", "source_priority", "speed",
         )
         result = [s.strip().lower() for s in str(raw).split(",") if s.strip().lower() in allowed]
         return result or ["download_speed"]
