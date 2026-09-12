@@ -4,15 +4,16 @@
 # This is the whitelist for interfaces. Interfaces in the whitelist will not be speed tested and will always be kept at the top of the results;
 # Filling in the channel name will directly retain the record to the final result of the channel, such as: CCTV-1, interface address;
 # If the channel name is not filled in, the address will be added to the results of all channels, with multiple records entered on new lines.
-# 翡翠台 (国内腾讯云深圳CDN/全网直连 1080P 极速秒开)
+# 翡翠台 (国内腾讯/阿里双协议全网直连 1080P 原生16:9 无黑边无拉伸)
+翡翠台,https://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.m3u8
 翡翠台,http://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.m3u8
-翡翠台,http://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.m3u8
 翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
 
 # 明珠台 (国内电信直连 1080P)
 明珠台,http://183.62.8.58:50085/tsfile/live/0018_1.m3u8?key=txiptv&playlive=1&authid=0
 
-# TVB Plus (国内直连 1080P)
+# TVB Plus (国内直连 1080P 16:9)
+TVB Plus,https://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 TVB Plus,http://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 
 # 无线新闻台 (720P 国内极速直连秒开)
@@ -21,11 +22,20 @@ TVB Plus,http://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 # TVBS新闻台 (高清 1080P 60FPS 中华电信直连秒开)
 TVBS新闻台,http://61.221.215.25:8800/hls/9/index.m3u8
 
-# TVB 星河 / 黄金翡翠台
-黄金翡翠台,http://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.m3u8
+# TVB 星河 (经典剧场)
+TVB 星河,https://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.m3u8
+TVB 星河,http://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.m3u8
+
+# HOY TV 系列 (1080P 50FPS 极速)
+HOY TV,https://play.wenxiang.cn/live/43dc6fc9b1af5af8ec332f3c88b95e4a.m3u8
 HOY TV,http://play.wenxiang.cn/live/43dc6fc9b1af5af8ec332f3c88b95e4a.m3u8
+HOY 资讯台,https://play.wenxiang.cn/live/cf4526f51988d0ed065b5c3fa4bc925d.m3u8
 HOY 资讯台,http://play.wenxiang.cn/live/cf4526f51988d0ed065b5c3fa4bc925d.m3u8
+
+# 港台电视系列 (1080P 极速)
+港台电视31,https://play.wenxiang.cn/live/0f4b100c9ed81fdd547ba0a1a20dea49.m3u8
 港台电视31,http://play.wenxiang.cn/live/0f4b100c9ed81fdd547ba0a1a20dea49.m3u8
+港台电视32,https://play.wenxiang.cn/live/1c84d2c289c82f92f588aaa566858174.m3u8
 港台电视32,http://play.wenxiang.cn/live/1c84d2c289c82f92f588aaa566858174.m3u8
 
 # 凤凰卫视系列
