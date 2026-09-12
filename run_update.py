@@ -18,13 +18,42 @@ print(f"    当前工作目录: {ROOT_DIR}")
 print("=" * 65)
 print()
 
-# 1. 环境变量配置：优先注入本地 FFmpeg / FFprobe
-local_ffmpeg_path = Path(r"C:\Users\tgr\.local\bin\ffmpeg-master-latest-win64-gpl\bin")
-if local_ffmpeg_path.is_dir():
-    os.environ["PATH"] = str(local_ffmpeg_path) + os.pathsep + os.environ.get("PATH", "")
-    print("✅ [1/5] 已加载本地硬件加速 FFmpeg / FFprobe 支持")
+# 1. 智能检测与加载 FFmpeg / FFprobe
+import shutil
+
+ffmpeg_candidates = [
+    ROOT_DIR / "bin",
+    ROOT_DIR / "ffmpeg" / "bin",
+    ROOT_DIR,
+    Path(r"C:\Users\tgr\.local\bin\ffmpeg-master-latest-win64-gpl\bin"),
+]
+found_ffmpeg = False
+if shutil.which("ffmpeg"):
+    found_ffmpeg = True
+    print("✅ [1/5] 已检测到系统全局 FFmpeg / FFprobe 支持")
 else:
-    print("⚠️ [1/5] 未检测到专用 FFmpeg 路径，使用系统默认 PATH")
+    for p in ffmpeg_candidates:
+        if p.is_dir() and (p / "ffmpeg.exe").is_file():
+            os.environ["PATH"] = str(p) + os.pathsep + os.environ.get("PATH", "")
+            found_ffmpeg = True
+            print(f"✅ [1/5] 已加载本地 FFmpeg 路径: {p}")
+            break
+
+if not found_ffmpeg:
+    print("⚠️ [1/5] 未检测到专用 FFmpeg 路径，将使用标准网络测速模式")
+    print("      (提示：如需启用高精度画质、码率与黑边检测，建议安装 FFmpeg 或将其放入 bin 目录)")
+
+# 自动检查并补全 Python 核心依赖
+missing_deps = []
+for mod in ["requests", "aiohttp", "tqdm", "pytz", "m3u8", "opencc"]:
+    try:
+        __import__(mod)
+    except ImportError:
+        missing_deps.append(mod)
+
+if missing_deps:
+    print(f"⚠️ 检测到缺少 Python 依赖包: {missing_deps}，正在自动为您安装...")
+    subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"], check=False)
 
 # 2. 同步云端最新代码与配置
 print("📥 [2/5] 正在检查与同步云端最新代码与配置...")
