@@ -66,7 +66,7 @@ print()
 print("🚀 [5/5] 正在将最新测速播放列表推送到 GitHub 仓库...")
 now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-subprocess.run(["git", "add", "-f", "output/", "public_output/", "config/"], check=False)
+subprocess.run(["git", "add", "-f", "output/", "public_output/", "config/", "utils/", "run_update.py", "一键测速并推送.bat"], check=False)
 diff_proc = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, check=False)
 
 if diff_proc.stdout.strip():
@@ -84,7 +84,9 @@ print()
 print("🔄 正在请求刷新 CDN 边缘缓存...")
 for p_url in [
     "https://purge.jsdelivr.net/gh/SimonTGR/IPTV_Worker@main/output/user_result.m3u",
-    "https://purge.jsdelivr.net/gh/SimonTGR/IPTV_Worker@main/public_output/live.m3u"
+    "https://purge.jsdelivr.net/gh/SimonTGR/IPTV_Worker@main/output/user_result.txt",
+    "https://purge.jsdelivr.net/gh/SimonTGR/IPTV_Worker@main/public_output/live.m3u",
+    "https://purge.jsdelivr.net/gh/SimonTGR/IPTV_Worker@main/public_output/live.txt",
 ]:
     try:
         req = urllib.request.Request(p_url, headers={"User-Agent": "Mozilla/5.0"})

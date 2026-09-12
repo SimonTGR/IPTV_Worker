@@ -93,14 +93,21 @@ def is_url_whitelisted(data_map: WhitelistMaps, url: str, channel_name: str | No
                 return True
         return False
 
-    if check_exact_for(channel_key) or check_exact_for(""):
-        return True
+    keys_to_check = [channel_key]
+    if channel_name and " " in channel_name:
+        keys_to_check.append(channel_name.split()[0])
+    keys_to_check.append("")
 
-    for kw in keyword_map.get(channel_key, []) + keyword_map.get("", []):
-        if not kw:
-            continue
-        if kw in url:
+    for k in keys_to_check:
+        if check_exact_for(k):
             return True
+
+    for k in keys_to_check:
+        for kw in keyword_map.get(k, []):
+            if not kw:
+                continue
+            if kw in url:
+                return True
 
     return False
 
@@ -112,7 +119,12 @@ def get_whitelist_url(data_map: WhitelistMaps, channel_name: str | None = None) 
     """
     exact_map, _ = data_map
     channel_key = channel_name or ""
-    return _dedupe_preserve_order(exact_map.get(channel_key, []) + exact_map.get("", []))
+    results = list(exact_map.get(channel_key, []))
+    if channel_name and " " in channel_name:
+        short_name = channel_name.split()[0]
+        results.extend(exact_map.get(short_name, []))
+    results.extend(exact_map.get("", []))
+    return _dedupe_preserve_order(results)
 
 
 def get_whitelist_total_count(data_map: WhitelistMaps) -> int:
