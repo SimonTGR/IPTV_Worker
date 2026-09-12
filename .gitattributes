@@ -1,0 +1,3 @@
+# 确保批处理脚本在 Windows 下始终保持 CRLF 换行符
+*.bat text eol=crlf
+*.cmd text eol=crlf

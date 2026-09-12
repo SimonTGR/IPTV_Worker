@@ -25,6 +25,8 @@ ffmpeg_candidates = [
     ROOT_DIR / "bin",
     ROOT_DIR / "ffmpeg" / "bin",
     ROOT_DIR,
+    Path(os.path.expandvars(r"%LOCALAPPDATA%\Microsoft\WinGet\Links")),
+    Path(os.path.expandvars(r"%USERPROFILE%\.local\bin\ffmpeg-master-latest-win64-gpl\bin")),
     Path(r"C:\Users\tgr\.local\bin\ffmpeg-master-latest-win64-gpl\bin"),
 ]
 found_ffmpeg = False
@@ -45,7 +47,7 @@ if not found_ffmpeg:
 
 # 自动检查并补全 Python 核心依赖
 missing_deps = []
-for mod in ["requests", "aiohttp", "tqdm", "pytz", "m3u8", "opencc"]:
+for mod in ["requests", "aiohttp", "tqdm", "pytz", "m3u8", "opencc", "ipdb", "bs4", "pydantic"]:
     try:
         __import__(mod)
     except ImportError:
@@ -95,7 +97,7 @@ print()
 print("🚀 [5/5] 正在将最新测速播放列表推送到 GitHub 仓库...")
 now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-subprocess.run(["git", "add", "-f", "output/", "public_output/", "config/", "utils/", "run_update.py", "一键测速并推送.bat"], check=False)
+subprocess.run(["git", "add", "-f", "output/", "public_output/", "config/", "utils/", "run_update.py", "一键测速并推送.bat", ".gitattributes", "requirements.txt"], check=False)
 diff_proc = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, check=False)
 
 if diff_proc.stdout.strip():
