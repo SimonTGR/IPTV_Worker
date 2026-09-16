@@ -102,13 +102,32 @@ diff_proc = subprocess.run(["git", "status", "--porcelain"], capture_output=True
 
 if diff_proc.stdout.strip():
     subprocess.run(["git", "commit", "-m", f"update: 本地真实网络精准测速推送 [{now_str}]"], check=False)
-    push_proc = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True, check=False)
-    if push_proc.returncode == 0:
-        print("✅ 成功推送到 GitHub 远程仓库！")
-    else:
-        print(f"⚠️ 推送到 GitHub 遇到警告:\n{push_proc.stderr}")
+    print("✅ 本地更新提交完成")
 else:
-    print("ℹ️ 播放列表内容无变化，已保持最新。")
+    print("ℹ️ 本地播放列表暂无新变动或已在本地提交。")
+
+# 检查是否存在未推送到远端的本地提交（包括刚才提交的以及之前残留未推成功的）
+unpushed_proc = subprocess.run(["git", "cherry", "-v"], capture_output=True, text=True, check=False)
+has_unpushed = bool(unpushed_proc.stdout.strip())
+
+if has_unpushed:
+    print("📤 检测到存在待推送的更新，正在推送到 GitHub 远程仓库...")
+    push_success = False
+    for attempt in range(1, 4):
+        push_proc = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True, check=False)
+        if push_proc.returncode == 0:
+            push_success = True
+            print("✅ 成功推送到 GitHub 远程仓库！")
+            break
+        else:
+            err_info = push_proc.stderr.strip() or push_proc.stdout.strip()
+            print(f"⚠️ 第 {attempt}/3 次推送至 GitHub 遇到提示: {err_info}")
+            if attempt < 3:
+                time.sleep(2)
+    if not push_success:
+        print("❌ 3 次推送均未能连接到 GitHub，可能受到国内网络环境影响。请检查网络或稍后再试。")
+else:
+    print("✅ 远程仓库已是最新状态，无需重复推送。")
 
 # 6. 刷新 CDN 边缘缓存
 print()
