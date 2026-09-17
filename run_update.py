@@ -83,12 +83,13 @@ if ret.returncode != 0:
 
 # 4. 重新构建公共发布列表 (public_output)
 print()
-print("📦 [4/5] 正在重新生成公开分发格式 (public_output)...")
+print("📦 [4/5] 正在重新生成公开分发格式并附加实时更新时间...")
 try:
     sys.path.insert(0, str(ROOT_DIR))
-    from cloud.publication import build_public_playlists
+    from cloud.publication import build_public_playlists, refresh_playlist_timestamp
+    updated_at_str = refresh_playlist_timestamp(ROOT_DIR)
     status = build_public_playlists(str(ROOT_DIR), media_probe=lambda b: True)
-    print(f"✅ 公开分发列表生成成功 (共 {status.get('direct_channel_count', 0)} 个有效频道)")
+    print(f"✅ 公开分发列表生成成功 (共 {status.get('direct_channel_count', 0)} 个有效频道，更新时间戳: {updated_at_str})")
 except Exception as e:
     print(f"⚠️ 生成 public_output 遇到异常: {e}")
 

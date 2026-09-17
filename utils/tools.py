@@ -468,17 +468,23 @@ def convert_to_m3u(path=None, first_channel_name=None, data=None):
                             )
                         except:
                             continue
-                        use_name = first_channel_name if current_group in (t("content.update_time"),
-                                                                           t("content.update_running")) else original_channel_name
-                        processed_channel_name = use_name
-                        if from_fanmingming:
-                            processed_channel_name = re.sub(
-                                r"(CCTV|CETV)-(\d+)(\+.*)?",
-                                lambda m: f"{m.group(1)}{m.group(2)}"
-                                          + ("+" if m.group(3) else ""),
-                                use_name,
-                            )
-                        tvg_id = get_channel_epg_id(use_name) or processed_channel_name
+                        is_update_time = current_group in (t("content.update_time"),
+                                                           t("content.update_running"))
+                        if is_update_time:
+                            use_name = first_channel_name
+                            processed_channel_name = original_channel_name
+                            tvg_id = ""
+                        else:
+                            use_name = original_channel_name
+                            processed_channel_name = use_name
+                            if from_fanmingming:
+                                processed_channel_name = re.sub(
+                                    r"(CCTV|CETV)-(\d+)(\+.*)?",
+                                    lambda m: f"{m.group(1)}{m.group(2)}"
+                                              + ("+" if m.group(3) else ""),
+                                    use_name,
+                                )
+                            tvg_id = get_channel_epg_id(use_name) or processed_channel_name
 
                         item_data = {}
                         if data:
@@ -488,10 +494,14 @@ def convert_to_m3u(path=None, first_channel_name=None, data=None):
                                     item_data = item
                                     break
                         channel_logo = ""
-                        if config.open_subscribe_logo and item_data:
-                            channel_logo = item_data.get("tvg_logo") or ""
-                        if not channel_logo:
-                            channel_logo = join_url(logo_url, f"{processed_channel_name}.{config.logo_type}")
+                        if is_update_time:
+                            if first_channel_name:
+                                channel_logo = join_url(logo_url, f"{first_channel_name}.{config.logo_type}")
+                        else:
+                            if config.open_subscribe_logo and item_data:
+                                channel_logo = item_data.get("tvg_logo") or ""
+                            if not channel_logo:
+                                channel_logo = join_url(logo_url, f"{processed_channel_name}.{config.logo_type}")
 
                         m3u_output += f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{processed_channel_name}" tvg-logo="{channel_logo}"'
                         if current_group:

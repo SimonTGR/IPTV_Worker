@@ -10,6 +10,7 @@ from typing import Callable
 from urllib.parse import urlsplit
 
 
+import datetime
 import os
 
 PUBLIC_REPOSITORY = "SimonTGR/IPTV_Worker"
@@ -69,7 +70,90 @@ def _blocked_for_direct(url: str | None) -> bool:
     return any(host == suffix[1:] or host.endswith(suffix) for suffix in BLOCKED_DIRECT_HOST_SUFFIXES)
 
 
+def is_update_time_block(block: list[str]) -> bool:
+    if not block:
+        return False
+    header = block[0]
+    return any(
+        k in header
+        for k in [
+            'group-title="🕘️更新时间"',
+            'group-title="更新时间"',
+            'group-title="\uD83D\uDD58\uFE0F更新时间"',
+            'group-title="\u23F0更新时间"',
+        ]
+    )
+
+
+def refresh_playlist_timestamp(root: Path | str, now: datetime.datetime | None = None) -> str:
+    root_path = Path(root)
+    if now is None:
+        try:
+            import pytz
+            tz = pytz.timezone("Asia/Shanghai")
+            now = datetime.datetime.now(datetime.timezone.utc).astimezone(tz)
+        except Exception:
+            now = datetime.datetime.now()
+    now_str = now.strftime("%Y-%m-%d %H:%M:%S")
+    iso_now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+
+    # 1. Update output/user_result.m3u
+    m3u_path = root_path / "output" / "user_result.m3u"
+    if m3u_path.is_file():
+        text = m3u_path.read_text(encoding="utf-8-sig")
+        lines = text.splitlines()
+        has_update_block = False
+        new_lines = []
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            if any(
+                k in line
+                for k in [
+                    'group-title="🕘️更新时间"',
+                    'group-title="更新时间"',
+                    'group-title="\uD83D\uDD58\uFE0F更新时间"',
+                    'group-title="\u23F0更新时间"',
+                ]
+            ):
+                has_update_block = True
+                new_lines.append(
+                    f'#EXTINF:-1 tvg-id="" tvg-name="{now_str}" tvg-logo="https://live.fanmingming.com/tv/CCTV1.png" group-title="🕘️更新时间",{now_str}'
+                )
+                if i + 1 < len(lines) and not lines[i + 1].startswith("#"):
+                    stream_url = lines[i + 1].strip()
+                    if not stream_url or "192.151.150.154" in stream_url:
+                        stream_url = "http://183.129.255.66:8480/hls/1/index.m3u8"
+                    new_lines.append(stream_url)
+                    i += 1
+            else:
+                new_lines.append(line)
+            i += 1
+        if not has_update_block and lines:
+            header = new_lines[0]
+            stamp = [
+                f'#EXTINF:-1 tvg-id="" tvg-name="{now_str}" tvg-logo="https://live.fanmingming.com/tv/CCTV1.png" group-title="🕘️更新时间",{now_str}',
+                "http://183.129.255.66:8480/hls/1/index.m3u8",
+            ]
+            new_lines = [header] + stamp + new_lines[1:]
+        m3u_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
+
+    # 2. Update output/report.json generated_at
+    report_path = root_path / "output" / "report.json"
+    if report_path.is_file():
+        try:
+            data = json.loads(report_path.read_text(encoding="utf-8"))
+            data["generated_at"] = iso_now
+            report_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        except Exception:
+            pass
+
+    return now_str
+
+
 def _probe_media_block(block: list[str]) -> bool:
+    if is_update_time_block(block):
+        return True
     url = _stream_url(block)
     if not url:
         return False
@@ -132,7 +216,10 @@ def build_public_playlists(
     if media_probe is None and os.getenv("GITHUB_ACTIONS"):
         media_probe = _bypass_probe
     verified_blocks = _media_verified_blocks(blocks, media_probe or _probe_media_block)
-    direct_blocks = [block for block in verified_blocks if not _blocked_for_direct(_stream_url(block))]
+    direct_blocks = [
+        block for block in verified_blocks
+        if is_update_time_block(block) or not _blocked_for_direct(_stream_url(block))
+    ]
     if not direct_blocks:
         raise PublicationError("direct playlist has no channels after filtering")
 
