@@ -76,9 +76,9 @@ http://183.129.255.66:8480/hls/18/index.m3u8
 #EXTINF:-1 tvg-id="CCTV-17 农业农村" tvg-name="CCTV-17 农业农村" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV17.png" group-title="📺央视频道",CCTV-17 农业农村
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv17hd
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://www.xn--rgv465a.top/tvlogo/翡翠台.png" group-title="🌊港·澳·台",翡翠台
-https://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.m3u8
+http://120.238.94.82:9901/tsfile/live/1007_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://www.xn--rgv465a.top/tvlogo/翡翠台.png" group-title="🌊港·澳·台",翡翠台
-http://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.m3u8
+http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://www.xn--rgv465a.top/tvlogo/明珠台.png" group-title="🌊港·澳·台",明珠台
 http://183.62.8.58:50085/tsfile/live/0018_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="无线新闻台" tvg-name="无线新闻台" tvg-logo="https://www.xn--rgv465a.top/tvlogo/无线新闻台.png" group-title="🌊港·澳·台",无线新闻台
@@ -88,9 +88,7 @@ https://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 #EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://www.xn--rgv465a.top/tvlogo/TVB Plus.png" group-title="🌊港·澳·台",TVB Plus
 http://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 #EXTINF:-1 tvg-id="TVB 星河" tvg-name="TVB 星河" tvg-logo="https://www.xn--rgv465a.top/tvlogo/TVB 星河.png" group-title="🌊港·澳·台",TVB 星河
-https://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.m3u8
-#EXTINF:-1 tvg-id="TVB 星河" tvg-name="TVB 星河" tvg-logo="https://www.xn--rgv465a.top/tvlogo/TVB 星河.png" group-title="🌊港·澳·台",TVB 星河
-http://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.m3u8
+http://120.238.94.82:9901/tsfile/live/1005_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://www.xn--rgv465a.top/tvlogo/HOY TV.png" group-title="🌊港·澳·台",HOY TV
 https://play.wenxiang.cn/live/43dc6fc9b1af5af8ec332f3c88b95e4a.m3u8
 #EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://www.xn--rgv465a.top/tvlogo/HOY TV.png" group-title="🌊港·澳·台",HOY TV
@@ -103,10 +101,6 @@ http://play.wenxiang.cn/live/cf4526f51988d0ed065b5c3fa4bc925d.m3u8
 https://play.wenxiang.cn/live/02267bba92f0f4b8291abefa0560664f.m3u8
 #EXTINF:-1 tvg-id="HOY 76" tvg-name="HOY 76" tvg-logo="https://www.xn--rgv465a.top/tvlogo/HOY 76.png" group-title="🌊港·澳·台",HOY 76
 http://play.wenxiang.cn/live/02267bba92f0f4b8291abefa0560664f.m3u8
-#EXTINF:-1 tvg-id="美亚电影台" tvg-name="美亚电影台" tvg-logo="https://www.xn--rgv465a.top/tvlogo/美亚电影台.png" group-title="🌊港·澳·台",美亚电影台
-https://play.wenxiang.cn/live/38a106306847b2579080984fab9ca49a.m3u8
-#EXTINF:-1 tvg-id="美亚电影台" tvg-name="美亚电影台" tvg-logo="https://www.xn--rgv465a.top/tvlogo/美亚电影台.png" group-title="🌊港·澳·台",美亚电影台
-http://play.wenxiang.cn/live/38a106306847b2579080984fab9ca49a.m3u8
 #EXTINF:-1 tvg-id="港台电视31" tvg-name="港台电视31" tvg-logo="https://www.xn--rgv465a.top/tvlogo/港台电视31.png" group-title="🌊港·澳·台",港台电视31
 https://play.wenxiang.cn/live/0f4b100c9ed81fdd547ba0a1a20dea49.m3u8
 #EXTINF:-1 tvg-id="港台电视31" tvg-name="港台电视31" tvg-logo="https://www.xn--rgv465a.top/tvlogo/港台电视31.png" group-title="🌊港·澳·台",港台电视31

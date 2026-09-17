@@ -17,9 +17,13 @@ CCTV-2,http://120.238.94.82:9901/tsfile/live/1027_1.m3u8?key=txiptv
 
 CCTV-3 综艺,http://183.129.255.66:8480/hls/3/index.m3u8
 CCTV-3,http://183.129.255.66:8480/hls/3/index.m3u8
+CCTV-3 综艺,http://120.238.94.82:9901/tsfile/live/1028_1.m3u8?key=txiptv
+CCTV-3,http://120.238.94.82:9901/tsfile/live/1028_1.m3u8?key=txiptv
 
 CCTV-4 中文国际,http://183.129.255.66:8480/hls/4/index.m3u8
 CCTV-4,http://183.129.255.66:8480/hls/4/index.m3u8
+CCTV-4 中文国际,http://120.238.94.82:9901/tsfile/live/1029_1.m3u8?key=txiptv
+CCTV-4,http://120.238.94.82:9901/tsfile/live/1029_1.m3u8?key=txiptv
 
 CCTV-5 体育,http://183.129.255.66:8480/hls/5/index.m3u8
 CCTV-5,http://183.129.255.66:8480/hls/5/index.m3u8
@@ -67,8 +71,6 @@ CCTV-17,http://183.129.255.66:8480/hls/18/index.m3u8
 # =========================================================================
 # 🌊 港·澳·台 精选高清全网直连 (标准端口 80/443/8800/9901，1080P 16:9)
 # =========================================================================
-翡翠台,https://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.m3u8
-翡翠台,http://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.m3u8
 翡翠台,http://120.238.94.82:9901/tsfile/live/1007_1.m3u8?key=txiptv
 翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
 
@@ -79,8 +81,7 @@ CCTV-17,http://183.129.255.66:8480/hls/18/index.m3u8
 TVB Plus,https://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 TVB Plus,http://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 
-TVB 星河,https://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.m3u8
-TVB 星河,http://play.wenxiang.cn/live/0389d29514f0290d6c774eb18f0d604a.m3u8
+TVB 星河,http://120.238.94.82:9901/tsfile/live/1005_1.m3u8?key=txiptv
 
 HOY TV,https://play.wenxiang.cn/live/43dc6fc9b1af5af8ec332f3c88b95e4a.m3u8
 HOY TV,http://play.wenxiang.cn/live/43dc6fc9b1af5af8ec332f3c88b95e4a.m3u8
@@ -90,9 +91,6 @@ HOY 资讯台,http://play.wenxiang.cn/live/cf4526f51988d0ed065b5c3fa4bc925d.m3u8
 
 HOY 76,https://play.wenxiang.cn/live/02267bba92f0f4b8291abefa0560664f.m3u8
 HOY 76,http://play.wenxiang.cn/live/02267bba92f0f4b8291abefa0560664f.m3u8
-
-美亚电影台,https://play.wenxiang.cn/live/38a106306847b2579080984fab9ca49a.m3u8
-美亚电影台,http://play.wenxiang.cn/live/38a106306847b2579080984fab9ca49a.m3u8
 
 港台电视31,https://play.wenxiang.cn/live/0f4b100c9ed81fdd547ba0a1a20dea49.m3u8
 港台电视31,http://play.wenxiang.cn/live/0f4b100c9ed81fdd547ba0a1a20dea49.m3u8
@@ -165,6 +163,7 @@ TVBS新闻台,http://61.221.215.25:8800/hls/9/index.m3u8
 河北卫视,http://221.7.175.154:85/tsfile/live/0117_1.m3u8?key=txiptv&playlive=1&authid=0
 河北卫视,https://event.pull.hebtv.com/jishi/cp1.m3u8
 
+河南卫视,http://120.238.94.82:9901/tsfile/live/1020_1.m3u8?key=txiptv
 河南卫视,http://221.7.175.154:85/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0
 
 山西卫视,http://221.7.175.154:85/tsfile/live/0118_1.m3u8?key=txiptv&playlive=1&authid=0
