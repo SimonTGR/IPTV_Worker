@@ -69,19 +69,22 @@ CCTV-17,http://183.129.255.66:8480/hls/18/index.m3u8
 
 
 # =========================================================================
-# 🌊 港·澳·台 精选高清全网直连 (标准端口 80/443/8800/9901，1080P 16:9)
+# 🌊 港·澳·台 精选高清全网直连 (标准端口 80/443/8800/9901，1080P/4K 原生 16:9 极速秒开)
 # =========================================================================
-翡翠台,http://120.238.94.82:9901/tsfile/live/1007_1.m3u8?key=txiptv
-翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
+翡翠台,http://php.jdshipin.com/TVOD/iptv.php?id=fct2
+翡翠台,http://r.jdshipin.com/qrfbg
+翡翠台,http://103.172.187.30:12000/stream/mytv/null-1/master.m3u8
+翡翠台,http://php.jdshipin.com/TVOD/iptv.php?id=fct4
 
-明珠台,http://183.62.8.58:50085/tsfile/live/0018_1.m3u8?key=txiptv&playlive=1&authid=0
+明珠台,http://php.jdshipin.com/TVOD/iptv.php?id=mzt
+明珠台,http://103.172.187.30:12000/stream/mytv/null-4/master.m3u8
 
 无线新闻台,https://h5cdn3.kylintv.tv/live/tvbnews_iphone.m3u8
 
 TVB Plus,https://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 TVB Plus,http://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 
-TVB 星河,http://120.238.94.82:9901/tsfile/live/1005_1.m3u8?key=txiptv
+TVB 星河,http://php.jdshipin.com/TVOD/iptv.php?id=xinghe
 
 HOY TV,https://play.wenxiang.cn/live/43dc6fc9b1af5af8ec332f3c88b95e4a.m3u8
 HOY TV,http://play.wenxiang.cn/live/43dc6fc9b1af5af8ec332f3c88b95e4a.m3u8
@@ -126,7 +129,7 @@ TVBS新闻台,http://61.221.215.25:8800/hls/9/index.m3u8
 广东影视,http://120.238.94.82:9901/tsfile/live/1010_1.m3u8?key=txiptv
 
 广东公共,http://120.238.94.82:9901/tsfile/live/1014_1.m3u8?key=txiptv
-广东公共,http://183.62.8.58:50085/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
+广东公共,http://218.13.170.98:9901/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
 
 
 # =========================================================================
