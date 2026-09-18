@@ -1,4 +1,4 @@
-﻿import os
+import os
 import re
 import json
 import datetime
@@ -91,15 +91,17 @@ def run_sync():
             for item in existing_blocks[channel_name]:
                 for u in item["urls"]:
                     if u not in streams and "jdshipin.com" not in u and "null-4" not in u:
+                        if any(bad in u for bad in ["mgtv.com", "hndt.com", "cctv8k.m3u8", "38.75.136.137", "198.204.228.26", "207.56.13.146", "catvod.com"]):
+                            continue
                         if channel_name == "广东珠江" and ("1009_1" in u or "0018_1" in u):
                             continue
                         if channel_name == "广东新闻" and "1008_1" in u:
                             continue
                         if channel_name == "广东影视" and "1010_1" in u:
                             continue
-                        if channel_name == "翡翠台" and ("fct" in u or "qrfbg" in u):
+                        if channel_name == "翡翠台" and ("fct" in u or "qrfbg" in u or "120.238.94.82" in u):
                             continue
-                        if channel_name == "明珠台" and "mzt" in u:
+                        if channel_name == "明珠台" and ("mzt" in u or "120.238.94.82" in u):
                             continue
                         streams.append(u)
 
