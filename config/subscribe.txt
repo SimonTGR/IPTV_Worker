@@ -12,5 +12,6 @@ https://cdn.jsdmirror.com/gh/YanG-1989/m3u@main/Gather.m3u
 https://cdn.jsdmirror.com/gh/YueChan/Live@main/IPTV.m3u
 https://cdn.jsdmirror.com/gh/iptv-org/iptv@master/streams/cn.m3u
 https://cdn.jsdmirror.com/gh/iptv-org/iptv@master/streams/hk.m3u
+https://cdn.jsdmirror.com/gh/CCSH/IPTV@master/live.m3u
 
 [WHITELIST]

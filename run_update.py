@@ -86,10 +86,9 @@ print()
 print("📦 [4/5] 正在重新生成公开分发格式并附加实时更新时间...")
 try:
     sys.path.insert(0, str(ROOT_DIR))
-    from cloud.publication import build_public_playlists, refresh_playlist_timestamp
-    updated_at_str = refresh_playlist_timestamp(ROOT_DIR)
-    status = build_public_playlists(str(ROOT_DIR), media_probe=lambda b: True)
-    print(f"✅ 公开分发列表生成成功 (共 {status.get('direct_channel_count', 0)} 个有效频道，更新时间戳: {updated_at_str})")
+    from sync_channels import run_sync
+    run_sync()
+    print("✅ 公开分发列表生成与同步成功")
 except Exception as e:
     print(f"⚠️ 生成 public_output 遇到异常: {e}")
 
@@ -98,7 +97,7 @@ print()
 print("🚀 [5/5] 正在将最新测速播放列表推送到 GitHub 仓库...")
 now_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-subprocess.run(["git", "add", "-f", "output/", "public_output/", "config/", "utils/", "run_update.py", "一键测速并推送.bat", ".gitattributes", "requirements.txt"], check=False)
+subprocess.run(["git", "add", "-f", "output/", "public_output/", "config/", "utils/", "run_update.py", "sync_channels.py", "一键测速并推送.bat", ".gitattributes", "requirements.txt"], check=False)
 diff_proc = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, check=False)
 
 if diff_proc.stdout.strip():
