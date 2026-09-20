@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-20T02:30:42.379255+00:00",
+  "generated_at": "2026-09-20T03:30:55.624792+00:00",
   "published": true,
-  "direct_channel_count": 112,
-  "full_channel_count": 112,
+  "direct_channel_count": 66,
+  "full_channel_count": 66,
   "excluded_from_direct": 0,
   "failed_final_media_probe": 0
 }

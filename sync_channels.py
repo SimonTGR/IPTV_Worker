@@ -97,7 +97,8 @@ def run_sync():
         if channel_name in whitelist_data:
             streams.extend(whitelist_data[channel_name])
 
-        if channel_name in existing_blocks:
+        # Only fallback to existing blocks if not already in whitelist
+        if not streams and channel_name in existing_blocks:
             for item in existing_blocks[channel_name]:
                 for u in item["urls"]:
                     if u not in streams and "jdshipin.com" not in u and "null-4" not in u:
