@@ -33,9 +33,12 @@ def run_sync():
             whitelist_data.setdefault(name, []).append(u)
 
     user_m3u_file = ROOT_DIR / "output" / "user_result.m3u"
+    candidate_m3u_file = ROOT_DIR / "output" / "user_result.candidate.m3u"
+    read_file = candidate_m3u_file if (candidate_m3u_file.is_file() and candidate_m3u_file.stat().st_size > 5000) else user_m3u_file
+
     existing_blocks = {}
-    if user_m3u_file.is_file():
-        text = user_m3u_file.read_text(encoding="utf-8-sig")
+    if read_file.is_file():
+        text = read_file.read_text(encoding="utf-8-sig")
         for b in text.split("#EXTINF:-1"):
             lines = [l.strip() for l in b.splitlines() if l.strip()]
             if not lines:
@@ -58,8 +61,8 @@ def run_sync():
                 })
 
     custom_logos = {
+        "CCTV-4K": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4K.png",
         "CCTV-8K": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV8K.png",
-        "黄金翡翠台": "https://www.xn--rgv465a.top/tvlogo/翡翠台.png",
         "美亚电影台": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/美亚电影.png",
         "广东少儿": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东少儿.png",
         "佛山综合": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/佛山综合.png",
@@ -72,6 +75,12 @@ def run_sync():
         'http://183.129.255.66:8480/hls/1/index.m3u8'
     ]
 
+    txt_lines = [
+        "🕘️更新时间,#genre#",
+        f"{now_str},http://183.129.255.66:8480/hls/1/index.m3u8",
+        ""
+    ]
+
     current_group = ""
     for raw in demo_lines:
         s = raw.strip()
@@ -79,6 +88,7 @@ def run_sync():
             continue
         if ",#genre#" in s:
             current_group = s.split(",#genre#")[0].strip()
+            txt_lines.append(f"\n{current_group},#genre#")
             continue
 
         channel_name = s
@@ -91,15 +101,15 @@ def run_sync():
             for item in existing_blocks[channel_name]:
                 for u in item["urls"]:
                     if u not in streams and "jdshipin.com" not in u and "null-4" not in u:
-                        if any(bad in u for bad in ["mgtv.com", "hndt.com", "cctv8k.m3u8", "38.75.136.137", "198.204.228.26", "207.56.13.146", "catvod.com"]):
+                        if any(bad in u for bad in ["mgtv.com", "hndt.com", "cctv8k.m3u8", "38.75.136.137", "198.204.228.26", "207.56.13.146", "catvod.com", "221.7.175.154", "122.152.202.33", "3a.ink", "bxtv", "112.123.243.37", "cctvnews.cctv.com", "183.11.239.36:808/hls/100"]):
                             continue
-                        if channel_name == "广东珠江" and ("1009_1" in u or "0018_1" in u):
+                        if channel_name == "广东珠江" and ("1009_1" in u or "0018_1" in u or "0125_1" in u or "gdzj.m3u8" in u):
                             continue
                         if channel_name == "广东新闻" and "1008_1" in u:
                             continue
                         if channel_name == "广东影视" and "1010_1" in u:
                             continue
-                        if channel_name == "翡翠台" and ("fct" in u or "qrfbg" in u or "120.238.94.82" in u):
+                        if channel_name == "翡翠台" and ("null-8" in u or "null-12" in u or "fct" in u or "qrfbg" in u or "120.238.94.82" in u):
                             continue
                         if channel_name == "明珠台" and ("mzt" in u or "120.238.94.82" in u):
                             continue
@@ -121,10 +131,19 @@ def run_sync():
                 f'#EXTINF:-1 tvg-id="{channel_name}" tvg-name="{channel_name}" tvg-logo="{logo}" group-title="{current_group}",{channel_name}'
             )
             out_lines.append(u)
+            txt_lines.append(f"{channel_name},{u}")
 
     final_m3u_text = "\n".join(out_lines) + "\n"
     user_m3u_file.write_text(final_m3u_text, encoding="utf-8")
-    print(f"[+] Successfully wrote {user_m3u_file} with {len(out_lines)} lines")
+    candidate_m3u_file.write_text(final_m3u_text, encoding="utf-8")
+    print(f"[+] Successfully wrote {user_m3u_file} and {candidate_m3u_file} with {len(out_lines)} lines")
+
+    final_txt_text = "\n".join(txt_lines) + "\n"
+    user_txt_file = ROOT_DIR / "output" / "user_result.txt"
+    live_txt_file = ROOT_DIR / "public_output" / "live.txt"
+    user_txt_file.write_text(final_txt_text, encoding="utf-8")
+    live_txt_file.write_text(final_txt_text, encoding="utf-8")
+    print(f"[+] Successfully wrote {user_txt_file} and {live_txt_file} with {len(txt_lines)} lines")
 
     report_file = ROOT_DIR / "output" / "report.json"
     if report_file.is_file():
