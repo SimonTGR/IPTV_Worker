@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2026-09-20 11:30:55,http://183.129.255.66:8480/hls/1/index.m3u8
+2026-09-21 09:44:51,http://183.129.255.66:8480/hls/1/index.m3u8
 
 
 📺央视频道,#genre#
@@ -38,15 +38,30 @@ CCTV-16 奥林匹克,http://183.250.156.180:9999/newlive/live/hls/16/live.m3u8
 CCTV-17 农业农村,http://183.250.156.180:9999/newlive/live/hls/17/live.m3u8
 
 🌊港·澳·台,#genre#
-翡翠台,http://103.172.187.30:12000/stream/mytv/null-1/master.m3u8
 翡翠台,http://play.wenxiang.cn/live/e240363d284b6f41fcb7136eef507ef6.m3u8
+翡翠台,http://103.172.187.30:12000/stream/mytv/null-1/master.m3u8
 TVB Plus,http://play.wenxiang.cn/live/5ec77f27f37babab48d60b879fde862a.m3u8
 TVB 星河,http://103.172.187.30:12000/stream/mytv/null-12/master.m3u8
 美亚电影台,http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
 港台电视31,http://play.wenxiang.cn/live/0f4b100c9ed81fdd547ba0a1a20dea49.m3u8
 港台电视32,http://play.wenxiang.cn/live/1c84d2c289c82f92f588aaa566858174.m3u8
 
+☘️广东频道,#genre#
+广东珠江,http://183.11.239.36:808/hls/83/index.m3u8
+广东珠江,http://120.238.94.82:9901/tsfile/live/1010_1.m3u8?key=txiptv
+广东新闻,http://120.238.94.82:9901/tsfile/live/1013_1.m3u8?key=txiptv
+广东民生,http://120.238.94.82:9901/tsfile/live/1011_1.m3u8?key=txiptv
+广东体育,http://120.238.94.82:9901/tsfile/live/1012_1.m3u8?key=txiptv
+广东体育,http://218.13.170.98:9901/tsfile/live/0019_1.m3u8?key=txiptv&playlive=1&authid=0
+广东影视,http://120.238.94.82:9901/tsfile/live/1016_1.m3u8?key=txiptv
+广东公共,http://120.238.94.82:9901/tsfile/live/1014_1.m3u8?key=txiptv
+广东少儿,http://120.238.94.82:9901/tsfile/live/1017_1.m3u8?key=txiptv
+广东少儿,http://gmxw.7766.org:808/hls/175/index.m3u8
+佛山综合,http://120.238.94.82:9901/tsfile/live/1025_1.m3u8?key=txiptv
+
 📡卫视频道,#genre#
+大湾区卫视,http://gmxw.7766.org:808/hls/132/index.m3u8
+大湾区卫视,http://120.238.94.82:9901/tsfile/live/1015_1.m3u8?key=txiptv
 浙江卫视,https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
 浙江卫视,http://221.226.51.220:50081/newlive/live/hls/27/live.m3u8
 湖南卫视,http://221.226.51.220:50081/newlive/live/hls/29/live.m3u8
