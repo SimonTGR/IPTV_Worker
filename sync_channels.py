@@ -28,7 +28,7 @@ def run_sync():
             name, u = line.split(",", 1)
             name = name.strip()
             u = u.strip()
-            if "jdshipin.com" in u or "null-4" in u:
+            if "jdshipin.com" in u or "null-4" in u or "wenxiang.cn" in u:
                 continue
             whitelist_data.setdefault(name, []).append(u)
 
@@ -45,7 +45,7 @@ def run_sync():
                 continue
             header = lines[0]
             name = header.split(",")[-1].strip()
-            urls = [l for l in lines[1:] if l.startswith("http") and "jdshipin.com" not in l and "null-4" not in l]
+            urls = [l for l in lines[1:] if l.startswith("http") and "jdshipin.com" not in l and "null-4" not in l and "wenxiang.cn" not in l]
             logo_m = re.search(r'tvg-logo="([^"]+)"', header)
             group_m = re.search(r'group-title="([^"]+)"', header)
             tvg_id_m = re.search(r'tvg-id="([^"]+)"', header)
@@ -101,7 +101,7 @@ def run_sync():
         if not streams and channel_name in existing_blocks:
             for item in existing_blocks[channel_name]:
                 for u in item["urls"]:
-                    if u not in streams and "jdshipin.com" not in u and "null-4" not in u:
+                    if u not in streams and "jdshipin.com" not in u and "null-4" not in u and "wenxiang.cn" not in u:
                         if any(bad in u for bad in ["221.226.51.220", "cctv8k.m3u8", "38.75.136.137", "198.204.228.26", "207.56.13.146", "catvod.com", "221.7.175.154", "122.152.202.33", "3a.ink", "bxtv", "112.123.243.37", "cctvnews.cctv.com", "183.11.239.36:808/hls/100"]):
                             continue
                         if channel_name == "广东珠江" and ("1009_1" in u or "0018_1" in u or "0125_1" in u or "gdzj.m3u8" in u):
