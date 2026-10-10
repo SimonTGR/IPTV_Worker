@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2026-10-08 09:25:30,http://183.129.255.66:8480/hls/1/index.m3u8
+2026-10-10 09:15:35,http://183.129.255.66:8480/hls/1/index.m3u8
 
 
 📺央视频道,#genre#
@@ -37,13 +37,13 @@ CCTV-17 农业农村,http://222.223.41.27:8888/hls/17/index.m3u8
 CCTV-17 农业农村,http://113.15.109.216:59901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
 
 🌊港·澳·台,#genre#
-翡翠台,https://cdn3.123.rr.kg/stream/tvb/fct/
 翡翠台,https://cdn3.indevs.in/stream/tvb/fct/
 翡翠台,https://cdn3.indevs.in/stream/live/jade/
-TVB Plus,https://cdn3.123.rr.kg/stream/tvb/tvbp/
+翡翠台,https://cdn3.123.rr.kg/stream/tvb/fct/
 TVB Plus,https://cdn3.indevs.in/stream/tvb/tvbp/
-TVB 星河,https://cdn3.123.rr.kg/stream/live/tvbxh/
+TVB Plus,https://cdn3.123.rr.kg/stream/tvb/tvbp/
 TVB 星河,https://cdn3.indevs.in/stream/live/tvbxh/
+TVB 星河,https://cdn3.123.rr.kg/stream/live/tvbxh/
 
 ☘️大湾区·广东精选,#genre#
 大湾区卫视,http://113.15.109.216:59901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0

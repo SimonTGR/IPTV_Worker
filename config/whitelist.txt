@@ -91,15 +91,15 @@ CCTV-17,http://113.15.109.216:59901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=
 # =========================================================================
 # 🌊 港·澳·台 精选高清全网直连 (速率与大缓冲第一位，国内/代理极速秒开)
 # =========================================================================
-翡翠台,https://cdn3.123.rr.kg/stream/tvb/fct/
 翡翠台,https://cdn3.indevs.in/stream/tvb/fct/
 翡翠台,https://cdn3.indevs.in/stream/live/jade/
+翡翠台,https://cdn3.123.rr.kg/stream/tvb/fct/
 
-TVB Plus,https://cdn3.123.rr.kg/stream/tvb/tvbp/
 TVB Plus,https://cdn3.indevs.in/stream/tvb/tvbp/
+TVB Plus,https://cdn3.123.rr.kg/stream/tvb/tvbp/
 
-TVB 星河,https://cdn3.123.rr.kg/stream/live/tvbxh/
 TVB 星河,https://cdn3.indevs.in/stream/live/tvbxh/
+TVB 星河,https://cdn3.123.rr.kg/stream/live/tvbxh/
 
 
 
