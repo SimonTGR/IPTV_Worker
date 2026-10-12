@@ -72,12 +72,12 @@ def run_sync():
     out_lines = [
         '#EXTM3U x-tvg-url="http://10.10.14.1:8080/epg/epg.gz"',
         f'#EXTINF:-1 tvg-id="" tvg-name="{now_str}" tvg-logo="https://live.fanmingming.com/tv/CCTV1.png" group-title="🕘️更新时间",{now_str}',
-        'http://153.0.171.163:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0'
+        'http://221.226.51.220:50081/newlive/live/hls/1/live.m3u8'
     ]
 
     txt_lines = [
         "🕘️更新时间,#genre#",
-        f"{now_str},http://153.0.171.163:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0",
+        f"{now_str},http://221.226.51.220:50081/newlive/live/hls/1/live.m3u8",
         ""
     ]
 
