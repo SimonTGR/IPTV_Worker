@@ -119,7 +119,8 @@ def run_sync():
         if not streams:
             continue
 
-        streams = streams[:3]
+        max_streams = 3 if channel_name == "翡翠台" else 2
+        streams = streams[:max_streams]
 
         logo = custom_logos.get(channel_name)
         if not logo and channel_name in existing_blocks and existing_blocks[channel_name]:
