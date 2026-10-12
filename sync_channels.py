@@ -28,7 +28,7 @@ def run_sync():
             name, u = line.split(",", 1)
             name = name.strip()
             u = u.strip()
-            if "jdshipin.com" in u or "null-4" in u or "wenxiang.cn" in u:
+            if any(bad in u for bad in ["jdshipin.com", "null-4", "wenxiang.cn", "ali-m-l.cztv.com", "event.pull.hebtv.com/jishi/cp", "bp-resource-dfl.bestv.cn", "t.live.cntv.cn", "hlscdn.liangtv.cn", "live.zohi.tv", "yncbn.ks-cdn.gitv.tv", "222.214.208.34", "satellitepull.cnr.cn"]):
                 continue
             whitelist_data.setdefault(name, []).append(u)
 
@@ -72,12 +72,12 @@ def run_sync():
     out_lines = [
         '#EXTM3U x-tvg-url="http://10.10.14.1:8080/epg/epg.gz"',
         f'#EXTINF:-1 tvg-id="" tvg-name="{now_str}" tvg-logo="https://live.fanmingming.com/tv/CCTV1.png" group-title="🕘️更新时间",{now_str}',
-        'http://183.129.255.66:8480/hls/1/index.m3u8'
+        'http://153.0.171.163:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0'
     ]
 
     txt_lines = [
         "🕘️更新时间,#genre#",
-        f"{now_str},http://183.129.255.66:8480/hls/1/index.m3u8",
+        f"{now_str},http://153.0.171.163:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0",
         ""
     ]
 
@@ -102,7 +102,7 @@ def run_sync():
             for item in existing_blocks[channel_name]:
                 for u in item["urls"]:
                     if u not in streams and "jdshipin.com" not in u and "null-4" not in u and "wenxiang.cn" not in u:
-                        if any(bad in u for bad in ["103.172.187.30", ":12000", "cdn6.cc.cd", "221.226.51.220", "cctv8k.m3u8", "38.75.136.137", "198.204.228.26", "207.56.13.146", "catvod.com", "221.7.175.154", "122.152.202.33", "3a.ink", "bxtv", "112.123.243.37", "cctvnews.cctv.com", "183.11.239.36:808/hls/100"]):
+                        if any(bad in u for bad in ["103.172.187.30", ":12000", "cdn6.cc.cd", "cctv8k.m3u8", "38.75.136.137", "198.204.228.26", "207.56.13.146", "catvod.com", "221.7.175.154", "122.152.202.33", "3a.ink", "bxtv", "112.123.243.37", "cctvnews.cctv.com", "183.11.239.36:808/hls/100", "ali-m-l.cztv.com", "event.pull.hebtv.com/jishi/cp", "bp-resource-dfl.bestv.cn", "t.live.cntv.cn", "hlscdn.liangtv.cn", "live.zohi.tv", "yncbn.ks-cdn.gitv.tv", "222.214.208.34", "satellitepull.cnr.cn"]):
                             continue
                         if channel_name == "广东珠江" and ("1009_1" in u or "0018_1" in u or "0125_1" in u or "gdzj.m3u8" in u):
                             continue
