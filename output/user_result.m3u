@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="http://10.10.14.1:8080/epg/epg.gz"
-#EXTINF:-1 tvg-id="" tvg-name="2026-10-12 10:25:21" tvg-logo="https://live.fanmingming.com/tv/CCTV1.png" group-title="🕘️更新时间",2026-10-12 10:25:21
+#EXTINF:-1 tvg-id="" tvg-name="2026-10-24 16:23:51" tvg-logo="https://live.fanmingming.com/tv/CCTV1.png" group-title="🕘️更新时间",2026-10-24 16:23:51
 http://221.226.51.220:50081/newlive/live/hls/1/live.m3u8
 #EXTINF:-1 tvg-id="CCTV-1 综合" tvg-name="CCTV-1 综合" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1 综合.png" group-title="📺央视频道",CCTV-1 综合
 http://221.226.51.220:50081/newlive/live/hls/1/live.m3u8
