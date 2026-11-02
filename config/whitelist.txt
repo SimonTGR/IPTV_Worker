@@ -18,9 +18,9 @@ CCTV-2,http://221.226.51.220:50081/newlive/live/hls/2/live.m3u8
 CCTV-2,http://183.129.255.66:8480/hls/2/index.m3u8
 
 CCTV-3 综艺,http://221.226.51.220:50081/newlive/live/hls/3/live.m3u8
-CCTV-3 综艺,http://124.116.183.146:9901/tsfile/live/0003_1.m3u8
+CCTV-3 综艺,http://112.46.85.60:8009/hls/3/index.m3u8
 CCTV-3,http://221.226.51.220:50081/newlive/live/hls/3/live.m3u8
-CCTV-3,http://124.116.183.146:9901/tsfile/live/0003_1.m3u8
+CCTV-3,http://112.46.85.60:8009/hls/3/index.m3u8
 
 CCTV-4 中文国际,http://183.129.255.66:8480/hls/4/index.m3u8
 CCTV-4 中文国际,http://222.223.41.27:8888/hls/4/index.m3u8
@@ -101,7 +101,7 @@ CCTV-17,http://183.129.255.66:8480/hls/18/index.m3u8
 翡翠台,http://128.14.206.166/pull-f5.flive.douyincdn.com/live/jade.flv
 
 TVB Plus,https://vdm6-hw.nbgdsygs.com/live/h6-2.flv
-TVB Plus,https://cdn3.123.rr.kg/stream/tvb/tvbp/
+TVB Plus,http://167.88.62.43:64012/0.ts
 
 TVB 星河,http://cfss.cc/cdn/huya/23734169.flv
 TVB 星河,https://live.ottiptv.cc/huya/23734169
@@ -111,7 +111,7 @@ TVB 星河,https://live.ottiptv.cc/huya/23734169
 # ☘️ 大湾区·广东精选极速频道 (100% 1920x1080 全高清 + 抽帧台标验真，保留前 2 最优源)
 # =========================================================================
 大湾区卫视,http://107.150.60.122/live/nfws.m3u8
-大湾区卫视,http://192.151.150.154/live/nfws.m3u8
+大湾区卫视,http://198.204.228.26/live/nfws.m3u8
 
 广东卫视,http://120.238.94.82:9901/tsfile/live/1009_1.m3u8
 广东卫视,http://183.129.255.66:8480/hls/31/index.m3u8

@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2026-11-02 10:48:22,http://221.226.51.220:50081/newlive/live/hls/1/live.m3u8
+2026-11-02 11:10:29,http://221.226.51.220:50081/newlive/live/hls/1/live.m3u8
 
 
 📺央视频道,#genre#
@@ -8,7 +8,7 @@ CCTV-1 综合,http://183.129.255.66:8480/hls/1/index.m3u8
 CCTV-2 财经,http://221.226.51.220:50081/newlive/live/hls/2/live.m3u8
 CCTV-2 财经,http://183.129.255.66:8480/hls/2/index.m3u8
 CCTV-3 综艺,http://221.226.51.220:50081/newlive/live/hls/3/live.m3u8
-CCTV-3 综艺,http://124.116.183.146:9901/tsfile/live/0003_1.m3u8
+CCTV-3 综艺,http://112.46.85.60:8009/hls/3/index.m3u8
 CCTV-4 中文国际,http://183.129.255.66:8480/hls/4/index.m3u8
 CCTV-4 中文国际,http://222.223.41.27:8888/hls/4/index.m3u8
 CCTV-5 体育,http://120.238.94.82:9901/tsfile/live/1030_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -43,13 +43,13 @@ CCTV-17 农业农村,http://183.129.255.66:8480/hls/18/index.m3u8
 翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
 翡翠台,http://128.14.206.166/pull-f5.flive.douyincdn.com/live/jade.flv
 TVB Plus,https://vdm6-hw.nbgdsygs.com/live/h6-2.flv
-TVB Plus,https://cdn3.123.rr.kg/stream/tvb/tvbp/
+TVB Plus,http://167.88.62.43:64012/0.ts
 TVB 星河,http://cfss.cc/cdn/huya/23734169.flv
 TVB 星河,https://live.ottiptv.cc/huya/23734169
 
 ☘️大湾区·广东精选,#genre#
 大湾区卫视,http://107.150.60.122/live/nfws.m3u8
-大湾区卫视,http://192.151.150.154/live/nfws.m3u8
+大湾区卫视,http://198.204.228.26/live/nfws.m3u8
 广东卫视,http://120.238.94.82:9901/tsfile/live/1009_1.m3u8
 广东卫视,http://183.129.255.66:8480/hls/31/index.m3u8
 深圳卫视,http://120.238.94.82:9901/tsfile/live/1065_1.m3u8
