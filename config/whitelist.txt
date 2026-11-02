@@ -96,15 +96,15 @@ CCTV-17,http://183.129.255.66:8480/hls/18/index.m3u8
 # =========================================================================
 # 🌊 港·澳·台 精选高清全网直连 (翡翠台保留 3 个，其余保留 2 个，Cloudflare Anycast 极速秒开)
 # =========================================================================
+翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=0&authid=0
 翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
-翡翠台,http://103.172.187.30:12000/stream/mytv/null-1/master.m3u8
-翡翠台,http://116.77.33.98:44330/tsfile/live/1008_1.m3u8?key=txiptv&playlive=0&authid=0
+翡翠台,http://128.14.206.166/pull-f5.flive.douyincdn.com/live/jade.flv
 
-TVB Plus,https://cdn3.indevs.in/stream/tvb/tvbp/
+TVB Plus,https://vdm6-hw.nbgdsygs.com/live/h6-2.flv
 TVB Plus,https://cdn3.123.rr.kg/stream/tvb/tvbp/
 
-TVB 星河,https://cdn3.indevs.in/stream/live/tvbxh/
-TVB 星河,https://cdn3.123.rr.kg/stream/live/tvbxh/
+TVB 星河,http://cfss.cc/cdn/huya/23734169.flv
+TVB 星河,https://live.ottiptv.cc/huya/23734169
 
 
 # =========================================================================

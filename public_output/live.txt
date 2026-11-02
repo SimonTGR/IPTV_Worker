@@ -1,5 +1,5 @@
 🕘️更新时间,#genre#
-2026-10-29 18:01:33,http://221.226.51.220:50081/newlive/live/hls/1/live.m3u8
+2026-11-02 10:48:22,http://221.226.51.220:50081/newlive/live/hls/1/live.m3u8
 
 
 📺央视频道,#genre#
@@ -39,13 +39,13 @@ CCTV-17 农业农村,http://111.61.208.131:9019/hls/17/index.m3u8
 CCTV-17 农业农村,http://183.129.255.66:8480/hls/18/index.m3u8
 
 🌊港·澳·台,#genre#
+翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=0&authid=0
 翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
-翡翠台,http://103.172.187.30:12000/stream/mytv/null-1/master.m3u8
-翡翠台,http://116.77.33.98:44330/tsfile/live/1008_1.m3u8?key=txiptv&playlive=0&authid=0
-TVB Plus,https://cdn3.indevs.in/stream/tvb/tvbp/
+翡翠台,http://128.14.206.166/pull-f5.flive.douyincdn.com/live/jade.flv
+TVB Plus,https://vdm6-hw.nbgdsygs.com/live/h6-2.flv
 TVB Plus,https://cdn3.123.rr.kg/stream/tvb/tvbp/
-TVB 星河,https://cdn3.indevs.in/stream/live/tvbxh/
-TVB 星河,https://cdn3.123.rr.kg/stream/live/tvbxh/
+TVB 星河,http://cfss.cc/cdn/huya/23734169.flv
+TVB 星河,https://live.ottiptv.cc/huya/23734169
 
 ☘️大湾区·广东精选,#genre#
 大湾区卫视,http://107.150.60.122/live/nfws.m3u8
