@@ -105,10 +105,20 @@ def gather_candidates(channels):
         # 1. 白名单当前源 (最高优先)
         for u in whitelist_urls.get(ch, []):
             add_url(u)
-        short_name = ch.split()[0]
+        short_name = ch.split()[0] if ch.startswith("CCTV-") else ch
         if short_name != ch:
             for u in whitelist_urls.get(short_name, []):
                 add_url(u)
+
+        if ch == "翡翠台":
+            add_url("http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0")
+            add_url("http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=0&authid=0")
+            add_url("http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=1")
+            add_url("http://128.14.206.166/pull-f5.flive.douyincdn.com/live/jade.flv")
+        elif ch == "TVB 星河":
+            add_url("http://cfss.cc/cdn/huya/23734169.m3u8")
+            add_url("http://cfss.cc/cdn/huya/23734169.flv")
+            add_url("https://live.ottiptv.cc/huya/23734169")
 
         # 2. 候选报告中的备选 1080P/720P 源 (最多补充 2 个优质备选)
         added_from_rep = 0
@@ -273,7 +283,7 @@ def run_local_speedtest():
             out_lines.append(f"\n# --- {ch} ---")
             for p in selected_by_channel.get(ch, []):
                 out_lines.append(f"{ch},{p['url']}")
-                short_ch = ch.split()[0]
+                short_ch = ch.split()[0] if ch.startswith("CCTV-") else ch
                 if short_ch != ch:
                     out_lines.append(f"{short_ch},{p['url']}")
 

@@ -116,19 +116,15 @@ CCTV-17,http://111.61.208.131:9019/hls/17/index.m3u8
 # --- 翡翠台 ---
 翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0
 翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=0&authid=0
-翡翠台,http://128.14.206.166/pull-f5.flive.douyincdn.com/live/jade.flv
+翡翠台,http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=1
 
 # --- TVB Plus ---
 TVB Plus,http://167.88.62.43:64012/0.ts
-TVB,http://167.88.62.43:64012/0.ts
 TVB Plus,https://vdm6-hw.nbgdsygs.com/live/h6-2.flv
-TVB,https://vdm6-hw.nbgdsygs.com/live/h6-2.flv
 
 # --- TVB 星河 ---
-TVB 星河,https://vdm6-hw.nbgdsygs.com/live/h6-2.flv
-TVB,https://vdm6-hw.nbgdsygs.com/live/h6-2.flv
-TVB 星河,http://167.88.62.43:64012/0.ts
-TVB,http://167.88.62.43:64012/0.ts
+TVB 星河,http://cfss.cc/cdn/huya/23734169.m3u8
+TVB 星河,http://cfss.cc/cdn/huya/23734169.flv
 
 # =================================================================
 # ☘️大湾区·广东精选
