@@ -111,13 +111,11 @@ def gather_candidates(channels):
                 add_url(u)
 
         if ch == "翡翠台":
-            add_url("http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=0")
+            add_url("http://218.13.139.26:9901/tsfile/live/1079_1.m3u8?key=txiptv&playlive=1&authid=0")
+            add_url("http://218.13.139.26:9901/tsfile/live/1079_1.m3u8?key=txiptv&playlive=0&authid=0")
             add_url("http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=0&authid=0")
-            add_url("http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=1&authid=1")
-            add_url("http://128.14.206.166/pull-f5.flive.douyincdn.com/live/jade.flv")
         elif ch == "TVB 星河":
             add_url("http://cfss.cc/cdn/huya/23734169.m3u8")
-            add_url("http://cfss.cc/cdn/huya/23734169.flv")
             add_url("https://live.ottiptv.cc/huya/23734169")
 
         # 2. 候选报告中的备选 1080P/720P 源 (最多补充 2 个优质备选)
