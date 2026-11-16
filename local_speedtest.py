@@ -111,8 +111,8 @@ def gather_candidates(channels):
                 add_url(u)
 
         if ch == "翡翠台":
-            add_url("http://218.13.139.26:9901/tsfile/live/1079_1.m3u8?key=txiptv&playlive=1&authid=0")
             add_url("http://218.13.139.26:9901/tsfile/live/1079_1.m3u8?key=txiptv&playlive=0&authid=0")
+            add_url("http://218.13.139.26:9901/tsfile/live/1079_1.m3u8?key=txiptv&playlive=1&authid=0")
             add_url("http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=0&authid=0")
         elif ch == "TVB 星河":
             add_url("http://cfss.cc/cdn/huya/23734169.m3u8")
@@ -242,8 +242,8 @@ def run_local_speedtest():
     for cat, ch in channels:
         items = results.get(ch, [])
         good = [x for x in items if x["ok"]]
-        # 按真实网络测速排序：网速最高、画质最佳排在前面
-        good.sort(key=lambda x: (x["width"] * x["height"], x["speed_mbps"]), reverse=True)
+        # 按真实网络测速排序：网速最高、画质最佳排在前面（高速节点优先大缓冲 playlive=0 防卡顿）
+        good.sort(key=lambda x: (x["width"] * x["height"], 1 if ("playlive=0" in x["url"] and x["speed_mbps"] >= 15.0) else 0, x["speed_mbps"]), reverse=True)
 
         target_count = 3 if ch == "翡翠台" else 2
         picked = good[:target_count]
