@@ -112,8 +112,8 @@ def gather_candidates(channels):
 
         if ch == "翡翠台":
             add_url("http://218.13.139.26:9901/tsfile/live/1079_1.m3u8?key=txiptv&playlive=0&authid=0")
-            add_url("http://218.13.139.26:9901/tsfile/live/1079_1.m3u8?key=txiptv&playlive=1&authid=0")
             add_url("http://183.62.8.58:50085/tsfile/live/0017_1.m3u8?key=txiptv&playlive=0&authid=0")
+            add_url("http://116.76.254.170:44330/tsfile/live/1008_1.m3u8?key=txiptv&playlive=0&authid=0")
         elif ch == "TVB 星河":
             add_url("http://cfss.cc/cdn/huya/23734169.m3u8")
             add_url("https://live.ottiptv.cc/huya/23734169")
